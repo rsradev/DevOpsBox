@@ -1,0 +1,66 @@
+Docker:
+
+Ctrl + P + Q --> gracefully stop container
+
+
+docker run -d --rm --name my-node -v $(pwd):/app -p 3000:3000 node:14 node /app
+
+hub_id/repo:img_name
+
+Image -> snapshot of a FS with set of commands
+Container -> running proccess with dedicated resources
+
+docker build -t "img_name" .
+
+docker run -d -p 81:80 webserver:latest /usr/sbin/apache2ctl -D FOREGROUND ->
+    -> launch apache webserver on port host port 81
+
+
+docker tab img_name docker_repo/img_name ->
+    -> docker push docker push
+
+docker loging --> to Docker hub
+
+docker run -it <image>:latest bash
+
+docker images --> list docker images
+
+docker ps --> show docker processes
+
+docker ps -a --> list all containers
+
+docker ps -l --> last container
+
+docker commit <container id/container name> --> commit image
+
+docker tag <docker commit output> <new image name> --> create new image
+
+CTL-Q CTL-P --> detached from container leave it running
+
+docker attach <container name> --> attach to running container
+
+docker exec -ti <name/id> bash --> connect to a running container
+
+docker run --name example -d ubuntu bash -c "lose /etc/password" --> run container detacherd(in the background) 
+
+docker kill <container name> --> kill conatiner
+
+docker rm <container name> --> remove container
+
+docker rmi <image name> --> remove image
+
+Process != Image
+
+docker run --memory maximum-allowed-memory imag-name --> run with fixed memory(docker create + docker start)
+
+docker network ls --> list networks
+
+docker network create <network name> --> create networks
+
+docker run --rm -ti --net <network name> --name dogserver ubuntu:20.04 bash --> create container with network specified
+
+leagacy linking works only one way
+
+docker run -ti -v </path/to/volume> | --volumes-from <name of the container>--> specified volume| specified shared volume
+
+docker exec -ti  container_name bash --> This command adds another process to a running container, and is good for debugging.

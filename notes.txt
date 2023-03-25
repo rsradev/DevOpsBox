@@ -1,0 +1,141 @@
+TCP/Inspection
+
+OSI Layers:
+
+1. Physical
+2. Data
+3. Netowrking
+4. Transport
+5. Session
+6. Presantation
+7. Application
+
+ping/pong --> ICMP Echo/Reply
+	
+	
+
+
+
+
+
+Linux dist = kernel + collections of software
+
+----- Traps & Signals -----
+
+kill -l --> list all the signals
+
+SIGINT --> ctl + c
+
+exit 1; --> terminates the scrit
+
+----- Jobs managements -----
+
+ps aux | grep <name of the job>
+jobs --> list all jobs
+job & --> run the job in the background
+
+standart workarounds
+
+jobs --> list backgound users jobs
+
+pgrep <job-name>
+
+ps aux | grep <job-name>
+
+PID of the job and whatever you want
+ 
+----- Permissions -----
+
+file --> -
+dire --> d
+
+4 --> r
+2 --> w
+1 --> x
+
+----- Redirections -----
+
+stdin --> 0
+stdout --> 1
+stderr --> 2
+
+ls -l output111111.txt > filename11111111111.txt 2>&1 --> try to list file that doesn't exist and print message in second file form 1 where 2 is redirected
+
+exec 3<>log_file.txt
+
+echo "Tesssttttt">&3 --> write output in log_file.txt e.g. 3 
+
+exec3>&- unlink/bad file descriptor
+
+
+
+----- Wildcards, Regex, finds, greps -----
+
+find */ -name test.* --> will find every file named test no matter what extention in the next directory
+
+find . -maxdepth 2 -iname *.py --> will find py file in 2 dir up
+
+--------------------------------|
+. --> level 1 			|
+				|
+/next/ --> level 2 		|--> maxdepth explain
+				|
+/next/onemore/ --> level 3	|
+...etc				|
+--------------------------------|
+
+Examples:
+---------------------------------------------------------------------------------------------------------
+find . -iname *.py -o -iname *.sh --> find all files sh or py
+
+find . -maxdepth 3  -iname "*.sh" -a -iname "*tests*" --> find file shell extention containing 'tests'
+
+find . -maxdepth 2 -type d -name 'tests*' --> find a directory starts with tests*
+
+find . -type f -iname '.vim*' --> find a hidden files of vim
+
+find . -type f ! -perm 777 --> files that doesn't have permissions 777
+
+sudo find /home -user hadoop --> find all files that belong to user hadoop 
+
+find . -iname "*.py" | xargs ls -la {} \n; 
+ 
+---------------------------------------------------------------------------------------------------------
+Global Regular Expression Print(grep):
+
+grep 'test' file.txt --> search for 'test' in file.txt
+grep -r 'test' * --> search for 'test' recursively
+grep -riv test * --> search for everything except 'test'
+grep -c "test" file1.txt --> count "test" in file1.txt 
+---------------------------------------------------------------------------------------------------------
+AWK & SED
+
+sed 's/,/-/g' <file_name> --> replace all ',' with '-' ;
+
+awk syntax
+
+BEGIN {
+	# substitute space with a tab
+	FS=" ";
+	OFS="\t\t";
+	print "Date\t\tPrice\t\tVolume";
+	print "-----\t\t----\t\t------";
+};
+{
+	print{$1, $2, $7}
+};
+
+Systems:
+
+lscpu --> list cpu info
+lsusb --> list usb
+
+Glob and Expand
+*: Match zero or more characters
+?: Match any single characters (expect ".")
+[]: Match any of the eclosed characters
+
+{}: Expand contents
+{A,B...}: Expand each alternatives
+{A..B}: Expand each character in range
+

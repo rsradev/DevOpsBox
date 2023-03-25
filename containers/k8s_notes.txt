@@ -1,0 +1,39 @@
+commands:
+	kubectl apply -f *.yml/yaml  ---> run pod
+	kubectl get all ---> list all pods
+    kubectl get pods -l <job=say-hello --> specific label > 
+    kubectl logs <pod_name>  ---> log pod
+    kubectl exec -it </bin/bash> -- /bin/bash ---> execute command on pod
+    kubectl describe pod/<podname> ---> describes pods
+    kubectl scale deployment/hello --replicas=10
+
+notes:
+    K8s is an open-source system for automating deployments, scaling, and management of containerized applications.
+
+    Ensures Pods(containers) are always running
+    Make scaling your apps easier
+    Takes care of networking between the Pods
+
+    K8s runs your worload by placing containers into Pods to run Nodes. A node may be a virtual or physicaal machine. Each node contins the services necessary to run Pods, managed by the control plane.
+
+
+
+    K8s is an open-source system for automating deployments, scaling, and management of containerized applications.
+
+    Ensures Pods(containers) are always running
+    Make scaling your apps easier
+    Takes care of networking between the Pods
+
+    K8s runs your worload by placing containers into Pods to run Nodes. A node may be a virtual or physicaal machine. Each node contins the services necessary to run Pods, managed by the control plane.
+
+    Pods are the smallest deployable units of computiong that you can create and manage in K8s
+
+    A pod is a group of one or more containers, with shared storage/network resources, and a specifiaction for how to run the containers.
+
+
+    Deployments ---> You describe a desired state in Deployment, and the Deployment Controller changes the actual state of the desired state at a controlled rate. You can define Deployments to create bew ReplicaSets, or to remove existing Deployment and adopt all their resourses with new Deployment
+
+    Services --> An abstract way to expose and application running on a set of Pods as a network service.
+    With k8s you don't need to modify your application to use an unfamiliar service discovery mechanism. K8s give Pods their own IP addresses and a single DNS name for a set of Pods, and can load-balacnce across them.
+
+    Ingresses - An API object that manages external access to the services in a cluster, typically HTTP. Ingress may provide load balancing, SSL temination and name-based virtual hosting.

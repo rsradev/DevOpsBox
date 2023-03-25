@@ -1,0 +1,8 @@
+total 24K
+drwxrwxr-x  2 raddy raddy 4.0K Mar 28 10:21 ./
+drwxrwxr-x 11 raddy raddy 4.0K Mar 28 10:18 ../
+-rw-rw-r--  1 raddy raddy  393 Mar 28 10:21 notes.txt
+-rw-rw-r--  1 raddy raddy    0 Mar 28 10:21 output.txt
+-rwxrwxr-x  1 raddy raddy   96 Mar 27 20:09 test.sh*
+-rw-rw-r--  1 raddy raddy   28 Mar 27 22:25 test.sort
+-rw-rw-r--  1 raddy raddy   74 Mar 27 23:49 test.sort1

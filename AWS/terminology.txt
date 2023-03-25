@@ -1,0 +1,83 @@
+Locations:
+Region > Availbility zones > Edge location
+
+IaaS: EC2
+PaaS: EMR
+SaaS: Office365
+FaaS: Lambda
+
+
+Sotrage Service:
+	-> S3
+	-> Glacier
+	-> EBS
+	-> EFS
+
+
+Networking:
+
+	Route 53 - DNS service of AWS
+
+	1. Create VPC then create IGW(internet gateway) then attache them;
+	2. Create route 0.0.0.0/0 attached it to IGW;
+	3. Create ACLs connect to VPC add rules (Outbound/inbound) Allow HTTP to all(0.0.0.0/0);
+	4. Create Subnet and asssociate them with ACLs;
+
+
+
+
+
+
+Managment and governance:
+	Cloud formation - foundational service that allows to create resource(Templates - json or YAML) 
+		-avoid to use specifically defined resource name
+	Cloud Watch - monitoring and observatory service
+	Autoscaling - HA/FT or cost management(saving) regarding the needs
+
+Compute:
+	EC2 - Elastic Compute Cloud(EC2)
+
+Storage:
+	S3 -> Objects in buckets:
+		- Standard
+		- Intelligent Tiering
+		- Infrequent
+		- One Zone Infrequent	
+		- Glacier
+		- Glacier Deep Archive
+		- Deep Archive
+		- Outposts
+
+Security:
+	AWS - responisble for the security OF the cloud
+	User - responsible for security In the clould
+	Well-AF: Operational Excellence; Security; Reliability; Performance Efficiency; Cost Optimization;
+	 
+Collection introduction:
+	Real Time: Kinesis Data Stream/Analytics
+	Near Real Time: Kinesis Firehose
+	Batch: Data Pipeline
+
+Kinesis: Stream -> Analytcis -> Firehose
+	
+Producers:                                                                      Consumers:
+    Apps, Clients, SDK, KPL, Kinesis Agents ->(1MB/SEC pr 1K msg/sec per shard) --> Apps, Lambda, Kinesis Firehose
+
+Athena:
+	
+	presto --> under the hood 
+
+	formats:
+		CSV 
+		JSON
+		ORC
+		Parquet
+		Avro
+
+
+                                                                                        
+~                                                                                                                             
+~                                                                                                                             
+~                                                                                                                             
+~                                     
+	

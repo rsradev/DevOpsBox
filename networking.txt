@@ -1,0 +1,46 @@
+ISO - OSI(Open System interconnection)
+
+OSI Model:
+    7. Application(data) -> network Porcess Application(Browser)
+    6. Presentation(data) -> Data represenation & encryption
+    5. Session(data) -> Interhost communication
+    4. Transport(segments)-> Ent to End connection and realiability
+    3. Network(packets) -> Path Determination & logical addressing(IP)(Router)
+    2. Data Link(frames) -> Physical addressing(MAC & LLC)(Switch)
+    1. Physical(bits) -> Media, Signal and binary Transmission 
+
+7-4 -> host layer
+1-3 -> Media
+services -> is a set of action one layer provided to another(higher) layer
+protocols -> set of rules for exchange info
+inteface -> communication
+
+HTTP:
+
+TC/IP based protocol
+default port: 80(if the port is empty or not given, port 80)
+
+HTTP connectionless -> req <-> res
+HTTP media independent -> any type of data can be sent
+HTTP steatless -> server <-> client know for each other only during the req/res communication
+
+
+          HTTP
+WebClien <---->  WebServer <-> BackEnd <-> DB
+
+LAN --> Local Area Network
+WAN --> Wide Area Network
+MAN --> Metropolitan Area Network
+CAN --> Campus Area Network(Intranet in Uni/Ofiice etc)
+PAN --> Personal Area Network
+
+Switches --> sharing resources by them
+
+Commands:
+
+netstat -antp --> all open ports on the current machine
+ss -tunlp ---> =======/=======/=======/========/======
+nmap --> scan for open ports(like telnet but more hacky)
+dig --> dns lookup
+mtr --> traceroute
+arp --> kernel's arp tables
