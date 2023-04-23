@@ -4,6 +4,8 @@ man git
 The stages of tracked files --|--> modified
                               |--> staged
 
+HEAD is just a reference to a branch
+
 
 git init	Initialize a local Git repository
 git clone ssh://git@github.com/[username]/[repository-name].git	Create a local copy of a remote repository
