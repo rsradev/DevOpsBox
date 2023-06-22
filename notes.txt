@@ -1,6 +1,10 @@
 TCP/Inspection
 
 OSI Layers:
+DevOps: DevOps U -> DevOps PS -> DevOps2 U
+Data: Spark PS -> Airflow U -> Kafka YT/NU -> AWS NU / ACG (||) -> ES NU
+Python: Micro NU -> Deep U -> Alog U -> FastAPI U(||) ..
+ML: Pre U -> Math U -> MLZTM U (||) -> MLSD -> RSSD ...  
 
 1. Physical
 2. Data
