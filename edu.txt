@@ -23,7 +23,7 @@
 #    JS(W3)*,
 #    Web(U),
 #    JSAlgo(U),
-#5. Block ->
+# 5. Block ->
 #    EaS(NU)*,
 #    CryptoZ*,
 #    wpBTC*,
