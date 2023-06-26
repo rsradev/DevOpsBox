@@ -6,11 +6,12 @@
 2. DevOps -> 
     BtM(U) + Beg PS *,
     Dep(U),
+    Go(PS)
 3. ML ->
     DeepDive(U),
-    Multi(U), 
+    Multi(U),
     Algo(U),
-    MAN repo*, 
+    MAN repo*,
     Math(U),
     Pre(U),
     MLs(U),
@@ -23,11 +24,11 @@
     Web(U),
     JSAlgo(U),
 5. Block ->
-    1. EaS(NU)*
-    2. CryptoZ*
-    3. wpBTC*
-    4. wpETH*
-    5. Learn block..
+    EaS(NU)*,
+    CryptoZ*,
+    wpBTC*,
+    wpETH*,
+    Learn block..
 
     
     
