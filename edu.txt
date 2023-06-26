@@ -1,0 +1,31 @@
+1. Data -> 
+    Spark(PS, U), 
+    Airflow(U),
+    Kafka(UT),
+    AWS(NU)
+2. DevOps -> 
+    BtM(U) + Beg PS,
+    Dep(U)
+    Go(PS)
+3. ML ->
+    DeepDive(U)
+    Multi(U)
+    Algo(U)
+    Math(U)
+    Pre(U)
+    MLs(U)
+    TF(U)
+4. Web -> 
+    FastApi(U)
+    MicroPy(NU)
+    MicroJS()
+    JS(U)
+    Web(U)
+    JSAlgo(U)
+5. Block ->
+    1. EaS(NU)
+    2. CryptoZ
+    3. 
+
+    
+    
