@@ -8,8 +8,9 @@
     Dep(U),
 3. ML ->
     DeepDive(U),
-    Multi(U)*, 
-    Algo(U)*,
+    Multi(U), 
+    Algo(U),
+    MAN repo*, 
     Math(U),
     Pre(U),
     MLs(U),
