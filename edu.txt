@@ -8,8 +8,8 @@
     Dep(U),
     Go(PS)
 3. ML ->
-    DeepDive(U),
-    Multi(U),
+    DeepDive(U) *,
+    Multi(U) *,
     Algo(U),
     MAN repo*,
     Math(U),
@@ -18,17 +18,17 @@
     TF(U),
 4. Web -> 
     FastApi(U),
-    MicroPy(NU),
-    MicroJS(U),
-    JS(W3)*,
-    Web(U),
-    JSAlgo(U),
-5. Block ->
-    EaS(NU)*,
-    CryptoZ*,
-    wpBTC*,
-    wpETH*,
-    Learn block..
+    MicroPy(NU) *,
+#    MicroJS(U),
+#    JS(W3)*,
+#    Web(U),
+#    JSAlgo(U),
+#5. Block ->
+#    EaS(NU)*,
+#    CryptoZ*,
+#    wpBTC*,
+#    wpETH*,
+#    Learn block..
 
     
     
