@@ -31,4 +31,8 @@
     Learn block..
 
     
-    
+***
+DevOps(U), 
+Airflow(U), 
+Spark(U, PS, YT),
+Python(Multi)      
