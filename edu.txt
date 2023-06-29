@@ -3,6 +3,7 @@
     Airflow(U)*,
     Kafka(UT),
     AWS(NU) *,
+    Scala(YT + PS)
 2. DevOps -> 
     BtM(U) + Beg PS *,
     Dep(U),
@@ -23,6 +24,7 @@
     JS(W3)*,
     Web(U),
     JSAlgo(U),
+    Java(PS)
 5. Block ->
     EaS(NU)*,
     CryptoZ*,
