@@ -49,4 +49,10 @@ func main() {
 
 	//f = i //error
 
+	a, b := 10, 5
+
+	c := a == b
+
+	fmt.Println(c)
+
 }
