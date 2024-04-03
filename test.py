@@ -16,3 +16,10 @@ if __name__ == '__main__':
     for _ in range(5):
         p = multiprocessing.Process(target=do_work, args=())
         p.start()
+
+
+
+test = time.import
+
+
+

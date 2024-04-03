@@ -1,10 +1,6 @@
 TCP/Inspection
 
 OSI Layers:
-DevOps: DevOps U -> DevOps PS -> DevOps2 U
-Data: Spark PS -> Airflow U -> Kafka YT/NU -> AWS NU / ACG (||) -> ES NU
-Python: Micro NU -> Deep U -> Alog U -> FastAPI U(||) ..
-ML: Pre U -> Math U -> MLZTM U (||) -> MLSD -> RSSD ...  
 
 1. Physical
 2. Data
@@ -15,12 +11,6 @@ ML: Pre U -> Math U -> MLZTM U (||) -> MLSD -> RSSD ...
 7. Application
 
 ping/pong --> ICMP Echo/Reply
-	
-	
-
-
-
-
 
 Linux dist = kernel + collections of software
 
@@ -143,3 +133,16 @@ Glob and Expand
 {A,B...}: Expand each alternatives
 {A..B}: Expand each character in range
 
+
+Mounting
+
+fdisk -l
+
+cd /etc/fstab
+
+device 		point
+/dev/xvdf1 	/var/www/html/images ext4 defaults 0 0 
+
+mount -a
+
+vim /etc/selinux -> disabel

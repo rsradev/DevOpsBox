@@ -7,6 +7,11 @@ SaaS: Office365
 FaaS: Lambda
 
 
+IAM:
+
+	
+
+
 Sotrage Service:
 	-> S3
 	-> Glacier
@@ -14,7 +19,14 @@ Sotrage Service:
 	-> EFS
 
 
+	EBS type:
+		General purpose SSD (gp2) 
+		General purpose SSD (gp3) 
+		Provisioned IOPS SSD (io1)
+
+
 Networking:
+
 
 	Route 53 - DNS service of AWS
 
@@ -23,9 +35,9 @@ Networking:
 	3. Create ACLs connect to VPC add rules (Outbound/inbound) Allow HTTP to all(0.0.0.0/0);
 	4. Create Subnet and asssociate them with ACLs;
 
-
-
-
+	VPC: 
+		logically isolated part of AWS cloud where you cn defined your 
+		own network
 
 
 Managment and governance:
@@ -74,10 +86,4 @@ Athena:
 		Parquet
 		Avro
 
-
-                                                                                        
-~                                                                                                                             
-~                                                                                                                             
-~                                                                                                                             
-~                                     
 	
