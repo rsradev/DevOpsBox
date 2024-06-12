@@ -1,0 +1,2022 @@
+    1  passwd
+    2  exit
+    3  ls
+    4  ll
+    5  exit
+    6  ls
+    7  exit
+    8  cat /etc/passwd
+    9  cat /etc/passwd | vm
+   10  cat /etc/passwd vm
+   11  cat /etc/passwd | grep vm
+   12  go
+   13  python
+   14  ls
+   15  exit
+   16  passwd
+   17  exit
+   18  getenforce
+   19  ll -Z /etc/shadow
+   20  restorecon /etc/shadow
+   21  ll -Z /etc/shadow
+   22  setenforce 1
+   23  getenforce
+   24  exit
+   25  ls
+   26  exit
+   27  ls
+   28  htop
+   29  top
+   30  vim
+   31  pwd
+   32  cd ..
+   33  ls
+   34  cd home/
+   35  ll
+   36  useradd radi
+   37  ls
+   38  sudo passwd radi
+   39  su - radi
+   40  exit
+   41  ls
+   42  visudo
+   43  vim /etc/sudoers
+   44  cat /etc/sudoers.d/
+   45  adduser radi sudo
+   46  sudo adduser radi sudo
+   47  sudo usermod -a -G sudo radi
+   48  vim /etc/sudoers
+   49  ls
+   50  cd /etc/
+   51  ls
+   52  vim sudo.conf 
+   53  vim /etc/sudoers
+   54  chmod 600 /etc/sudoers
+   55  vim /etc/sudoers
+   56  source /etc/sudoers
+   57  vim /etc/sudoers
+   58  su - radi
+   59  exit
+   60  cd ../home/
+   61  ls
+   62   chgrp -R sharegrp shared/
+   63  ll
+   64  chmod g+s shared/
+   65  cd shared/
+   66  touch test
+   67  ll
+   68  exit
+   69  su - sarah
+   70  history
+   71  history 1000
+   72  cho $HISTSEdsfsd
+   73  echo $HISTSIZE
+   74  history | grep group
+   75  history | +
+   76  history | grep +
+   77  history | gre +
+   78  ls
+   79  exit
+   80  passwd sarah
+   81  usermod sarah -a -G sharegrp
+   82  groups sarah
+   83  useradd harry
+   84  passwd harry
+   85  groupmod -a -U harry sharegrp
+   86  groups harry
+   87  gropus --version
+   88  groups --version
+   89  groups harry
+   90  grep sharegrp /etc/group
+   91  useradd -M georgo
+   92  usermod -L georgo 
+   93  passwd georgo 
+   94  su - georgo 
+   95  usermod -r -s /bin/nologin georgo
+   96  userdel georgo 
+   97  adduser -r -s /bin/nologin georgo
+   98  adduser -r -s /sbin/nologin georgo
+   99  userdel -r georgo 
+  100  adduser -r -s /sbin/nologin georgo
+  101  passwd georgo 
+  102  su - georgo 
+  103  ls
+  104  cd ..
+  105  ls
+  106  cd home/
+  107  ls
+  108  mkdir shared 
+  109  ll
+  110  chgrp sharegrp -r  shared 
+  111  chown sharegrp:sharegrp -r  shared 
+  112  chown sharegrp:sharegrp -r shared 
+  113  chown *:sharegrp -r shared 
+  114  history | grep chown
+  115  history | grep chmod
+  116  chown sharegrp:root shared/
+  117  chown root:sharegrp shared/
+  118  cd shared/
+  119  touch test
+  120  ll
+  121  rm test 
+  122  cd ..
+  123  ls
+  124  chown root:sharegrp -r shared/
+  125  chown -r root:sharegrp shared/
+  126  ll
+  127  chmod 770 shared/
+  128  ll
+  129  cd shared/
+  130  cd ..
+  131  ls
+  132  su - talusan 
+  133  exit
+  134  cd /usr/share/
+  135  ls
+  136  cd dict/
+  137  ls
+  138  cat linux.words 
+  139  ls
+  140  cd wo
+  141  cat words 
+  142  cat words | grep virus
+  143  cat words | grep virus >> lines
+  144  cat lines 
+  145  vim lines 
+  146  mv lines ~
+  147  cd
+  148  ll
+  149  cat lines 
+  150  cd /usr/share/dict/
+  151  ls
+  152  cat words 
+  153  cat words | grpe virus
+  154  cat words | grep virus
+  155  vim test.txt
+  156  cat test.txt | grep lal
+  157  vim test.txt 
+  158  find / -name games
+  159  find / -user games
+  160  find '/' -user games
+  161  cd /proc/11049/
+  162  cp /usr/lib/udev/rules.d/98-micro.rules ~
+  163  cp /usr/lib64//libinter.so.1.0.0 ~
+  164  cp /usr/local/games/roomm 
+  165  cd
+  166  ls
+  167  ll
+  168  cd /usr/share/dict/
+  169  ll
+  170  rm test.txt 
+  171  find /local/ -user games
+  172  find usr/local/ -user games
+  173  find /usr/local/ -user games
+  174  cd /usr/local/games/
+  175  ll
+  176  cp roomm ~
+  177  cd
+  178  find / -user games
+  179  cd
+  180  ll
+  181  chmod games:user 98-micro.rules 
+  182  chown games:user 98-micro.rules 
+  183  chown games:users 98-micro.rules 
+  184  chown games:users libinter.so.1.0.0 
+  185  chown games:users roomm 
+  186  find / -user games
+  187  ls
+  188  mkdir foundfiles
+  189  mv 98-micro.rules foundfiles/
+  190  mv libinter.so.1.0.0 foundfiles/
+  191  mv roomm foundfiles/
+  192  ll
+  193  pwd
+  194  find / -user games
+  195  cat /usr/share/doc/setup*/uidgid
+  196  ls
+  197  vim /etc/login.defs 
+  198  useradd -u 2985 talusan
+  199  su - talusan
+  200  history
+  201  groupadd sharegrp
+  202  useradd sarah
+  203  groups sarah
+  204  su - sarah
+  205  sarah passwd
+  206  su - sarah
+  207  exit
+  208  ls
+  209  cat lines 
+  210  cd foundfiles/
+  211  ls
+  212  man
+  213  man users
+  214  cut -d: -f1 /etc/passwd
+  215  цд
+  216  cd
+  217  ls
+  218  cd ..
+  219  ls
+  220  cd home/
+  221  ls
+  222  cd shared/
+  223  ls
+  224  su - georgo
+  225  su georgo
+  226  su - sarah
+  227  ls
+  228  cd ..
+  229  ls
+  230  ll
+  231  su - talusan
+  232  exit
+  233  exit5
+  234  exit
+  235  ls
+  236  lsblk
+  237  mkfs
+  238  mkfs.
+  239  cat /proc/partitions
+  240  exit
+  241  ls
+  242  reboot
+  243  ls
+  244  reboot
+  245  root
+  246  reboot
+  247  ls
+  248  pwd
+  249  reboot
+  250  passwd
+  251  exit
+  252  reboot
+  253  passwd
+  254  exit
+  255  ls
+  256  getenforce
+  257  ll -Z /etc/shadow
+  258  setenforce 1
+  259  restorecon /etc/shadow
+  260  ll -Z /etc/shadow
+  261  setenforce 1
+  262  getenforce
+  263  ll -Z /etc/shadow
+  264  reboot
+  265  k
+  266  ls
+  267  exit
+  268  ls
+  269  lsblk
+  270  rpm
+  271  rpm -q lvm2 xfsporgs
+  272  rpm update
+  273  rpm upgrade
+  274  pvs
+  275  ls
+  276  tar -cvzf kernelmod.tgz  /lib/modules/5.14.0-70.17.1.el9_0.x86_64/kernel
+  277  ll
+  278  rm kernelmod.tgz 
+  279  gzip -kr kernelmod.tgz  /lib/modules/5.14.0-70.17.1.el9_0.x86_64/kernel
+  280  ls
+  281  gzip -cr /lib/modules/5.14.0-70.17.1.el9_0.x86_64/kernel > kernelmod.tgz
+  282  ll
+  283  ll -a
+  284  ll -h
+  285  ls
+  286  scp . vm149:/backups/guest_backup.tar.bz2
+  287  scp . guest101@vm149:/backups/guest_backup.tar.bz2
+  288  ll
+  289  scp guest101@vm149:/backups/guest_backup.tar.bz2 .
+  290  ll
+  291  ls
+  292  gzip -l guest_backup.tar.bz2
+  293  untar guest_backup.tar.bz2 
+  294  tar -xvf guest_backup.tar.bz2 
+  295  ls
+  296  cd guest_backup/
+  297  ls
+  298  cat README 
+  299  ls
+  300  cd ..
+  301  ls
+  302  rm -rf guest_backup
+  303  tar -xf guest_backup.tar.bz2 --wildcards 'guest101.txt'
+  304  rm -rf guest_backup.tar.bz2 
+  305  scp guest101@vm149:/backups/guest_backup.tar.bz2 .
+  306  ll
+  307  tar -xf guest_backup.tar.bz2 --wildcards '*.txt'
+  308  cd guest_backup/
+  309  ll
+  310  mv guest101.txt ../
+  311  ll
+  312  cd ..
+  313  ls
+  314  cat guest101.txt 
+  315  ls
+  316  rm -rf guest_backup
+  317  rm guest_backup.tar.bz2 
+  318  ll
+  319  scp guest101@vm149:/backups/guest_backup.tar.bz2 .
+  320  tar -tvf guest_backup.tar.bz2 
+  321  ll
+  322  tar -xf guest_backup.tar.bz2 --wildcards 'guest_backup/guest101.txt'
+  323  ll
+  324  lsgrp
+  325  grp
+  326  less /etc/passwd | grep sarah
+  327  cat /etc/group
+  328  cat /etc/group 
+  329  id -Gn sarah
+  330  exit
+  331  ls
+  332  rpm -q lvm2 xfsprogs 
+  333  pvs
+  334  lsblk
+  335  df -h
+  336  lsblk
+  337  sudo pvscan
+  338  parted
+  339  vgdisplay
+  340  lsblk
+  341  sudo pvcreate /dev/sr0 
+  342  swapoff --all
+  343  lsblk
+  344  df -h
+  345  vim /etc/fstab 
+  346  lsblk
+  347  pvs
+  348  lvdisplay
+  349  df -h
+  350  lvreseize /dev/mapper/vg_os-lv_root -L +500mb
+  351  lvresize /dev/mapper/vg_os-lv_root -L +500mb
+  352  df -h
+  353  lsblk
+  354  ll
+  355  df -h
+  356  resize2fs /dev/mapper/vg_os-lv_root 
+  357  ll
+  358  lvdisplay
+  359  df -h
+  360  lsblk
+  361  sudo dmesg | grep -i sd
+  362   sudo fdisk -l | grep -i /dev/sd
+  363  uid root 
+  364  id root 
+  365  ll
+  366  lsblk
+  367  df -h
+  368  history
+  369  lvextend man
+  370  lvextend --help
+  371  lsblk
+  372  df -h
+  373  lvextend -L 200MB /dev/mapper/vg_os-lv_root
+  374  df -h
+  375  lsblk
+  376  vgdisplay development
+  377  lsblk
+  378  vgcreate development /dev/sda
+  379  vgcreate development /dev/sda2 
+  380  ll /dev/ 
+  381  vgcreate development /dev/sda1
+  382  vgcreate development /dev/sr0
+  383  sudo pvcreate /dev/sr0 
+  384  lsblk
+  385  sudo pvcr /dev/sda1 
+  386  vgcreate development /dev/sda1
+  387  vgcreate development /dev/sda
+  388  vgcreate development /dev/sda1
+  389  mkdir /data/engine
+  390  mkdir -p /data/engine
+  391  ls
+  392  mkdir data
+  393  ll
+  394  cd data/
+  395  mkdir engine
+  396  ls
+  397  cd ..
+  398  ls
+  399  lsblk
+  400  cat /proc/partitions 
+  401  fdisk -l /dev/sda
+  402  history
+  403  ls
+  404  fdisk /dev/sda
+  405  ll
+  406  lsblk
+  407  cat /etc/fstab 
+  408  reboot
+  409  lsblk
+  410  cd /run/systemd/
+  411  ll
+  412  cd
+  413  ls
+  414  vim /etc/fstab 
+  415  tree data
+  416  vim /etc/fstab 
+  417  reboot
+  418  ls
+  419  vim /etc/fstab 
+  420  reboot
+  421  parted /dev/sda3 
+  422  ls
+  423  lsblk
+  424  fdisk /dev/sda3 
+  425  parted /dev/sda rm 3
+  426  lsblk
+  427  mount -a
+  428  lsblk
+  429  df -h
+  430  fdiks -l
+  431  fdisk -l
+  432  ll
+  433  pwd
+  434  cd ..
+  435  ll
+  436  cd data/
+  437  ls
+  438  cd engine/
+  439  ls
+  440  cd ..
+  441  ls
+  442  cd egine/
+  443  ls
+  444  ll
+  445  ls
+  446  cd ..
+  447  ls
+  448  ls -lah
+  449  ll 
+  450  rm -r egine/
+  451  ls
+  452  cd ..
+  453  ls
+  454  cd home/
+  455  ls
+  456  blkid
+  457  history
+  458  cd
+  459  vim .bashrc 
+  460  source .bashrc 
+  461  history
+  462  blkid | grep sda1 | awk '{ print $2 }'
+  463  blkid | grep sda1
+  464  python
+  465  l
+  466  htop
+  467  top
+  468  mount | grep tmp
+  469  free -m
+  470  swap -a
+  471  swapon -a
+  472  fdisk /dev/sda
+  473  lsblk
+  474  fdisk -l /dev/sda
+  475  mkswap /dev/sda3 
+  476  swapon /dev/sda3
+  477  freem 0m
+  478  freem -m
+  479  free -m
+  480  vim /etc/fstab 
+  481  swapoff /dev/sda3 
+  482  free -m
+  483  swapon /dev/sda3
+  484  free -m
+  485  reboot
+  486  free -m
+  487  df -h
+  488  lsblk
+  489  vgcreate engineering /dev/sda2
+  490  gdisk /dev/sda
+  491  fdisk /dev/sda
+  492  df -l
+  493  lsblk
+  494  pvcreate /dev/sda4 
+  495  ll
+  496  lsblk
+  497  vgcreate -s 8M engineering /dev/sda4 
+  498  vgs
+  499  vgdisplay
+  500  vgrename engineering development
+  501  lvcreate -L 168MB -n engineering /dev/development
+  502  lvs
+  503  mkfs.xfs /dev/development/engineering 
+  504  vim /etc/fstab 
+  505  mount -a
+  506  reboot
+  507  lsblk
+  508  history
+  509  lsblk
+  510  df -h
+  511  ls -l /dev/mapper/vg_os-lv_root 
+  512  vgs 
+  513  vgs
+  514  lvextend -r -l 25%FREE /dev/mapper/vg_os-lv_root
+  515  vgs 
+  516  df -h
+  517  lvextend -r -l 50%FREE /dev/mapper/vg_os-lv_root
+  518  df -h
+  519  resize2fs
+  520  resize2fs /dev/mapper/vg_os-lv_root 
+  521  xfs_growfs /dev/mapper/vg_os-lv_root 
+  522  df -h
+  523  reboot
+  524  ls
+  525  cd data/
+  526  ls
+  527  cd ..
+  528  l
+  529  ls
+  530  rm -rf data/
+  531  ls
+  532  cd ..
+  533  ls
+  534  cd data/
+  535  ls
+  536  cd engine/
+  537  df -h
+  538  ll
+  539  ll -a
+  540  df -h
+  541  lsblk
+  542  free -m
+  543  history
+  544      1  passwd
+  545      2  exit
+  546      3  ls
+  547      4  ll
+  548      5  exit
+  549      6  ls
+  550      7  exit
+  551      8  cat /etc/passwd
+  552      9  cat /etc/passwd | vm
+  553     10  cat /etc/passwd vm
+  554     11  cat /etc/passwd | grep vm
+  555     12  go
+  556     13  python
+  557     14  ls
+  558     15  exit
+  559     16  passwd
+  560     17  exit
+  561     18  getenforce
+  562     19  ll -Z /etc/shadow
+  563     20  restorecon /etc/shadow
+  564     21  ll -Z /etc/shadow
+  565     22  setenforce 1
+  566     23  getenforce
+  567     24  exit
+  568     25  ls
+  569     26  exit
+  570     27  ls
+  571     28  htop
+  572     29  top
+  573     30  vim
+  574     31  pwd
+  575     32  cd ..
+  576     33  ls
+  577     34  cd home/
+  578     35  ll
+  579     36  useradd radi
+  580     37  ls
+  581     38  sudo passwd radi
+  582     39  su - radi
+  583     40  exit
+  584     41  ls
+  585     42  visudo
+  586     43  vim /etc/sudoers
+  587     44  cat /etc/sudoers.d/
+  588     45  adduser radi sudo
+  589     46  sudo adduser radi sudo
+  590     47  sudo usermod -a -G sudo radi
+  591     48  vim /etc/sudoers
+  592     49  ls
+  593     50  cd /etc/
+  594     51  ls
+  595     52  vim sudo.conf
+  596     53  vim /etc/sudoers
+  597     54  chmod 600 /etc/sudoers
+  598     55  vim /etc/sudoers
+  599     56  source /etc/sudoers
+  600     57  vim /etc/sudoers
+  601     58  su - radi
+  602     59  exit
+  603     60  cd ../home/
+  604     61  ls
+  605     62   chgrp -R sharegrp shared/
+  606     63  ll
+  607     64  chmod g+s shared/
+  608     65  cd shared/
+  609     66  touch test
+  610     67  ll
+  611     68  exit
+  612     69  su - sarah
+  613     70  history
+  614     71  history 1000
+  615     72  cho $HISTSEdsfsd
+  616     73  echo $HISTSIZE
+  617     74  history | grep group
+  618     75  history | +
+  619     76  history | grep +
+  620     77  history | gre +
+  621     78  ls
+  622     79  exit
+  623     80  passwd sarah
+  624     81  usermod sarah -a -G sharegrp
+  625     82  groups sarah
+  626     83  useradd harry
+  627     84  passwd harry
+  628     85  groupmod -a -U harry sharegrp
+  629     86  groups harry
+  630     87  gropus --version
+  631     88  groups --version
+  632     89  groups harry
+  633     90  grep sharegrp /etc/group
+  634     91  useradd -M georgo
+  635     92  usermod -L georgo
+  636     93  passwd georgo
+  637     94  su - georgo
+  638     95  usermod -r -s /bin/nologin georgo
+  639     96  userdel georgo
+  640     97  adduser -r -s /bin/nologin georgo
+  641     98  adduser -r -s /sbin/nologin georgo
+  642     99  userdel -r georgo
+  643    100  adduser -r -s /sbin/nologin georgo
+  644    101  passwd georgo
+  645    102  su - georgo
+  646    103  ls
+  647    104  cd ..
+  648    105  ls
+  649    106  cd home/
+  650    107  ls
+  651    108  mkdir shared
+  652    109  ll
+  653    110  chgrp sharegrp -r  shared
+  654    111  chown sharegrp:sharegrp -r  shared
+  655    112  chown sharegrp:sharegrp -r shared
+  656    113  chown *:sharegrp -r shared
+  657    114  history | grep chown
+  658    115  history | grep chmod
+  659    116  chown sharegrp:root shared/
+  660    117  chown root:sharegrp shared/
+  661    118  cd shared/
+  662    119  touch test
+  663    120  ll
+  664    121  rm test
+  665    122  cd ..
+  666    123  ls
+  667    124  chown root:sharegrp -r shared/
+  668    125  chown -r root:sharegrp shared/
+  669    126  ll
+  670    127  chmod 770 shared/
+  671    128  ll
+  672    129  cd shared/
+  673    130  cd ..
+  674    131  ls
+  675    132  su - talusan
+  676    133  exit
+  677    134  cd /usr/share/
+  678    135  ls
+  679    136  cd dict/
+  680    137  ls
+  681    138  cat linux.words
+  682    139  ls
+  683    140  cd wo
+  684    141  cat words
+  685    142  cat words | grep virus
+  686    143  cat words | grep virus >> lines
+  687    144  cat lines
+  688    145  vim lines
+  689    146  mv lines ~
+  690    147  cd
+  691    148  ll
+  692    149  cat lines
+  693    150  cd /usr/share/dict/
+  694    151  ls
+  695    152  cat words
+  696    153  cat words | grpe virus
+  697    154  cat words | grep virus
+  698    155  vim test.txt
+  699    156  cat test.txt | grep lal
+  700    157  vim test.txt
+  701    158  find / -name games
+  702    159  find / -user games
+  703    160  find '/' -user games
+  704    161  cd /proc/11049/
+  705    162  cp /usr/lib/udev/rules.d/98-micro.rules ~
+  706    163  cp /usr/lib64//libinter.so.1.0.0 ~
+  707    164  cp /usr/local/games/roomm
+  708    165  cd
+  709    166  ls
+  710    167  ll
+  711    168  cd /usr/share/dict/
+  712    169  ll
+  713    170  rm test.txt
+  714    171  find /local/ -user games
+  715    172  find usr/local/ -user games
+  716    173  find /usr/local/ -user games
+  717    174  cd /usr/local/games/
+  718    175  ll
+  719    176  cp roomm ~
+  720    177  cd
+  721    178  find / -user games
+  722    179  cd
+  723    180  ll
+  724    181  chmod games:user 98-micro.rules
+  725    182  chown games:user 98-micro.rules
+  726    183  chown games:users 98-micro.rules
+  727    184  chown games:users libinter.so.1.0.0
+  728    185  chown games:users roomm
+  729    186  find / -user games
+  730    187  ls
+  731    188  mkdir foundfiles
+  732    189  mv 98-micro.rules foundfiles/
+  733    190  mv libinter.so.1.0.0 foundfiles/
+  734    191  mv roomm foundfiles/
+  735    192  ll
+  736    193  pwd
+  737    194  find / -user games
+  738    195  cat /usr/share/doc/setup*/uidgid
+  739    196  ls
+  740    197  vim /etc/login.defs
+  741    198  useradd -u 2985 talusan
+  742    199  su - talusan
+  743    200  history
+  744    201  groupadd sharegrp
+  745    202  useradd sarah
+  746    203  groups sarah
+  747    204  su - sarah
+  748    205  sarah passwd
+  749    206  su - sarah
+  750    207  exit
+  751    208  ls
+  752    209  cat lines
+  753    210  cd foundfiles/
+  754    211  ls
+  755    212  man
+  756    213  man users
+  757    214  cut -d: -f1 /etc/passwd
+  758    215  цд
+  759    216  cd
+  760    217  ls
+  761    218  cd ..
+  762    219  ls
+  763    220  cd home/
+  764    221  ls
+  765    222  cd shared/
+  766    223  ls
+  767    224  su - georgo
+  768    225  su georgo
+  769    226  su - sarah
+  770    227  ls
+  771    228  cd ..
+  772    229  ls
+  773    230  ll
+  774    231  su - talusan
+  775    232  exit
+  776    233  exit5
+  777    234  exit
+  778    235  ls
+  779    236  lsblk
+  780    237  mkfs
+  781    238  mkfs.
+  782    239  cat /proc/partitions
+  783    240  exit
+  784    241  ls
+  785    242  reboot
+  786    243  ls
+  787    244  reboot
+  788    245  root
+  789    246  reboot
+  790    247  ls
+  791    248  pwd
+  792    249  reboot
+  793    250  passwd
+  794    251  exit
+  795    252  reboot
+  796    253  passwd
+  797    254  exit
+  798    255  ls
+  799    256  getenforce
+  800    257  ll -Z /etc/shadow
+  801    258  setenforce 1
+  802    259  restorecon /etc/shadow
+  803    260  ll -Z /etc/shadow
+  804    261  setenforce 1
+  805    262  getenforce
+  806    263  ll -Z /etc/shadow
+  807    264  reboot
+  808    265  k
+  809    266  ls
+  810    267  exit
+  811    268  ls
+  812    269  lsblk
+  813    270  rpm
+  814    271  rpm -q lvm2 xfsporgs
+  815    272  rpm update
+  816    273  rpm upgrade
+  817    274  pvs
+  818    275  ls
+  819    276  tar -cvzf kernelmod.tgz  /lib/modules/5.14.0-70.17.1.el9_0.x86_64/kernel
+  820    277  ll
+  821    278  rm kernelmod.tgz
+  822    279  gzip -kr kernelmod.tgz  /lib/modules/5.14.0-70.17.1.el9_0.x86_64/kernel
+  823    280  ls
+  824    281  gzip -cr /lib/modules/5.14.0-70.17.1.el9_0.x86_64/kernel > kernelmod.tgz
+  825    282  ll
+  826    283  ll -a
+  827    284  ll -h
+  828    285  ls
+  829    286  scp . vm149:/backups/guest_backup.tar.bz2
+  830    287  scp . guest101@vm149:/backups/guest_backup.tar.bz2
+  831    288  ll
+  832    289  scp guest101@vm149:/backups/guest_backup.tar.bz2 .
+  833    290  ll
+  834    291  ls
+  835    292  gzip -l guest_backup.tar.bz2
+  836    293  untar guest_backup.tar.bz2
+  837    294  tar -xvf guest_backup.tar.bz2
+  838    295  ls
+  839    296  cd guest_backup/
+  840    297  ls
+  841    298  cat README
+  842    299  ls
+  843    300  cd ..
+  844    301  ls
+  845    302  rm -rf guest_backup
+  846    303  tar -xf guest_backup.tar.bz2 --wildcards 'guest101.txt'
+  847    304  rm -rf guest_backup.tar.bz2
+  848    305  scp guest101@vm149:/backups/guest_backup.tar.bz2 .
+  849    306  ll
+  850    307  tar -xf guest_backup.tar.bz2 --wildcards '*.txt'
+  851    308  cd guest_backup/
+  852    309  ll
+  853    310  mv guest101.txt ../
+  854    311  ll
+  855    312  cd ..
+  856    313  ls
+  857    314  cat guest101.txt
+  858    315  ls
+  859    316  rm -rf guest_backup
+  860    317  rm guest_backup.tar.bz2
+  861    318  ll
+  862    319  scp guest101@vm149:/backups/guest_backup.tar.bz2 .
+  863    320  tar -tvf guest_backup.tar.bz2
+  864    321  ll
+  865    322  tar -xf guest_backup.tar.bz2 --wildcards 'guest_backup/guest101.txt'
+  866    323  ll
+  867    324  lsgrp
+  868    325  grp
+  869    326  less /etc/passwd | grep sarah
+  870    327  cat /etc/group
+  871    328  cat /etc/group
+  872    329  id -Gn sarah
+  873    330  exit
+  874    331  ls
+  875    332  rpm -q lvm2 xfsprogs
+  876    333  pvs
+  877    334  lsblk
+  878    335  df -h
+  879    336  lsblk
+  880    337  sudo pvscan
+  881    338  parted
+  882    339  vgdisplay
+  883    340  lsblk
+  884    341  sudo pvcreate /dev/sr0
+  885    342  swapoff --all
+  886    343  lsblk
+  887    344  df -h
+  888    345  vim /etc/fstab
+  889    346  lsblk
+  890    347  pvs
+  891    348  lvdisplay
+  892    349  df -h
+  893    350  lvreseize /dev/mapper/vg_os-lv_root -L +500mb
+  894    351  lvresize /dev/mapper/vg_os-lv_root -L +500mb
+  895    352  df -h
+  896    353  lsblk
+  897    354  ll
+  898    355  df -h
+  899    356  resize2fs /dev/mapper/vg_os-lv_root
+  900    357  ll
+  901    358  lvdisplay
+  902    359  df -h
+  903    360  lsblk
+  904    361  sudo dmesg | grep -i sd
+  905    362   sudo fdisk -l | grep -i /dev/sd
+  906    363  uid root
+  907    364  id root
+  908    365  ll
+  909    366  lsblk
+  910    367  df -h
+  911    368  history
+  912    369  lvextend man
+  913    370  lvextend --help
+  914    371  lsblk
+  915    372  df -h
+  916    373  lvextend -L 200MB /dev/mapper/vg_os-lv_root
+  917    374  df -h
+  918    375  lsblk
+  919    376  vgdisplay development
+  920    377  lsblk
+  921    378  vgcreate development /dev/sda
+  922    379  vgcreate development /dev/sda2
+  923    380  ll /dev/
+  924    381  vgcreate development /dev/sda1
+  925    382  vgcreate development /dev/sr0
+  926    383  sudo pvcreate /dev/sr0
+  927    384  lsblk
+  928    385  sudo pvcr /dev/sda1
+  929    386  vgcreate development /dev/sda1
+  930    387  vgcreate development /dev/sda
+  931    388  vgcreate development /dev/sda1
+  932    389  mkdir /data/engine
+  933    390  mkdir -p /data/engine
+  934    391  ls
+  935    392  mkdir data
+  936    393  ll
+  937    394  cd data/
+  938    395  mkdir engine
+  939    396  ls
+  940    397  cd ..
+  941    398  ls
+  942    399  lsblk
+  943    400  cat /proc/partitions
+  944    401  fdisk -l /dev/sda
+  945    402  history
+  946    403  ls
+  947    404  fdisk /dev/sda
+  948    405  ll
+  949    406  lsblk
+  950    407  cat /etc/fstab
+  951    408  reboot
+  952    409  lsblk
+  953    410  cd /run/systemd/
+  954    411  ll
+  955    412  cd
+  956    413  ls
+  957    414  vim /etc/fstab
+  958    415  tree data
+  959    416  vim /etc/fstab
+  960    417  reboot
+  961    418  ls
+  962    419  vim /etc/fstab
+  963    420  reboot
+  964    421  parted /dev/sda3
+  965    422  ls
+  966    423  lsblk
+  967    424  fdisk /dev/sda3
+  968    425  parted /dev/sda rm 3
+  969    426  lsblk
+  970    427  mount -a
+  971    428  lsblk
+  972    429  df -h
+  973    430  fdiks -l
+  974    431  fdisk -l
+  975    432  ll
+  976    433  pwd
+  977    434  cd ..
+  978    435  ll
+  979    436  cd data/
+  980    437  ls
+  981    438  cd engine/
+  982    439  ls
+  983    440  cd ..
+  984    441  ls
+  985    442  cd egine/
+  986    443  ls
+  987    444  ll
+  988    445  ls
+  989    446  cd ..
+  990    447  ls
+  991    448  ls -lah
+  992    449  ll
+  993    450  rm -r egine/
+  994    451  ls
+  995    452  cd ..
+  996    453  ls
+  997    454  cd home/
+  998    455  ls
+  999    456  blkid
+ 1000    457  history
+ 1001    458  cd
+ 1002    459  vim .bashrc
+ 1003    460  source .bashrc
+ 1004    461  history
+ 1005    462  blkid | grep sda1 | awk '{ print $2 }'
+ 1006    463  blkid | grep sda1
+ 1007    464  python
+ 1008    465  l
+ 1009    466  htop
+ 1010    467  top
+ 1011    468  mount | grep tmp
+ 1012    469  free -m
+ 1013    470  swap -a
+ 1014    471  swapon -a
+ 1015    472  fdisk /dev/sda
+ 1016    473  lsblk
+ 1017    474  fdisk -l /dev/sda
+ 1018    475  mkswap /dev/sda3
+ 1019    476  swapon /dev/sda3
+ 1020    477  freem 0m
+ 1021    478  freem -m
+ 1022    479  free -m
+ 1023    480  vim /etc/fstab
+ 1024    481  swapoff /dev/sda3
+ 1025    482  free -m
+ 1026    483  swapon /dev/sda3
+ 1027    484  free -m
+ 1028    485  reboot
+ 1029    486  free -m
+ 1030    487  df -h
+ 1031    488  lsblk
+ 1032    489  vgcreate engineering /dev/sda2
+ 1033    490  gdisk /dev/sda
+ 1034    491  fdisk /dev/sda
+ 1035    492  df -l
+ 1036    493  lsblk
+ 1037    494  pvcreate /dev/sda4
+ 1038    495  ll
+ 1039    496  lsblk
+ 1040    497  vgcreate -s 8M engineering /dev/sda4
+ 1041    498  vgs
+ 1042    499  vgdisplay
+ 1043    500  vgrename engineering development
+ 1044    501  lvcreate -L 168MB -n engineering /dev/development
+ 1045    502  lvs
+ 1046    503  mkfs.xfs /dev/development/engineering
+ 1047    504  vim /etc/fstab
+ 1048    505  mount -a
+ 1049    506  reboot
+ 1050    507  lsblk
+ 1051    508  history
+ 1052    509  lsblk
+ 1053    510  df -h
+ 1054    511  ls -l /dev/mapper/vg_os-lv_root
+ 1055    512  vgs
+ 1056    513  vgs
+ 1057    514  lvextend -r -l 25%FREE /dev/mapper/vg_os-lv_root
+ 1058    515  vgs
+ 1059    516  df -h
+ 1060    517  lvextend -r -l 50%FREE /dev/mapper/vg_os-lv_root
+ 1061    518  df -h
+ 1062    519  resize2fs
+ 1063    520  resize2fs /dev/mapper/vg_os-lv_root
+ 1064    521  xfs_growfs /dev/mapper/vg_os-lv_root
+ 1065    522  df -h
+ 1066    523  reboot
+ 1067    524  ls
+ 1068    525  cd data/
+ 1069    526  ls
+ 1070    527  cd ..
+ 1071    528  l
+ 1072    529  ls
+ 1073    530  rm -rf data/
+ 1074    531  ls
+ 1075    532  cd ..
+ 1076    533  ls
+ 1077    534  cd data/
+ 1078    535  ls
+ 1079    536  cd engine/
+ 1080    537  df -h
+ 1081    538  ll
+ 1082    539  ll -a
+ 1083    540  df -h
+ 1084    541  lsblk
+ 1085    542  free -m
+ 1086    543  history
+ 1087  ls
+ 1088  ll
+ 1089  cat lines 
+ 1090  ll
+ 1091  cd ..
+ 1092  ls
+ 1093  cd ..
+ 1094  l
+ 1095  ls
+ 1096  \
+ 1097  node
+ 1098  perl
+ 1099  perl -v
+ 1100  python -v
+ 1101  ls
+ 1102  df -h
+ 1103  lsblk
+ 1104  exit
+ 1105  ls
+ 1106  cd /var/lib/rpm/
+ 1107  ls
+ 1108  cd
+ 1109  cd /etc/yum.repos.d/rocky
+ 1110  cd /etc/yum.repos.d/
+ 1111  ls
+ 1112  cat rocky.repo 
+ 1113  ls
+ 1114  cat rocky-extras.repo 
+ 1115  yum update
+ 1116  du -h
+ 1117  cd
+ 1118  gu -h
+ 1119  du -h
+ 1120  df -h
+ 1121  rpm -ql
+ 1122  rpm
+ 1123  rpm -ql
+ 1124  rmp -qa
+ 1125  rpm -qa
+ 1126  yum info
+ 1127  lsblk
+ 1128  yum -v repolist
+ 1129  cd /etc/pki/
+ 1130  ls
+ 1131  cd rpm-gpg/
+ 1132  ls
+ 1133  cd ..
+ 1134  ls
+ 1135  my-gpg
+ 1136  mkdir my-gpg
+ 1137  cd my-gpg/
+ 1138  wget https://georgi.mobi/rpm/RPM-GPG-KEY-georgi.mobi
+ 1139  ll
+ 1140  ls
+ 1141  cd ..
+ 1142  ls
+ 1143  cd ..
+ 1144  ls
+ 1145  cd ..
+ 1146  ls
+ 1147  cd etc/
+ 1148  sl
+ 1149  ls
+ 1150  cd yum.repos.d/
+ 1151  ls
+ 1152  vim rocky.repo 
+ 1153  yum-config-manager --add-repo https://georgi.mobi/rpm/students/el9/Packages/
+ 1154  yum-config-manager --add-repo=https://georgi.mobi/rpm/students/el9/Packages/
+ 1155  yum-config-manager --add-repo="https://georgi.mobi/rpm/students/el9/Packages/"
+ 1156  vim myrepo.repo
+ 1157  vim myrepo.repo 
+ 1158  vi myrepo.repo 
+ 1159  vim test.py
+ 1160  cd
+ 1161  ls
+ 1162  ll -a
+ 1163  vim .viminfo 
+ 1164  vim /etc/yum.repos.d/
+ 1165  exit
+ 1166  ls
+ 1167  vim /etc/yum.repos.d/
+ 1168  yum update
+ 1169  yum repolist
+ 1170  vim /etc/yum.repos.d/
+ 1171  yum repolist
+ 1172  yum update
+ 1173  ls
+ 1174  vim /etc/yum.repos.d/
+ 1175  yum update
+ 1176  wget  https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm
+ 1177  gpg --verigy georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm 
+ 1178  gpg --verify georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm 
+ 1179  ll
+ 1180  ls
+ 1181  cd
+ 1182  ls
+ 1183  cd ..
+ 1184  l
+ 1185  vim /etc/yum.repos.d/
+ 1186  ymu update
+ 1187  yum update
+ 1188  rpm -qpi package.rpm
+ 1189  rpm
+ 1190  rpm -qa --qf '%{NAME}-%{VERSION}-%{RELEASE} %{SIGPGP:pgpsig} %{SIGGPG:pgpsig}\n'
+ 1191  ls
+ 1192  yum update
+ 1193  yum upgrade
+ 1194  ls
+ 1195  yum install beer-stu
+ 1196  vim /etc/yum.repos.d/
+ 1197  cd /etc/yum.repos.d/
+ 1198  mv myrepo.repo georgi.mobi-stu.repo
+ 1199  vim georgi.mobi-stu.repo 
+ 1200  yum update
+ 1201  yum remve beer-stu
+ 1202  yum remove beer-stu
+ 1203  yum install beer-stu
+ 1204  rpm -qa gpg-pubkey*
+ 1205  rpm -qpi package.rpm
+ 1206  ls
+ 1207  cd ..
+ 1208  ls
+ 1209  cd yum.repos.d/
+ 1210  ls
+ 1211  cd ..
+ 1212  ls
+ 1213  cd yum
+ 1214  ls
+ 1215  cd vars/
+ 1216  ls
+ 1217  cd ..
+ 1218  ls
+ 1219  yum -v repolist
+ 1220  yum list installed | grep georgi.mobi-stu.repo
+ 1221  rpm -qa --qf '%{NAME}-%{VERSION}-%{RELEASE} %{SIGPGP:pgpsig} %{SIGGPG:pgpsig}\n'
+ 1222  yum -v repolist
+ 1223  rpm -qpi gegeorgi.mobi-stu.repo
+ 1224  rpm -qpi georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm  
+ 1225  rpm -qpi georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm
+ 1226  yum install georgi.mobi
+ 1227  rpm --im
+ 1228  rpm --import /etc/pki/my-gpg/RPM-GPG-KEY-georgi.mobi 
+ 1229  rpm -K
+ 1230  yum list -a
+ 1231  yum list --a
+ 1232  yum repolist -v
+ 1233  yum list georgi.mobi-stu.repo
+ 1234  cd
+ 1235  ls
+ 1236  wget https://georgi.mobi/rpm/students/el9/Packages/
+ 1237  ll
+ 1238  rm index.html 
+ 1239  rpm -K georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm 
+ 1240  history | grep wget
+ 1241  https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm
+ 1242  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm
+ 1243  rpm -K georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm 
+ 1244  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm
+ 1245  rpm -K georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm 
+ 1246  rpm -K georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm 
+ 1247  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm
+ 1248  rpm -K georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1249  ls
+ 1250  rm georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm 
+ 1251  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm
+ 1252  rpm -K georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm 
+ 1253  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.2-1.el9.gm.noarch.rpm
+ 1254  ls
+ 1255  rpm 
+ 1256  rpm -i georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1257  ls
+ 1258  ll -a
+ 1259  cd /var/lib/rpm
+ 1260  ll
+ 1261  cd ..
+ 1262  cd
+ 1263  ls
+ 1264  rpm -i georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm 
+ 1265  rpm -i georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm 
+ 1266  rpm -i georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1267  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-free-release-1.2-1.el9.gm.noarch.rpm 
+ 1268  rpm -i georgi.mobi-free-release-1.2-1.el9.gm.noarch.rpm 
+ 1269  rpm -i georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1270  rpm -i georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm 
+ 1271  rpm -i georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm 
+ 1272  rpm -K georgi.mobi-free-release-1.2-1.el9.gm.noarch.rpm 
+ 1273  cd /var/lib/rpm
+ 1274  ls
+ 1275  rpm -ql gegeorgi.mobi-free-release-1.2-1.el9.gm.noarch.rpm 
+ 1276  rpm -ql georgi.mobi-free-release-1.2-1.el9.gm.noarch.rpm
+ 1277  rpm -ql georgi.mobi
+ 1278  ls
+ 1279  cd
+ 1280  ls
+ 1281  cd ..
+ 1282  ls
+ 1283  ll
+ 1284  cd home/
+ 1285  ls
+ 1286  cd harry/
+ 1287  ls
+ 1288  cd ..
+ 1289  ls
+ 1290  cd shared/
+ 1291  ls
+ 1292  cd ..
+ 1293  ls
+ 1294  cd talusan/
+ 1295  ls
+ 1296  cd ..
+ 1297  ls
+ 1298  cd ..
+ 1299  ls
+ 1300  cd home/
+ 1301  ls
+ 1302  cd ..
+ 1303  kls
+ 1304  ls
+ 1305  cd /var/
+ 1306  ls
+ 1307  cd lib/
+ 1308  ls
+ 1309  tree
+ 1310  cd /usr/
+ 1311  ls
+ 1312  ll
+ 1313  cd
+ 1314  ls
+ 1315  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-free-release-1.1-1.el9.gm.noarch.rpm
+ 1316  rpm -K georgi.mobi-free-release-1.1-1.el9.gm.noarch.rpm 
+ 1317  wget https://georgi.mobi/rpm/students/el9/Packages/beer-stu-1.2-0.el9.gm.noarch.rpm      
+ 1318  rpm -K beer-stu-1.2-0.el9.gm.noarch.rpm 
+ 1319  rpm -K  beer-stu-lib-1.1-0.el9.gm.noarch.rpm    
+ 1320  wget https://georgi.mobi/rpm/students/el9/Packages/beer-stu-lib-1.1-0.el9.gm.noarch.rpm    
+ 1321  rpm -K  beer-stu-lib-1.2    
+ 1322  ll 
+ 1323  rpm -K beer-stu-1.2-0.el9.gm.noarch.rpm 
+ 1324  rpm -K beer-stu-lib-1.1-0.el9.gm.noarch.rpm 
+ 1325  rpm -K *
+ 1326  rm georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm 
+ 1327  rpm -qpi beer-stu-1.2-0.el9.gm.noarch.rpm
+ 1328  rpm -qpi *.rpm
+ 1329  ls
+ 1330  gpg --show-keys /etc/pki/my-gpg/RPM-GPG-KEY-georgi.mobi 
+ 1331  rpm -qpi beer-stu-1.2-0.el9.gm.noarch.rpm 
+ 1332  rpm -qpi beer-stu-lib-1.1-0.el9.gm.noarch.rpm 
+ 1333  rpm -qpi georgi.mobi-free-release-1.1-1.el9.gm.noarch.rpm 
+ 1334  rpm -qpi georgi.mobi-free-release-1.2-1.el9.gm.noarch.rpm 
+ 1335  rpm -qpi georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1336  rpm -qpi georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm 
+ 1337  rpm -qpi georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1338  rpm -qpi georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm 
+ 1339  rpm -qpi georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm 
+ 1340  yum install georgi.mobi-free-release
+ 1341  yum remove georgi.mobi-release-stu
+ 1342  ls
+ 1343  cat georgi.mobi-free-release-1.1-1.el9.gm.noarch.rpm 
+ 1344  cat * | grep CODE
+ 1345  cat * 
+ 1346  ls
+ 1347  locate beer-stu-
+ 1348  rpm -i beer-stu
+ 1349  yum install -i beer-stu
+ 1350  yum install beer-stu
+ 1351  rpm -ql beer-stu
+ 1352  /cd /usr/share/
+ 1353  ll
+ 1354  cd /usr/
+ 1355  lks
+ 1356  ls
+ 1357  cd share/
+ 1358  ll
+ 1359  cd doc/
+ 1360  ll
+ 1361  cd beer-stu/
+ 1362  ls
+ 1363  cat GPL 
+ 1364  cat GPL  | grep CODE
+ 1365  ls
+ 1366  cd ..
+ 1367  ls
+ 1368  cd georgi.mobi-free-release/
+ 1369  ls
+ 1370  cat GPL | grep CODE
+ 1371  cat GPL | grep code
+ 1372  cd ..
+ 1373  ls
+ 1374  rpm -ql beer-stu
+ 1375  rpm -ql georgi.mobi-free-release
+ 1376  ls
+ 1377  cd
+ 1378  ls
+ 1379  rpm -qpi georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1380  rm  georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1381  rpm -qpi georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm 
+ 1382  rpm -qpi georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm 
+ 1383  rm georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm
+ 1384  rpm -qpi *.rpm 
+ 1385  rpm -qpi *.rpm | grep Signature
+ 1386  ls
+ 1387  rpm -i georgi.mobi-free-release-1.1-1.el9.gm.noarch.rpm 
+ 1388  yum -ql georgi.mobi-free-release-1.1-1.el9.gm.noarch.rpm 
+ 1389  rpm -ql georgi.mobi-free-release
+ 1390  ll
+ 1391  rpm -i install georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm 
+ 1392  rpm -i georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm 
+ 1393  rpm -ql georgi.mobi-release-stu 
+ 1394  cd /usr/share/doc/georgi.mobi-release-stu-1.3/misc/
+ 1395  cat * | grep CODE
+ 1396  cat * | grep grep ^CODE$
+ 1397  cat * | grep ^CODE$
+ 1398  ls
+ 1399  cd ..
+ 1400  ls
+ 1401  cd
+ 1402  ls
+ 1403  rpm -ql georgi.mobi-free-release 
+ 1404  rpm -i georgi.mobi-free-release-1.2-1.el9.gm.noarch.rpm 
+ 1405  rpm -i georgi.mobi-free-release-1.1-1.el9.gm.noarch.rpm 
+ 1406  yum remove georgi.mobi-release-stu.noarch 
+ 1407  rpm -ql georgi.mobi-release-stu 
+ 1408  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm  
+ 1409  rpm -i georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1410  rpm -ql georgi.mobi-release-stu 
+ 1411  cat /usr/share/doc/georgi.mobi-release-stu-1.3/misc/* | grep CODE
+ 1412  rpm -ql georgi.mobi-release-stu 
+ 1413  yum remove georgi.mobi-release-stu.noarch 
+ 1414  rpm -ql georgi.mobi-release-stu 
+ 1415  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm  
+ 1416  rpm
+ 1417  rpm -ql georgi.mobi-release-stu 
+ 1418  yum remove georgi.mobi-release-stu.noarch 
+ 1419  rpm -ql georgi.mobi-release-stu 
+ 1420  ls
+ 1421  rpm -K georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1422  history
+ 1423  rpm -qpi georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm
+ 1424  rpm -qpi georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm
+ 1425  wget https://georgi.mobi/rpm/students/el9/Packages/georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm  
+ 1426  rpm -qpi georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm
+ 1427  rpm -ql georgi.mobi-release-stu 
+ 1428  rpm -i georgi.mobi-release-stu-1.3-4..rpm 
+ 1429  rpm -ql georgi.mobi-release-stu 
+ 1430  yum remove georgi.mobi-release-stu.noarch 
+ 1431  rpm -ql georgi.mobi-release-stu 
+ 1432  rpm -qpi georgi.mobi-release-*.rpm
+ 1433  rpm -i georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm
+ 1434  rpm -ql georgi.mobi-release-stu 
+ 1435  cat /usr/share/doc/georgi.mobi-release-stu-1.3/misc/* | grpe CODE
+ 1436  rpm -ql georgi.mobi-release-stu 
+ 1437  yum remove georgi.mobi-release-stu.noarch 
+ 1438  rpm -i georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm
+ 1439  rpm -ql georgi.mobi-release-stu 
+ 1440  cat /usr/share/doc/georgi.mobi-release-stu-1.3/misc/* | grpe CODE
+ 1441  cat /usr/share/doc/georgi.mobi-release-stu-1.3/misc/* | grep CODE
+ 1442  yum remove georgi.mobi-release-stu.noarch 
+ 1443  rpm -i georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm
+ 1444  cat /usr/share/doc/georgi.mobi-release-stu-1.3/misc/* | grep CODE
+ 1445  yum remove georgi.mobi-release-stu.noarch 
+ 1446  rpm -i georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm
+ 1447  cat /usr/share/doc/georgi.mobi-release-stu-1.3/misc/* | grep CODE
+ 1448  rpm -qpi georgi.mobi-release-*.rpm
+ 1449  ls
+ 1450  rm georgi.mobi-release-stu-1.3-1.el9.gm.noarch.rpm 
+ 1451  rm georgi.mobi-release-stu-1.3-3.el9.gm.noarch.rpm 
+ 1452  rm georgi.mobi-release-stu-1.3-4.el9.gm.noarch.rpm 
+ 1453  rpm -i georgi.mobi-release-stu-1.3-2.el9.gm.noarch.rpm
+ 1454  cat /usr/share/doc/georgi.mobi-release-stu-1.3/misc/* | grep CODE
+ 1455  ls
+ 1456  rpm -qpi georgi.mobi-release-*.rpm
+ 1457  rpm *.rpm
+ 1458  rpm -qpi*.rpm
+ 1459  rpm -qpi *.rpm
+ 1460  gpg --list-keys --keyid-format long
+ 1461  yum install georgi.mobi
+ 1462  yum install georgi.mobi-release-stu
+ 1463  yum install georgi.mobi-free-release
+ 1464  yum install beer-stu
+ 1465   
+ 1466  yum install beer-stu
+ 1467  ls
+ 1468  yum update
+ 1469  vim /etc/yum.repos.d/
+ 1470  yum update
+ 1471  yum install beer-stu
+ 1472  yum install georgi.mobi-release-stu.noarch 1.3-2.el9.g
+ 1473  yum update
+ 1474  cat /usr/share/doc/georgi.mobi-release-stu-1.3/misc/* | grep CODE
+ 1475  ls
+ 1476  exit
+ 1477  crontab -e
+ 1478  su - sarah
+ 1479  ssh-keygen
+ 1480  ll .ssh/
+ 1481  ssh-copy-id guest101@vm149
+ 1482  ssh guest101@vm149
+ 1483  history
+ 1484  cat /etc/ssh/sshd_config
+ 1485  vim /etc/ssh/sshd_config
+ 1486  reboot
+ 1487  ls
+ 1488  ssh guest101@vm149
+ 1489  vim /etc/ssh/ssh_config
+ 1490  ssh guest101@vm149
+ 1491  vim /etc/ssh/ssh_config
+ 1492  reboot
+ 1493  ssh guest101@vm149
+ 1494  vim /etc/ssh/ssh_config
+ 1495  netstat -tpln | egrep '(Proto|ssh)'
+ 1496  sudo lsof -Pi | grep ssh
+ 1497  vim /etc/ssh/ssh_config
+ 1498  semanage user
+ 1499  setsebool -P ssh_sysadm_login on
+ 1500  semanage login -l
+ 1501  setsebool -P ssh_sysadm_login on
+ 1502  semanage boolean -l | head
+ 1503  semanage boolean -l 
+ 1504  semanage boolean -l | grep admin
+ 1505  semanage boolean -l | grep ssh
+ 1506  reboot
+ 1507  semanage boolean -l | grep ssh
+ 1508  ssh guest101@vm149
+ 1509  setsebool -P ssh_sysadm_login on
+ 1510  history\
+ 1511  history
+ 1512  ssh guest101@vm149
+ 1513  ls
+ 1514  vim foundfiles/
+ 1515  ls
+ 1516  vim 3q 
+ 1517  exit
+ 1518  ll
+ 1519  setstatus
+ 1520  sestatus
+ 1521  ssh guest101@vm149
+ 1522  ls
+ 1523  wget https://georgi.mobi/linux/LSNA/Homeworks/files/helloworld.htm
+ 1524  wget https://georgi.mobi/linux/LSNA/Homeworks/files/helloworld.html
+ 1525  mv helloworld.html index.html
+ 1526  exit
+ 1527  ls
+ 1528  yum update
+ 1529  yum install httpd
+ 1530  systemctl status httpd
+ 1531  systemctl httpd start
+ 1532  systemctl start httpd
+ 1533  systemctl status httpd
+ 1534  cp index.html /var/www/html/
+ 1535  ip adddr
+ 1536  ifconfig
+ 1537  vim /etc/httpd/conf/httpd.conf 
+ 1538  cd /var/www/html/
+ 1539  l
+ 1540  ls
+ 1541  ll
+ 1542  cat index.html 
+ 1543  curl http://localhost
+ 1544  yum install mod_ssl
+ 1545  yum install openssl
+ 1546  vim /etc/httpd/conf.d/vim vm101_example.conf
+ 1547  ls
+ 1548  cd /etc/httpd/conf.d/
+ 1549  ls
+ 1550  cat vim 
+ 1551  mv vim 101_example101.conf
+ 1552  s
+ 1553  mv 101_example101.conf example.conf
+ 1554  ll
+ 1555  openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt
+ 1556  ll
+ 1557  cat example.conf 
+ 1558  mv server.crt /etc/pki/tls/certs/
+ 1559  mv server.key /etc/pki/tls/private/
+ 1560  vim /etc/hosts 
+ 1561  ipaddr
+ 1562  iofconfig
+ 1563  ifconfig
+ 1564  vim /etc/host
+ 1565  systemclt restart hhtpd
+ 1566  systmclt restart hhtpd
+ 1567  history
+ 1568  systemclt restart httpd
+ 1569   systemctl status httpd
+ 1570   systemctl restart httpd
+ 1571   systemctl status httpd
+ 1572  curl https://www.vm101.example.com
+ 1573  httpd -t
+ 1574  firewall-cmp --permanent --add-service=https
+ 1575  firewall-cmd --permanent --add-service=https
+ 1576  curl https://www.vm101.example.com
+ 1577  firewall-cmd --reload
+ 1578  curl https://www.vm101.example.com
+ 1579  firewall-cmd --reload
+ 1580  vim /var/www/html/
+ 1581  pwd
+ 1582  ls
+ 1583  vim example.conf 
+ 1584  ifoncfig
+ 1585  ifconfig
+ 1586  cd
+ 1587  curl https://www.vm101.example.com
+ 1588  apachectl status
+ 1589  apachectl configtest
+ 1590  firewall-cmd --permanent --add-port=80/tcp
+ 1591   firewall-cmd --reload
+ 1592  systemctl enable --now httpd
+ 1593  curl https://www.vm101.example.com
+ 1594  vim /etc/httpd/conf/httpd.conf 
+ 1595  vim /etc/httpd/conf.d/
+ 1596  cd ..
+ 1597  ls
+ 1598  cd /etc/httpd/conf/
+ 1599  vim httpd.conf 
+ 1600  systemctl restart httpd
+ 1601  curl https://www.vm101.example.com
+ 1602  vim httpd.conf 
+ 1603  systemctl restart httpd
+ 1604  curl https://www.vm101.example.com
+ 1605  ifconfig
+ 1606  firefox
+ 1607  ls
+ 1608  vim httpd.conf 
+ 1609  systemctl restart httpd
+ 1610  curl https://www.vm101.example.com
+ 1611  exit
+ 1612  ls
+ 1613  systemctl enable httpd --now
+ 1614  systemctl restart httpd
+ 1615  systemctl status httpd
+ 1616  curl https://www.vm101.example.com
+ 1617  ifocngi
+ 1618  ifocngig
+ 1619  ifconfig
+ 1620  curl 192.168.109.101
+ 1621  curl www.vm101.example.com
+ 1622  curl 192.168.109.101
+ 1623  systemctl enable httpd
+ 1624  chmod +x /etc/rc.d/rc.local
+ 1625  systemctl enable httpd
+ 1626  systemctl status httpd
+ 1627  ping www.vm101.example.com
+ 1628  ping test
+ 1629  ping google.com
+ 1630  vim /etc/hosts 
+ 1631  ping google.com
+ 1632  ping www.vm101.example.com
+ 1633  curl www.vm101.example.com
+ 1634  curl google.com
+ 1635  curl -k https://www.vm101.example.com/index.html
+ 1636  history | grep ssh
+ 1637  ssh guest101@vm149
+ 1638  exit
+ 1639  ~]# service httpd configtest
+ 1640  Syntax OK
+ 1641  ~]# service httpd configtest
+ 1642  Syntax OK
+ 1643  ~]#~chkconfig
+ 1644  yum install httpd mod_ssl
+ 1645  ~]systemctl enable httpd
+ 1646  systemctl enable httpd
+ 1647  systemctl start httpd
+ 1648  systemctl enable httpd
+ 1649  ~]systemctl enable httpd
+ 1650  cd /var/httpd/conf/
+ 1651  cd /etc/httpd/
+ 1652  vim cd conf
+ 1653  cd conf
+ 1654  ls
+ 1655  vim httpd.conf 
+ 1656  cd ..
+ 1657  l
+ 1658  cd conf.d/
+ 1659  ls
+ 1660  rm example.conf 
+ 1661  systemctl restart hhtpd
+ 1662  systemctl restart httpd
+ 1663  systemctl status httpd
+ 1664  firewall-cmd --permanent --add-service={http,https}
+ 1665  firewall-cmd --reload
+ 1666  telnet vm101.example.com
+ 1667  ping vm101.example.com
+ 1668  curl vm101.example.com
+ 1669  curl -K vm101.example.com
+ 1670  curl -k vm101.example.com
+ 1671  curl -k https://www.vm101.example.com
+ 1672  curl https://www.vm101.example.com
+ 1673  curl _K https://www.vm101.example.com
+ 1674  curl -K https://www.vm101.example.com
+ 1675  curl -k https://www.vm101.example.com
+ 1676  firewall-cmd --permanent -add-rich-rule='rule family=ipv4 source address=192.168.109.66 reject'
+ 1677  firewall-cmd --permanent --add-rich-rule='rule family=ipv4 source address=192.168.109.66 reject'
+ 1678  firewall-cmd --reaload
+ 1679  firewall-cmd --reload
+ 1680  firewall-cmd --list-all
+ 1681  reboot
+ 1682  firewall-cmd --list-all
+ 1683  systemctl status httpd
+ 1684  curl -k https://www.vm101.example.com
+ 1685  history | grep ssh
+ 1686  ssh guest101@vn149
+ 1687  ssh guest101@vm149
+ 1688  ifconfig
+ 1689  vim /etc/hosts 
+ 1690  vim /etc/httpd/conf.d/
+ 1691  vim /etc/httpd/conf/
+ 1692  systemctl restart httpd
+ 1693  ssh guest101@vm149
+ 1694  ifconfggi
+ 1695  ifconfig
+ 1696  vim /etc/httpd/conf
+ 1697  systemctl restart httpd
+ 1698  curl -k https://www.vm101.example.com
+ 1699  ssh guest101@vm149
+ 1700  httpd -D DUMP_VHOSTS
+ 1701  ssh guest101@vm149
+ 1702  curl -k https://www.vm101.example.com
+ 1703  vim /etc/hosts 
+ 1704  vim /etc/httpd/conf
+ 1705  curl -k https://www.vm101.example.com
+ 1706  ssh guest101@vm149
+ 1707  vim /etc/httpd/conf
+ 1708  systemctl restart httpd
+ 1709  systemctl status httpd
+ 1710  ssh guest101@vm149
+ 1711  vim /etc/httpd/conf
+ 1712  systemctl status httpd
+ 1713  systemctl restart httpd
+ 1714  vim /etc/httpd/conf
+ 1715  systemctl restart httpd
+ 1716  vim /etc/httpd/conf
+ 1717  systemctl restart httpd
+ 1718  vim /etc/httpd/conf
+ 1719  systemctl restart httpd
+ 1720  curl -k https://www.vm101.example.com
+ 1721  vim /etc/httpd/conf
+ 1722  systemctl restart httpd
+ 1723  curl -k https://www.vm101.example.com
+ 1724  ssh guest101@vm149
+ 1725  vim /etc/
+ 1726  cd /etc/httpd/
+ 1727  ls
+ 1728  ll conf.d/
+ 1729  vim conf
+ 1730  systemctl restart httpd
+ 1731  vim conf
+ 1732  systemctl restart httpd
+ 1733  curl -k https://www.vm101.example.com
+ 1734  ssh guest101@vm149
+ 1735  exit
+ 1736  vim /etc/hosts/
+ 1737  vim /etc/httpd/
+ 1738  systemctl restart httpd
+ 1739  ssh guest101@vm149
+ 1740  vim /etc/hosts 
+ 1741  vim /etc/httpd/ 
+ 1742  ssh guest101@vm149
+ 1743  vim /etc/hosts 
+ 1744  vim /etc/httpd/conf/
+ 1745  curl -k https://www.vm101.example.com
+ 1746  curl -k https://vm101.example.com
+ 1747  systemctl restart httpd
+ 1748  ssh guest101@vm149
+ 1749  history
+ 1750  ifconfig
+ 1751  nslookup
+ 1752  ip addr
+ 1753  ip addr show eth0
+ 1754  arp -a
+ 1755  ip address
+ 1756  ip address add 10.100.0.101/24 dev eth3
+ 1757  ip address add 10.100.0.101/24 dev eth1
+ 1758  ip address add 10.100.0.101/24 dev eth0
+ 1759  ip address add 10.100.0.101/24 dev 3
+ 1760  ifconfig
+ 1761  ip address add 10.100.0.101/24 dev enp1s1
+ 1762  ip r
+ 1763  ip route add 10.100.0.101/24
+ 1764  p /etc/nes/
+ 1765  cd /etc/
+ 1766  ls
+ 1767  cd NetworkManager/
+ 1768  ls
+ 1769  cat NetworkManager.conf 
+ 1770  cd
+ 1771  iplink show
+ 1772  ip link show
+ 1773  ip a
+ 1774  nmtui
+ 1775  cd /etc/sysconfig/
+ 1776  ls
+ 1777  cd network-scripts/
+ 1778  ls
+ 1779  ip a
+ 1780  nmcli con
+ 1781  nmcli man
+ 1782  nmcli --help
+ 1783  nmcli --help c
+ 1784  nmcli -c --help c
+ 1785  nmcli -c --help
+ 1786  nmcli conn --help
+ 1787  nmcli con mod enp1s0 +ipv4.address 10.100.0.101/24
+ 1788  ifconfig
+ 1789  ls
+ 1790  cat readme-ifcfg-rh.txt 
+ 1791  ncmli n
+ 1792  nmcli n
+ 1793  nmcli n off
+ 1794  nmcli n on
+ 1795  ifconfig
+ 1796  ll
+ 1797  nmcli con mod enp1s0 +ipv4.address 192.168.109.101/24
+ 1798  nmcli n on
+ 1799  nmcli n off
+ 1800  nmcli n on
+ 1801  ifconfig
+ 1802  curl hhtps://vm101.example.com
+ 1803  curl htps://vm101.example.com
+ 1804  curl htpps://vm101.example.com
+ 1805  curl https://vm101.example.com
+ 1806  curl -k https://vm101.example.com
+ 1807  id a
+ 1808  ip a
+ 1809  reboot
+ 1810  ip addr
+ 1811  history
+ 1812  лс
+ 1813  ls
+ 1814  ip a
+ 1815  crontab -e
+ 1816  nmcli shhow
+ 1817  nmcli show
+ 1818  nmcli con show
+ 1819  nmcli dev status
+ 1820  nmcli connection modify "lo" ipv6.addresses acad:15:dead:af7e:1ce:co1d:bee2:0/112 ipv6.method manual
+ 1821  nmcli connection modify "lo" ipv6.addresses acad:15:dead:af7e:1ce:co1d:bee2:101/112 ipv6.method manual
+ 1822  nmcli connection modify "enp1s0" ipv6.addresses acad:15:dead:af7e:1ce:co1d:bee2:101/112 ipv6.method manual
+ 1823  nmcli connection modify "lo" ipv6.addresses acad:15:dead:af7e:1ce:c01d:bee2:101/112 ipv6.method manual
+ 1824  nmcli con show
+ 1825  curl http://acad:15:dead:af7e:1ce:c01d:bee2:101/112 ipv6.method manual/ipv6_getme.php 
+ 1826  curl http://acad:15:dead:af7e:1ce:c01d:bee2:101/ipv6_getme.php 
+ 1827  curl -g -6 http://acad:15:dead:af7e:1ce:c01d:bee2:101/ipv6_getme.php 
+ 1828  curl -g -6 'http://acad:15:dead:af7e:1ce:c01d:bee2:101/ipv6_getme.php'
+ 1829  curl -g -6 'http://acad:15:dead:af7e:1ce:c01d:bee2:22/ipv6_getme.php'
+ 1830  curl -k -g 'http://acad:15:dead:af7e:1ce:c01d:bee2:22/ipv6_getme.php'
+ 1831  ip as
+ 1832  ip a
+ 1833  nmcli connection modify "lo" ipv6.addresses acad:15:dead:af7e:1ce:c01d:bee2:101/112 ipv6.method manual
+ 1834  nmcli connection modify "enp1s0" ipv6.addresses acad:15:dead:af7e:1ce:c01d:bee2:101/112 ipv6.method manual
+ 1835  curl -k -g 'http://acad:15:dead:af7e:1ce:c01d:bee2:22/ipv6_getme.php'
+ 1836  ip a
+ 1837  ip -6 addr
+ 1838  curl -k -g 'http://acad:15:dead:af7e:1ce:c01d:bee2:22/ipv6_getme.php'
+ 1839  curl -k -g 'http://\[acad:15:dead:af7e:1ce:c01d:bee2:22\]/ipv6_getme.php'
+ 1840  curl "http://\[acad:15:dead:af7e:1ce:c01d:bee2:22\]/ipv6_getme.php"
+ 1841  curl -p 22 "http://\[acad:15:dead:af7e:1ce:c01d:bee2:22\]/ipv6_getme.php"
+ 1842  curl -6  "http://\[acad:15:dead:af7e:1ce:c01d:bee2:22\]/ipv6_getme.php"
+ 1843  wget  "http://\[acad:15:dead:af7e:1ce:c01d:bee2:22\]/ipv6_getme.php"
+ 1844  telnet  pv6_getme.php"
+ 1845  curl -k  "http://\[acad:15:dead:af7e:1ce:c01d:bee2:22\]/ipv6_getme.php"
+ 1846  curl -k  "http://\[acad:15:dead:af7e:1ce:c01d:bee2:101\]/ipv6_getme.php"
+ 1847  curl -k  "http://\[acad:15:dead:af7e:1ce:c01d:bee2:22\]/ipv6_getme.php"
+ 1848  curl -k  "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1849  curl "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1850  ping acad:15:dead:af7e:1ce:c01d:bee2:22
+ 1851  nmcli connection modify "enp1s0" connection.autoconnect yes
+ 1852  nmcli connection up "enp1s0" 
+ 1853  curl "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1854  wget 
+ 1855  curl -k https://vm101.example.com
+ 1856  nmcli connectio show "enp10"
+ 1857  nmcli connectio show "enp1s0"
+ 1858  nmcli connectio show "enp1s0" | grep ipv6
+ 1859  sytemctl restart network
+ 1860  systemctl restart network
+ 1861  systemctl restart network.services
+ 1862  curl "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1863  systemctl restart network.service
+ 1864  ping6 
+ 1865  ping6 acad:15:dead:af7e:1ce:c01d:bee2:101
+ 1866  curl "http://[acad:15:dead:af7e:1ce:c01d:bee2:101]/ipv6_getme.php"
+ 1867  ping6 acad:15:dead:af7e:1ce:c01d:bee2:101
+ 1868  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1869  ping -I  acad:15:dead:af7e:1ce:c01d:bee2:22
+ 1870  wget "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1871  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1872  cat acad.is.dead.after.ice.cold.beer.org
+ 1873  wget acad.is.dead.after.ice.cold.beer.org
+ 1874  curl -6 localhost
+ 1875  route -A inet6
+ 1876  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1877  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:0]/ipv6_getme.php"
+ 1878  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1879  ifconfig | grep inet6 addr
+ 1880  ifconfig | grep "inet6 addr"
+ 1881  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]:8080/ipv6_getme.php"
+ 1882  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]:*/ipv6_getme.php"
+ 1883  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]:22/ipv6_getme.php"
+ 1884  curl -V "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]:8080/ipv6_getme.php"
+ 1885  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]:22/ipv6_getme.php"
+ 1886  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1887  curl -6 http://
+ 1888  ping6 google.com
+ 1889  sudo systemctl restart NetworkManager
+ 1890  ping6 google.com
+ 1891  ip a show dev ep1s0
+ 1892  ip a show dev ep0s1
+ 1893  ip a
+ 1894  ip a show dev enp1s0
+ 1895  vim /etc/sysctl.conf 
+ 1896  sudo sysctl -p
+ 1897  ping6 google.com
+ 1898  sudo nmcli con modify enp0s3 ipv6.gateway acad:15:dead:af7e:1ce:c01d:bee2:101
+ 1899  sudo nmcli con modify enp1s0 ipv6.gateway acad:15:dead:af7e:1ce:c01d:bee2:101
+ 1900  ping6 google.com
+ 1901  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]:22/ipv6_getme.php"
+ 1902  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1903  ping6 google.com
+ 1904  ping6 ivp6.google.com
+ 1905  ping6 ipv6.google.com
+ 1906  pinggoogle.com
+ 1907  ping google.com
+ 1908  ping -6  google.com
+ 1909  ip a | grep inet6
+ 1910  ip -6 addr
+ 1911  dig -6 TXT +short o-o.myaddr.l.google.com @ns1.google.com
+ 1912  curl getme.php"
+ 1913  curl -6 https://ifconfig.co/ip
+ 1914  ping6 http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php
+ 1915  ping6 acad:15:dead:af7e:1ce:c01d:bee2:22
+ 1916  sudo firewall-cmd --permanent --add-service=dhcpv6-client
+ 1917  sudo firewall-cmd --permanent --add-service=ipv6-icmp
+ 1918  sudo firewall-cmd --reload
+ 1919  ping6 acad:15:dead:af7e:1ce:c01d:bee2:22
+ 1920  vim /etc/sysconfig/network-scripts/ifcfg-acad:15:dead:af7e:1ce:c01d:bee2:101
+ 1921  sudo systemctl restart NetworkManager
+ 1922  ping6 acad:15:dead:af7e:1ce:c01d:bee2:22
+ 1923  nmcli con show acad:15:dead:af7e:1ce:c01d:bee2:101
+ 1924  nmcli con enp1s0
+ 1925  sudo ip -6 route add default via acad:15:dead:af7e:1ce:c01d:bee2:101  dev enp1s0
+ 1926  sudo ip -6 route add default via acad:15:dead:af7e:1ce:c01d:bee2:22  dev enp1s0
+ 1927  ping6 acad:15:dead:af7e:1ce:c01d:bee2:22
+ 1928  sudo ip -6 route add default via acad:15:dead:af7e:1ce:c01d:bee2:101  dev enp1s0
+ 1929  sudo ip -6 route add default via acad:15:dead:af7e:1ce:c01d:bee2:0  dev enp1s0
+ 1930  sudo ip -6 route add default via acad:15:dead:af7e:1ce:c01d:bee2:0 dev enp1s0
+ 1931  raceroute6 google.com
+ 1932  traceroute6 google.com
+ 1933  ip a show dev enp1s0
+ 1934  ip -6 route
+ 1935  nmcli con show enp1s0
+ 1936  sudo ip -6 route add default via acad:15:dead:af7e:1ce:c01d:bee2:101 dev enp1s0
+ 1937  sudo ip -6 route add default via acad:15:dead:af7e:1ce:c01d:bee2:22 dev enp1s0
+ 1938  cd /etc/sysconfig/network-scripts/
+ 1939  mv ifcfg-acad\:15\:dead\:af7e\:1ce\:c01d\:bee2\:101 ifcfg-enp1s0
+ 1940  ll
+ 1941  vim ifcfg-enp1s0 
+ 1942  sudo systemctl restart NetworkManager
+ 1943  sudo firewall-cmd --list-all
+ 1944  sudo firewall-cmd --permanent --add-service=dhcpv6-client
+ 1945  sudo firewall-cmd --permanent --add-service=ipv6-icmp
+ 1946  udo firewall-cmd --reload
+ 1947  raceroute6 google.com
+ 1948  ping6 google.com
+ 1949  ping6 acad:15:dead:af7e:1ce:c01d:bee2:22
+ 1950  vim ifcfg-enp1s0 
+ 1951  sudo systemctl restart NetworkManager
+ 1952  ping6 acad:15:dead:af7e:1ce:c01d:bee2:22
+ 1953  ping6 googl.com
+ 1954  history | grep curl
+ 1955   1903  curl -6 
+ 1956  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1957  ls
+ 1958  ip a
+ 1959  ll
+ 1960  sudo firewall-cmd --permanent --add-service=dhcpv6-client
+ 1961  sudo firewall-cmd --permanent --add-service=ipv6-icmp
+ 1962  sudo firewall-cmd --reload
+ 1963  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 1964  ping6 google.com
+ 1965  vim ifcfg-enp1s0 
+ 1966  sudo systemctl restart NetworkManager
+ 1967  ping6 google.com
+ 1968  reboot
+ 1969  sudo systemctl restart NetworkManager
+ 1970  ping6 google.com
+ 1971  sudo nmcli con modify epn1s0 ipv6.gateway acad:15:dead:af7e:1ce:c01d:bee2:101/112
+ 1972  sudo nmcli con modify enp1s0 ipv6.gateway acad:15:dead:af7e:1ce:c01d:bee2:101/112
+ 1973  sudo nmcli con modify enp1s0 ipv6.gateway acad:15:dead:af7e:1ce:c01d:bee2:101
+ 1974  sudo nmcli con up enp1s0
+ 1975  sudo systemctl restart NetworkManager
+ 1976  ping6 google.com
+ 1977  sudo firewall-cmd --permanent --add-service=dhcpv6-client
+ 1978  vim /etc/sysconfig/network-scripts/ifcfg-enp1s0 
+ 1979  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112," gw6 "acad:15:dead:af7e:1ce:c01d:bee2:0/112,"
+ 1980  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee2:0/112"
+ 1981  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee2:101/112"
+ 1982  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee2:100/112"
+ 1983  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee2:0"
+ 1984  nmcli con mod enp1s0 ipv6.method manual
+ 1985  ping6 -c2  www.redhat.com
+ 1986  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "2a22:1d0:5222:4::22f0/64"
+ 1987  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee2:101/112"
+ 1988  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee2:0"
+ 1989  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee2"
+ 1990  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee0"
+ 1991  nmcli con mod enp1s0 ipv6.addresses "acad:15:dead:af7e:1ce:c01d:bee2:101/112" gw6 "acad:15:dead:af7e:1ce:c01d:bee2:0"
+ 1992  ping6 -c2  www.redhat.com
+ 1993  vim /etc/sysconfig/network-scripts/ifcfg-enp1s0 
+ 1994  ping6 -c2  www.redhat.com
+ 1995  nmcli con mod enp1s0 ipv6.method manual
+ 1996  ping6 -c2  www.redhat.com
+ 1997  vim /etc/sysconfig/network-scripts/ifcfg-enp1s0 
+ 1998  ping6 -c2  www.redhat.com
+ 1999  vim /etc/sysconfig/network-scripts/ifcfg-enp1s0 
+ 2000  reboot
+ 2001  ping6 -c2  www.redhat.com
+ 2002  vim /etc/sysconfig/network-scripts/ifcfg-enp1s0 
+ 2003  source /etc/sysconfig/network-scripts/ifcfg-enp1s0
+ 2004  vim /etc/sysconfig/network-scripts/ifcfg-enp1s0 
+ 2005  source /etc/sysconfig/network-scripts/ifcfg-enp1s0
+ 2006  ping6 -c2  www.redhat.com
+ 2007  curl -6 "http://[acad:15:dead:af7e:1ce:c01d:bee2:22]/ipv6_getme.php"
+ 2008  cd
+ 2009  pwd
+ 2010  vim IPv6-CODE
+ 2011  curl https://www.vm101.example.com
+ 2012  curl -K https://www.vm101.example.com
+ 2013  curl -k https://www.vm101.example.com
+ 2014  ll
+ 2015  ls
+ 2016  cd
+ 2017  ls
+ 2018  cd ..
+ 2019  ls
+ 2020  cd etc/
+ 2021  ls
+ 2022  history
