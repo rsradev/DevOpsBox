@@ -1,0 +1,678 @@
+Cloud computing
+P
+Classic Infrastructure Issues
+Data centers capacity
+Hardware is not utilized efficiently
+Legacy hardware and systems
+Application compatibility issues
+Cross vendor interoperability
+Complex processes and management
+A lot of experts are required (e.g. Network, Storage, Backup, OS)
+Introduction:
+
+Running workloads on-premises presents several challenges. These issues often limit scalability, flexibility, and cost-effectiveness, making the case for cloud adoption.
+Key Points:
+
+Data Center Capacity:
+
+Scaling infrastructure requires significant capital investment.
+Hardware Utilization:
+
+Under-utilized hardware leads to inefficient resource usage.
+Legacy Systems and Compatibility:
+
+Outdated hardware and software create compatibility and maintenance challenges.
+Interoperability Issues:
+
+Ensuring cross-vendor compatibility adds complexity to operations.
+Expertise Requirements:
+
+On-prem environments demand a wide range of specialized skills, increasing operational overhead.
+Conclusion:
+
+These limitations have driven organizations toward the scalability, flexibility, and cost efficiency offered by cloud computing.
+P
+The Era of Cloud Computing
+Computing resources provided as a service
+Natural evolution and adoption of
+Existing technologies
+Existing paradigms
+Introduction:
+
+Cloud computing represents a natural evolution of existing technologies and paradigms, enabling the delivery of computing resources as a service.
+
+Key Points:
+
+Computing Resources as a Service:
+
+Resources like servers, storage, and applications are provided on-demand over the internet.
+Built on Existing Technologies:
+
+Virtualization, containerization, and automation form the foundation of cloud computing.
+Conclusion:
+
+Cloud computing combines advancements in technology to create scalable, flexible, and accessible solutions for modern businesses.
+P
+Utility Services
+Available to the customer as needed
+Charges for specific usage
+Maximize the efficient use of resources
+Minimize associated costs
+Billing reporting
+Introduction:
+
+Cloud computing introduces the well known concept of utility services in IT, allowing organizations to consume resources as needed, similar to utilities like electricity.
+Key Points:
+
+On-Demand Availability:
+
+Resources can be provisioned and released as needed.
+Cost Efficiency:
+
+Pay only for what you use, reducing unnecessary expenses.
+Billing and Reporting:
+
+Provides detailed insights into resource usage and costs.
+Conclusion:
+
+Utility services maximize efficiency and minimize costs, making cloud computing an attractive option for dynamic workloads.
+P
+How Cloud Computing can help?
+Managed services
+Cost effective solutions
+Server consolidation
+Service or application isolation
+Simplified service deployment
+Simplified service management
+Increased service and application availability
+Automatic scalability
+Service automation
+Introduction:
+
+Cloud computing addresses many limitations of on-premises environments, providing significant operational and strategic advantages.
+Key Benefits:
+
+Managed Services:
+
+Offloads maintenance and support responsibilities to the cloud provider.
+Cost Efficiency:
+
+Reduces upfront infrastructure costs and optimizes resource usage.
+Scalability and Automation:
+
+Supports automatic scaling and workload distribution to meet changing demands.
+Simplified Deployment and Management:
+
+Streamlines processes, reducing complexity and increasing agility.
+Conclusion:
+
+Cloud computing offers a transformative approach to deploying, managing, and scaling IT resources.
+P
+Behind The Scene
+Hardware Infrastructure
+Virtualization
+Containers
+Management stacks
+Automation stacks
+Programming APIs
+Web User Interface
+Introduction:
+
+Cloud computing relies on a complex stack of technologies and tools to deliver services seamlessly.
+Key Components:
+
+Hardware and Virtualization:
+
+Abstracts physical hardware into virtualized environments for scalability and efficiency.
+Containers and Management Stacks:
+
+Containers ensure consistency, while management stacks automate and orchestrate deployments.
+Programming APIs and Web UI:
+
+Enable developers and administrators to interact programmatically or through a user-friendly interface.
+Conclusion:
+
+Understanding the underlying architecture provides insights into the scalability and efficiency of cloud platforms.
+P
+Cloud Classifications and Service Models
+Classification
+
+Public
+Private
+Hybrid
+Service Models
+
+Infrastructure as a service (IaaS)
+Platform as a service (PaaS)
+Software as a service (SaaS)
+And more…
+Introduction:
+
+Cloud computing offers a variety of deployment classifications and service models, catering to diverse use cases and organizational needs.
+Classifications:
+
+Public Cloud:
+
+Shared infrastructure managed by a cloud provider.
+Private Cloud:
+
+Dedicated infrastructure for a single organization.
+Hybrid Cloud:
+
+Combines public and private cloud resources for flexibility and optimization.
+Service Models:
+
+IaaS (Infrastructure as a Service):
+
+Provides virtualized computing resources.
+PaaS (Platform as a Service):
+
+Offers development platforms and tools.
+SaaS (Software as a Service):
+
+Delivers applications over the internet.
+Conclusion:
+
+Choosing the right classification and service model depends on organizational goals, workload requirements, and regulatory considerations.
+P
+Good Cloud Platform
+Managed Services
+API automation
+Self-Service – UI, CLI, API
+Flexible billing model (pay-as-you-go)
+Flexible billing reporting
+Dynamic workload balancing
+High-Availability and Scalability
+Role-based administration
+Monitoring and Reporting
+Integration with other systems
+Introduction:
+
+A good cloud platform is characterized by features and capabilities that simplify operations, ensure scalability, and provide seamless integration for diverse workloads. It caters to both technical and business needs, making it an essential choice for modern enterprises.
+Key Characteristics:
+
+Managed Services:
+
+Offers services that handle routine tasks like maintenance, updates, and scaling.
+Reduces the burden on IT teams by automating complex processes.
+API Automation:
+
+Provides APIs for automating resource provisioning and configuration, enabling DevOps workflows.
+Supports tools like Terraform, Ansible, and custom integrations.
+Self-Service – UI, CLI, API:
+
+Allows users to interact with the platform through multiple channels:
+UI: For a user-friendly experience.
+CLI: For scriptable interactions.
+API: For integration with other tools and systems.
+Flexible Billing Model (Pay-as-You-Go):
+
+Supports dynamic pricing based on actual resource usage.
+Helps organizations avoid overprovisioning and control costs effectively.
+Flexible Billing Reporting:
+
+Provides detailed usage and cost reports for budgeting, forecasting, and optimization.
+Includes features like tag-based cost allocation and multi-account reporting.
+Dynamic Workload Balancing:
+
+Ensures efficient distribution of workloads across resources to maximize performance and reliability.
+High Availability and Scalability:
+
+Offers built-in redundancy and failover mechanisms to guarantee uptime.
+Supports automatic scaling to handle variable workloads.
+Role-Based Administration:
+
+Implements fine-grained access control through role-based policies, ensuring security and compliance.
+Allows administrators to assign permissions at different levels (e.g., project, resource, or user).
+Monitoring and Reporting:
+
+Includes built-in tools for real-time monitoring, logging, and alerting.
+Enables proactive issue resolution and performance tuning.
+Integration with Other Systems:
+
+Provides connectors and plugins to integrate with external systems like CRMs, ERPs, CI/CD pipelines, and analytics tools.
+Conclusion:
+
+A good cloud platform ensures flexibility, efficiency, and ease of use. By combining managed services, automation, scalability, and robust reporting, it empowers organizations to focus on innovation rather than infrastructure management.
+P
+Public Cloud Platforms
+2024 Q2
+AWS – 33%
+Azure – 20%
+Google Cloud – 10%
+Alibaba – 6%
+Others – 32%
+Introduction:
+
+The public cloud is the most widely adopted cloud deployment model. It is managed by third-party providers who offer shared infrastructure and services over the internet.
+Market Share (2024 Q2):
+
+AWS (33%):
+
+Dominates the market with a wide range of services and global reach.
+Azure (20%):
+
+Popular among enterprises due to its integration with Microsoft products like Windows Server and Active Directory.
+Google Cloud (10%):
+
+Known for advanced analytics, machine learning, and developer-friendly tools.
+Alibaba (6%):
+
+A major player in the Asia-Pacific region, offering services tailored to local markets.
+Others (32%):
+
+Includes smaller or niche providers catering to specific industries or regions.
+Key Advantages of Public Cloud:
+
+Scalability: Instant access to resources without upfront investment.
+Flexibility: Wide range of services to support diverse workloads.
+Global Reach: Data centers in multiple geographic locations for low latency and redundancy.
+Conclusion:
+
+Public cloud platforms offer unmatched scalability and innovation, making them the go-to choice for organizations of all sizes and industries.
+P
+Private Cloud Platforms
+DELL
+VMWare
+IBM and RedHat
+Oracle
+BMC
+Citrix
+HP
+Cisco
+Microsoft
+More…
+Introduction:
+
+Private cloud platforms provide dedicated infrastructure for a single organization, offering enhanced control, security, and customization.
+Major Private Cloud Providers:
+
+DELL and VMWare:
+
+Leaders in virtualization and private cloud solutions.
+IBM and RedHat:
+
+Focused on hybrid cloud and open-source technologies like OpenShift.
+Oracle and Microsoft:
+
+Strong presence in enterprise environments, offering specialized solutions for databases and applications.
+Others:
+
+Include BMC, Citrix, HP, and Cisco, which cater to various industries and use cases.
+Use Cases for Private Cloud:
+
+Regulated Industries: Banking, healthcare, and government sectors that require strict data security and compliance.
+Custom Workloads: Applications with unique requirements that cannot be easily supported in the public cloud.
+Conclusion:
+
+While private cloud platforms offer greater control, they often come with higher complexity and costs, making them suitable for specific use cases.
+P
+Private Cloud Platforms (The problem)
+Mainly focused on Virtual Machines (IaaS)
+Do not provide real cloud native experience
+Very hard to maintain and support
+Limited or missing APIs
+Limited or missing integration with tools like terraform, cdk, ansible and etc.
+Introduction:
+
+Despite their advantages, private cloud platforms face significant challenges that limit their scalability, flexibility, and adoption.
+Key Issues:
+
+Focus on Virtual Machines (IaaS):
+
+Most private clouds emphasize virtual machines, limiting support for cloud-native approaches like containers and microservices.
+Limited APIs and Integration:
+
+Many private cloud platforms lack robust APIs and integration capabilities, making it difficult to automate processes or use modern tools like Terraform or Ansible.
+Maintenance Complexity:
+
+Maintaining private cloud infrastructure requires specialized skills and significant effort, increasing operational overhead.
+Legacy Approach:
+
+Some platforms fail to deliver a truly cloud-native experience, relying on outdated technologies and practices.
+Conclusion:
+
+While private clouds are valuable for certain scenarios, addressing these challenges is critical for organizations looking to adopt modern cloud-native practices.
+P
+Hybrid Cloud Platforms
+AWS Outposts
+Azure Stack
+Google Anthos
+More…
+Introduction:
+
+Hybrid cloud platforms combine the best of public and private clouds, enabling organizations to leverage the advantages of both models.
+Key Examples:
+
+AWS Outposts:
+
+Extends AWS infrastructure and services to on-premises environments.
+Azure Stack:
+
+Provides Azure-compatible services in private data centers.
+Google Anthos:
+
+Focuses on running Kubernetes-based workloads across on-premises and cloud environments.
+Benefits of Hybrid Cloud:
+
+Flexibility: Run workloads in the most suitable environment.
+Compliance: Keep sensitive data on-premises while leveraging public cloud for scalability.
+Cost Optimization: Optimize costs by distributing workloads based on performance and cost requirements.
+Conclusion:
+
+Hybrid cloud platforms are ideal for organizations that need a mix of control, scalability, and flexibility, particularly in regulated industries.
+Amazon Web Services (AWS)
+P
+Welcome to AWS
+Amazon Web Services
+The most broadly adopted cloud platform
+Offering over 200 fully featured services
+Largest community of customers and partners
+Who is using AWS?
+Fastest-growing startups
+Largest enterprises
+Leading government agencies
+Global and distributed cloud infrastructure
+34 geographic regions
+108 Availability Zones
+Introduction:
+
+Amazon Web Services (AWS) is the most widely adopted cloud platform, offering a broad range of services to meet diverse business needs. Its global infrastructure and extensive community make it a leader in the cloud market.
+Key Features:
+
+Comprehensive Service Offerings:
+
+AWS provides over 200 fully featured services, including compute, storage, databases, machine learning, and analytics.
+Adoption Across Industries:
+
+Trusted by startups, enterprises, and government agencies for its reliability and scalability.
+Global Infrastructure:
+
+AWS operates 34 geographic regions with 108 Availability Zones, ensuring low latency and high availability worldwide.
+Conclusion:
+
+AWS’s robust offerings and global reach make it a preferred choice for organizations aiming for innovation, scalability, and cost-efficiency.
+P
+AWS Regions
+34 Geographic Regions (https://aws.amazon.com/about-aws/global-infrastructure/)
+What is an AWS Region?
+Physical locations around the world
+Group of logical well-connected data centers (Availability Zone)
+
+Introduction:
+
+AWS Regions are the backbone of its global infrastructure, ensuring low-latency access, high availability, and data compliance.
+Key Points:
+
+What is a Region?
+
+A physical location with multiple Availability Zones (AZs).
+Designed to deliver high availability and fault tolerance.
+Global Presence:
+
+AWS operates 34 geographic regions, strategically placed to serve customers worldwide.
+Use Cases:
+
+Regions help meet data residency requirements, reduce latency for end-users, and support disaster recovery setups.
+Conclusion:
+
+By leveraging AWS Regions, organizations can ensure global reach, low latency, and compliance with local regulations.
+P
+AWS Availability Zones
+Availability Zone (AZ)
+One or more discrete date centers
+Redundant power supply
+Redundant Networking
+Interconnected with high-bandwidth and low-latency
+Fault tolerant
+Scalable
+Encrypted Traffic
+Not more than 100 km (60 miles)
+Introduction:
+
+AWS Availability Zones (AZs) are designed to ensure resilience and fault tolerance, forming the core of AWS’s high availability architecture.
+Key Features:
+
+Fault Isolation:
+
+Each AZ consists of one or more physically distinct data centers, ensuring redundancy.
+High Bandwidth Interconnects:
+
+AZs are interconnected with low-latency, high-bandwidth fiber, enabling seamless communication.
+Key Benefits:
+
+Provides high availability for applications.
+Ensures fault tolerance by isolating failures to a single AZ.
+Design Principles:
+
+Redundancy:
+Redundant power, networking, and cooling systems ensure reliability.
+Proximity:
+AZs are located within 100 km (60 miles) of each other to minimize latency.
+Conclusion:
+
+By utilizing multiple AZs, businesses can deploy applications with high availability and disaster recovery capabilities.
+P
+Important AWS Definitions
+High Availability
+Accessible when you need it
+Fault Tolerance
+Ability to withstand a certain amount of failure and still remain functional
+Scalability
+Ability to easily grow in size, capacity, and/or scope when required
+Elasticity (Elastic)
+Ability to grow when required and to reduce in size when resources are no longer needed
+Introduction:
+
+AWS leverages foundational principles to ensure reliable, scalable, and resilient cloud solutions. Understanding these concepts is critical to optimizing workloads.
+Key Definitions:
+
+High Availability:
+
+Systems designed to be accessible whenever needed, reducing downtime.
+Fault Tolerance:
+
+Ability to maintain functionality despite failures in components or infrastructure.
+Scalability:
+
+Capability to handle increased workloads by adding resources as needed.
+Elasticity:
+
+Ability to dynamically adjust resource usage up or down based on demand.
+Real-World Example:
+
+A scalable and elastic application might automatically increase EC2 instances during peak traffic and reduce them during off-peak hours, optimizing costs and performance.
+Conclusion:
+
+These principles form the backbone of AWS’s architecture, enabling organizations to build robust and efficient cloud solutions.
+P
+Shared Responsibility Model
+
+Introduction:
+
+The Shared Responsibility Model defines the roles of AWS and its customers in securing and managing cloud resources.
+Key Responsibilities:
+
+AWS Responsibilities (Security of the Cloud):
+
+Managing the infrastructure, including hardware, software, networking, and facilities.
+Ensures physical security, hardware availability, and global redundancy.
+Customer Responsibilities (Security in the Cloud):
+
+Configuring applications, data encryption, and identity management.
+Ensuring compliance with regulatory requirements specific to their use case.
+Examples:
+
+AWS Handles:
+
+Securing physical servers, AZs, and network infrastructure.
+Customers Handle:
+
+Setting IAM permissions, securing data in S3 buckets, and applying security patches to virtual machines.
+Conclusion:
+
+Understanding the Shared Responsibility Model helps customers effectively secure their workloads while leveraging AWS’s robust infrastructure.
+S
+Elastic Cloud Computing (EC2)
+Virtual Machine like experience in AWS
+Scalable computing capacity
+Foundation for many other services
+S
+Core Concepts in EC2
+Instance Type
+Wide selection to fit different use cases
+Comprise varying combinations of CPU, memory, storage, and networking
+General Purpose, Compute Optimized, Memory Optimized, Storage Optimized, etc.
+Amazon Machine Image (AMI)
+Template for EC2 instances
+Operating System
+Operating System + Additional Software
+S
+Purchase Options (EC2)
+On-Demand Instances
+Pay, by the second, for the instances that you launch.
+Reserved Instances
+Make commitment to a consistent instance configuration
+Available for a term of 1 or 3 years.
+Includes the instance type and region
+Spot Instances
+Request unused instances
+Very cheap
+Not reliable
+More…
+S
+Auto Scaling
+Maintain application availability
+Automatically add or remove EC2 instances
+Based on conditions
+Integrated with Elastic Load Balancing
+S
+Simple Storage Service (S3)
+Object storage as a Service
+Store data objects in S3 Bucket
+High Available (Stores data in multiple AZs)
+Allow access to objects using URL endpoint
+Provides different classes for different use cases
+Can serve static web site content
+S
+Simple Queue Service (SQS)
+Message Queue
+High Available
+Fully managed
+AWS SDK
+S
+Simple Notification Service (SNS)
+Pub/Sub Messaging
+High Available
+Fully managed
+AWS SDK
+HTTP/EMAIL/SMS
+S
+Lambda
+Run functions without provisioning or managing servers
+Pay only for the compute time you consume
+No charge when your code is not running
+S
+Elastic Container Service (ECS)
+Container orchestration service
+Proprietary implementation
+Eliminates the need to install and manage container orchestration software
+Supports docker
+Highly scalable and Highly Available
+S
+Elastic Container Registry (ECR)
+Fully-managed Docker container registry
+Public or Private
+Eliminates the need to operate your own container registry
+Highly available and scalable architecture
+Scaling internally the underlying infrastructure
+You pay only for
+The amount of data
+Data transfer
+S
+Elastic Kubernetes Service (EKS)
+Managed Kubernetes (Container Orchestration)
+Eliminates the need to install and manage Kubernetes
+Highly scalable and Highly Available
+Relational Database Service (RDS)
+Managed relational database service
+Cost-efficient and resizable capacity
+Database instance types
+PostgreSQL
+MySQL
+MariaDB
+OracleDB
+Microsoft SQL Server
+Automating time-consuming administration tasks
+Provisioning
+Patching
+Backups
+S
+Amazon Aurora
+Fully managed Relational Database Service
+MySQL and PostgreSQL compatible relational database engine
+Five times faster than standard MySQL
+Three times faster than standard PostgreSQL
+Automates time-consuming administration tasks
+Provisioning/Scalability
+High Availability
+Patching
+Backups
+Fault-tolerant and self-healing storage (up to 128TB per DB)
+Replication across three Azs
+Aurora Global Database
+Multi-Region Primary/Secondary setup
+Zero data loss planned downtime
+S
+Amazon DynamoDB
+Fully managed NoSQL database
+Key-Value and Document database
+Multiregion and multimaster
+Highly Scalable
+10 trillion requests per day
+> 20 million requests per second
+Automates time-consuming administration tasks
+Provisioning/Scalability
+High Availability
+Patching
+Backups
+Used by many innovative companies like Airbnb, Redfin
+S
+Amazon Elastic Cache
+Fully managed in-memory cache service
+Supports two engines
+Redis – a fast, open source, in-memory key-value data store
+Memcached - a fast, open source, in-memory object caching system
+S
+Amazon Route53
+Fully managed DNS Service
+Highly available and scalable
+Effectively connects to infrastructure running in AWS
+EC2
+ELB/ALB
+S3
+Health checks
+Geo DNS
+More…
+S
+Amazon VPC
+Virtual Private Cloud (VPC)
+Virtual network isolation in AWS
+Provision a logically isolated resources in different VPS
+Example:
+Public facing services
+Backend service
+Databases
+Supports IPv4 and IPv6
+S
+Elastic Load Balancing (ELB)
+Managed load balancing service
+Distributes incoming application traffic across multiple targets
+Supports different targets
+Amazon EC2 instances
+Containers
+IP addresses
+Types of load balancers
+Application Load Balancer – Layer 7 - HTTP and HTTPS traffic
+Network Load Balancer – Layer 4 – TCP traffic
+Classic Load Balancer – Legacy load balancer for EC2-Classic

@@ -1,0 +1,734 @@
+CI/CD
+P
+What is Continues Integration (CI)?
+Coding philosophy
+Set of practices
+Development teams implement small changes
+Push code to version control repositories frequently
+Every commit triggers a build
+Source code testing and quality check
+Introduction:
+
+Continuous Integration (CI) is a development practice that emphasizes frequent, automated integration of code changes into a shared repository, ensuring early detection of issues.
+Key Points:
+
+Coding Philosophy:
+
+Encourages small, incremental changes to minimize conflicts and simplify debugging.
+Version Control Integration:
+
+Code changes are pushed to repositories like GitHub or GitLab frequently.
+Automated Builds and Testing:
+
+Every commit triggers a build, source code testing, and quality checks to maintain code health.
+Conclusion:
+
+CI improves code quality, fosters collaboration, and reduces integration risks, forming the foundation for modern software development practices.
+P
+What is Continues Delivery (CD)?
+Picks up where continuous integration ends
+Automates the delivery of applications to selected environment
+Releases to production as early as possible
+Makes releases small and easy to troubleshoot
+Manual approval step for release to production
+Introduction:
+
+Continuous Delivery (CD) automates the deployment of integrated code to production-like environments, ensuring that every change is ready for release.
+Key Points:
+
+End-to-End Automation:
+
+Automates the delivery process from CI to staging or production environments.
+Frequent, Small Releases:
+
+Simplifies deployments, making them less error-prone and easier to troubleshoot.
+Manual Approval for Production:
+
+Adds an optional human checkpoint to control releases to production environments.
+Conclusion:
+
+Continuous Delivery ensures code is always in a deployable state, reducing lead times and improving release quality.
+P
+What is Continues Deployment (CD)?
+One step further than continuous delivery
+Every code change is released to your customers
+No human intervention
+Only a failed guard will prevent a new change to be deployed
+Introduction:
+
+Continuous Deployment takes Continuous Delivery a step further by automatically deploying every change that passes quality checks into production.
+Key Points:
+
+No Manual Intervention:
+
+Fully automates deployment, relying solely on automated testing and quality gates.
+Immediate User Access:
+
+Delivers new features or fixes to customers as soon as they are ready.
+Guardrails:
+
+Deployments only fail if quality checks or tests detect issues.
+Conclusion:
+
+Continuous Deployment enables rapid innovation and reduces time-to-market but requires robust automated testing to ensure reliability.
+P
+Importance of CI/CD
+Faster Release Cycles
+Release software more frequently and consistently
+Improved Quality
+Reduce the risk of defects
+Enhanced Collaboration
+Encourages collaboration between teams by streamlining workflows
+Reduced Risk
+More frequent updates lower the risk of large-scale failures
+Allows for quicker fixes
+Introduction:
+
+CI/CD practices are critical for modern software development, driving faster releases, improved quality, and reduced risks.
+Key Benefits:
+
+Faster Release Cycles:
+
+Automates repetitive tasks, allowing for frequent and consistent software delivery.
+Improved Quality:
+
+Early detection of bugs and defects through continuous testing and feedback.
+Enhanced Collaboration:
+
+Breaks silos between development and operations teams, fostering a DevOps culture.
+Reduced Risk:
+
+Smaller, incremental changes lower the likelihood of large-scale failures and make rollbacks easier.
+Conclusion:
+
+CI/CD accelerates innovation while ensuring stability and reliability, making it indispensable for competitive software development.
+P
+Key Principles and Goals
+Automation
+Automates repetitive and error-prone tasks
+Reliability
+Ensures quality gates pass
+Speed
+Decreases time-to-market
+Feedback
+Provides fast feedback
+Consistency
+Standardize the process
+Minimize human errors
+Introduction:
+
+The success of CI/CD pipelines hinges on principles like automation, reliability, and consistency, ensuring efficient and predictable workflows.
+Key Principles:
+
+Automation:
+
+Eliminates manual tasks, reducing errors and saving time.
+Reliability:
+
+Incorporates quality gates and robust testing to ensure only high-quality code progresses.
+Speed:
+
+Accelerates the development lifecycle, decreasing time-to-market.
+Feedback:
+
+Provides immediate feedback to developers, enabling quick resolutions of issues.
+Consistency:
+
+Standardizes processes to minimize variability and human errors.
+Conclusion:
+
+By adhering to these principles, CI/CD pipelines enable teams to deliver high-quality software efficiently and reliably.
+P
+CI/CD Pipeline
+Developer commit code to branch
+A build job is triggered on every commit
+Build software
+Run tests
+Run static code and security analyses
+Run coverage and quality checks
+Build artifact
+Release software to environment
+Introduction:
+
+A CI/CD Pipeline is a series of automated steps that streamline the development and deployment process, ensuring consistent and reliable delivery.
+Pipeline Stages:
+
+Commit and Build:
+
+Developer commits code to a version control system, triggering a build job.
+Testing and Analysis:
+
+Automated tests (unit, integration) and static code analysis are performed.
+Includes security scans and coverage checks.
+Artifact Creation:
+
+Build artifacts are generated for deployment.
+Deployment:
+
+Artifacts are deployed to staging or production environments.
+Conclusion:
+
+CI/CD pipelines automate the end-to-end software delivery process, reducing manual intervention and ensuring quality at every stage.
+P
+Popular Tools
+GitHub Actions
+GitLab CI/CD
+CircleCI
+Travis CI
+Azure DevOps
+Jenkins
+Team City
+Bamboo
+More…
+Introduction:
+
+The CI/CD ecosystem offers a variety of tools to support automation, collaboration, and deployment at scale.
+Popular CI/CD Tools:
+
+GitHub Actions:
+
+Integrated directly into GitHub for building, testing, and deploying code.
+GitLab CI/CD:
+
+Comprehensive CI/CD capabilities within GitLab repositories.
+Jenkins:
+
+Open-source automation server with extensive plugin support.
+CircleCI and Travis CI:
+
+Cloud-based CI/CD platforms with easy setup and scalability.
+Azure DevOps:
+
+CI/CD and project management tools integrated into Microsoft’s ecosystem.
+TeamCity and Bamboo:
+
+Enterprise-grade solutions for building and deploying software.
+Conclusion:
+
+The choice of tools depends on project requirements, team preferences, and ecosystem compatibility.
+P
+GitHub Actions
+CI/CD Platform
+Integrated directly into GitHub
+Responds to GitHub events
+Create custom workflows to build, test, and deploy
+Introduction:
+
+GitHub Actions is a CI/CD platform integrated directly into GitHub, enabling developers to automate workflows triggered by GitHub events.
+Key Features:
+
+Event-Driven Workflows:
+
+Responds to events like code pushes, pull requests, or schedule-based triggers.
+Customizable Workflows:
+
+Build, test, and deploy applications with reusable workflows written in YAML.
+Integration with GitHub:
+
+Seamlessly integrates with repositories, issues, and pull requests for streamlined collaboration.
+Use Cases:
+
+Automate unit testing and code linting on every pull request.
+Deploy applications to staging or production environments after successful tests.
+Schedule periodic tasks like database backups or dependency updates.
+Conclusion:
+
+GitHub Actions simplifies CI/CD by embedding workflows within GitHub, making it a powerful tool for developers.
+P
+Core Components
+Workflows
+Specifying what should happen and when
+Jobs
+Workflows can contain multiple jobs
+Sequences of tasks
+Run independently or sequentially
+Steps
+Job is made up of steps
+Predefined actions or custom scripts
+Actions
+Reusable commands or tasks
+GitHub Actions marketplace
+Introduction:
+
+GitHub Actions workflows are built on several core components that define and execute automation steps.
+Core Components:
+
+Workflows:
+
+Define the sequence of actions triggered by specific events.
+Jobs:
+
+Group related tasks and run them independently or in sequence.
+Steps:
+
+Individual actions or commands executed within a job.
+Actions:
+
+Reusable building blocks sourced from the GitHub Marketplace or custom scripts.
+Use Cases:
+
+Workflows handle tasks like testing, deployment, and notifications.
+Actions simplify repetitive tasks by encapsulating reusable logic.
+Conclusion:
+
+Understanding these components is key to designing efficient and maintainable GitHub Actions workflows.
+P
+Runners
+Servers that execute the steps in a workflow
+
+GitHub-Hosted Runners
+
+Automatically configured and maintained
+Support various operating systems
+Best for common tasks and easy setup
+Self-Hosted Runners
+
+Set up your own servers
+Allow customization
+Useful for specialized builds
+Data Privacy or compliance
+Introduction:
+
+Runners are servers that execute the steps in GitHub Actions workflows, providing the environment needed for builds, tests, and deployments.
+Types of Runners:
+
+GitHub-Hosted Runners:
+
+Fully managed by GitHub, offering pre-configured environments.
+Supports multiple operating systems like Linux, macOS, and Windows.
+Ideal for common tasks due to ease of setup.
+Self-Hosted Runners:
+
+Allow users to set up their own infrastructure for executing workflows.
+Useful for specialized builds requiring custom dependencies or tools.
+Offers control over data privacy and compliance.
+Key Benefits:
+
+GitHub-Hosted Runners: Quick and easy to use for most workflows.
+Self-Hosted Runners: Provides flexibility for advanced or custom scenarios.
+Conclusion:
+
+Choosing the right runner depends on workload requirements, cost considerations, and compliance needs.
+P
+Key Features
+Workflow Automation
+Event-Based Triggers
+Scheduled Triggers
+Extensive Language and Framework Support
+Artifacts and Logs
+Built-in Actions and Marketplace
+Secrets Management
+Conditional Execution
+Self-Hosted Runners
+Introduction:
+
+GitHub Actions is a powerful CI/CD platform with a rich set of features that simplify automation and workflow management for developers.
+Key Features:
+
+Workflow Automation:
+
+Define workflows to automate tasks like building, testing, and deploying code.
+Enable seamless integration with GitHub repositories and events.
+Event-Based Triggers:
+
+Automatically trigger workflows based on GitHub events, such as pushes, pull requests, or issue updates.
+Scheduled Triggers:
+
+Schedule workflows to run at specific times using cron expressions, enabling periodic tasks like backups or dependency updates.
+Extensive Language and Framework Support:
+
+Supports multiple languages and frameworks, making it versatile for diverse projects.
+Artifacts and Logs:
+
+Collect and save artifacts generated by workflows for later use.
+Access detailed logs for debugging and monitoring workflow execution.
+Built-in Actions and Marketplace:
+
+Use prebuilt actions or explore the GitHub Marketplace for reusable tasks.
+Simplifies common tasks like setting up environments or running tests.
+Secrets Management:
+
+Securely store sensitive information like API keys and passwords.
+Limit secret access to specific workflows or repositories.
+Conditional Execution:
+
+Define conditions for running specific steps or jobs, ensuring workflows adapt to different scenarios.
+Self-Hosted Runners:
+
+Use custom infrastructure for workflows requiring specialized environments or compliance with organizational policies.
+Conclusion:
+
+GitHub Actions’ comprehensive feature set makes it a flexible and efficient platform for automating CI/CD pipelines, supporting projects of any size or complexity.
+P
+Workflow
+Configurable automated process
+Runs one or more jobs
+Defined by a YAML
+Checked in to the repository
+Defined in .github/workflows directory
+Repository can have multiple workflows
+Introduction:
+
+A workflow in GitHub Actions is a configurable automated process that defines how tasks are executed in response to events or schedules.
+Key Features:
+
+Runs One or More Jobs:
+
+Workflows can consist of multiple jobs, each performing a specific task or set of tasks.
+Defined in YAML:
+
+Written as YAML files for readability and flexibility.
+Repository Integration:
+
+Stored in the .github/workflows directory of a repository for easy management.
+Multiple Workflows Per Repository:
+
+Allows repositories to have dedicated workflows for different tasks like testing, deployment, or maintenance.
+Use Cases:
+
+Automate CI/CD pipelines for building, testing, and deploying code.
+Schedule regular maintenance tasks like dependency updates.
+Conclusion:
+
+Workflows form the backbone of GitHub Actions, providing a structured way to automate repetitive tasks and improve development efficiency.
+P
+Workflow Structure - Name and Triggers
+Workflow Name
+Provides a name for your workflow
+name: CI Pipeline
+
+Workflow Triggers
+Defines the events that trigger the workflow to run.
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * *"  # Runs daily at midnight
+
+Introduction:
+
+The structure of a GitHub Actions workflow defines the overall process, from triggers to steps, enabling developers to create flexible and reusable automation pipelines.
+Key Components:
+
+Workflow Name:
+
+Provides an easily identifiable name for the workflow.
+Example: name: CI Pipeline.
+Workflow Triggers:
+
+Specifies the events that start the workflow.
+Examples include:
+Push events: Trigger on code pushes to specific branches.
+Pull requests: Trigger when pull requests are created or updated.
+Schedules: Use cron expressions to run workflows at specific times.
+Conclusion:
+
+A well-structured workflow ensures clarity, flexibility, and maintainability, making it easier to manage and scale automation pipelines.
+
+P
+Workflow Structure - Jobs and Steps
+Workflow Jobs and Steps
+Job: Defines tasks to be run in the workflow
+Steps: Individual steps that define specific actions or commands
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Build project
+        run: make build
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run tests
+        run: make test
+
+Introduction:
+
+Jobs and steps are essential components of a GitHub Actions workflow, defining the tasks to be executed and the order in which they occur.
+Key Components:
+
+Workflow Jobs:
+
+Represent a series of related tasks.
+Each job runs in its own virtual environment.
+Jobs can run independently or have dependencies on other jobs.
+Workflow Steps:
+
+Define individual actions or commands within a job.
+Steps are executed sequentially.
+Conclusion:
+
+Jobs and steps allow for modular and organized workflows, making it easier to define and execute complex automation processes.
+P
+Workflow Structure - Actions and Conditions
+Workflow Actions
+Allows to use reusable actions from the GitHub Marketplace or other sources
+- name: Lint code
+  uses: github/super-linter@v4
+  with:
+    languages: 'javascript, python'
+
+Workflow conditions
+Conditionally run steps or jobs based on expression
+- name: Deploy to production
+  if: github.ref == 'refs/heads/main' && success()
+  run: ./deploy.sh
+
+Introduction:
+
+Actions and Conditions in GitHub Actions workflows enhance flexibility and reusability, enabling more efficient and context-aware automation.
+Workflow Actions:
+
+Reusable Components:
+
+Actions are standalone commands or tasks that can be used across workflows.
+Available in the GitHub Marketplace or can be custom-defined.
+Simplifies Workflows:
+
+Actions encapsulate complex tasks, reducing the need to write repetitive code.
+Workflow Conditions:
+
+Conditional Execution:
+
+Steps or jobs can be executed only when specific conditions are met.
+Conditions are defined using expressions.
+Dynamic Workflows:
+
+Enables workflows to adapt to context, such as branch names, environment variables, or results of previous steps.
+Conclusion:
+
+Actions and conditions together make workflows powerful and adaptable, allowing developers to automate tasks while maintaining control over execution.
+P
+Workflow Structure - Environment Variables and Secrets
+Workflow Environment Varialbes (env)
+Set environment variables to use within steps in the job
+env:
+  NODE_ENV: 'test'
+
+Workflow Environment Varialbes with secrets
+Securely manage sensitive information (e.g. API keys, passwords)
+env:
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+Introduction:
+
+Environment variables and secrets provide flexibility and security in workflows by enabling dynamic configuration and secure handling of sensitive data.
+Workflow Environment Variables:
+
+Dynamic Configuration:
+
+Environment variables allow workflows to be parameterized, making them reusable across different scenarios.
+Scoped Usage:
+
+Variables can be defined at the workflow, job, or step level.
+Workflow Secrets:
+
+Secure Data Handling:
+
+Secrets are used for storing sensitive information like API keys or passwords.
+Restricted Access:
+
+Secrets are scoped to repositories and workflows, ensuring they are only accessible where needed.
+Conclusion:
+
+By combining environment variables and secrets, workflows become flexible, secure, and maintainable, supporting diverse automation scenarios.
+P
+Workflow Structure - Matrix Builds
+Workflow Matrix Builds
+Run the same job in multiple environments (e.g., different language versions or OS).
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12, 14, 16]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm test
+
+Introduction:
+
+Matrix builds enable workflows to run the same job across multiple environments, configurations, or dependencies, ensuring comprehensive testing and validation.
+Key Benefits:
+
+Cross-Environment Testing:
+
+Ensures compatibility across various operating systems, language versions, or toolchains.
+Automation Efficiency:
+
+Automatically expands jobs to cover all specified combinations, reducing manual effort.
+Scalability:
+
+Executes combinations in parallel, significantly reducing execution time.
+Conclusion:
+
+Matrix builds enhance the reliability and robustness of CI workflows by validating code in diverse environments.
+P
+Workflow Structure - Stages
+Workflow Stages
+Define stages to control the order of job execution
+stages:
+  - build
+  - test
+
+build_job:
+  stage: build
+  script:
+    - echo "Building project..."
+
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+
+Introduction:
+
+Workflow stages allow for logical grouping and sequencing of tasks within a pipeline, helping to organize and control the flow of execution.
+Key Features:
+
+Stage Definition:
+
+Stages group related jobs, providing clarity and modularity.
+Order of Execution:
+
+Stages control the sequence in which jobs run, ensuring logical progression from build to test or deployment.
+Flexibility:
+
+Allows workflows to adapt to complex pipelines with interdependencies between tasks.
+Conclusion:
+
+Defining stages ensures workflows are structured and maintainable, supporting efficient execution of CI/CD pipelines.
+P
+Workflow Structure - Needs
+Workflow Needs
+pecify that a job depends on the successful completion of another job
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Build project
+        run: echo "Building project..."
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Run tests
+        run: echo "Running tests..."
+
+Introduction:
+
+Workflow stages allow for logical grouping and sequencing of tasks within a pipeline, helping to organize and control the flow of execution.
+Key Features:
+
+Stage Definition:
+
+Stages group related jobs, providing clarity and modularity.
+Order of Execution:
+
+Stages control the sequence in which jobs run, ensuring logical progression from build to test or deployment.
+Flexibility:
+
+Allows workflows to adapt to complex pipelines with interdependencies between tasks.
+Conclusion:
+
+Defining stages ensures workflows are structured and maintainable, supporting efficient execution of CI/CD pipelines.
+P
+Workflow Structure - Artifacts
+Workflow Artifacts
+Let you save files generated in a workflow
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        id: build
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: ./dist/
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-output   # Name of the artifact to download
+          path: ./downloaded   # Directory to download the artifact to
+      - name: Use Artifact in Tests
+        run: cat ./downloaded/output.txt
+Introduction:
+
+Artifacts allow workflows to persist data generated during execution, such as build outputs or test results, for later use or review.
+Key Features:
+
+Artifact Storage:
+
+Save workflow outputs like logs, binaries, or test results as artifacts.
+Artifact Sharing:
+
+Enables jobs to reuse data generated by previous jobs within the same workflow.
+Visibility:
+
+Artifacts can be downloaded after workflow execution for debugging or analysis.
+Conclusion:
+
+Artifacts enhance workflows by enabling data persistence and inter-job communication, making pipelines more robust and reusable.
+P
+Workflow Structure - Outputs
+Workflow Outputs
+Allow you to pass data between jobs
+ set-output:
+    runs-on: ubuntu-latest
+    outputs:
+      my-output: ${{ steps.output-step.outputs.result }}
+    steps:
+      - name: Set output using environment file
+        id: output-step
+        run: echo "result=Hello, GitHub Actions!" >> $GITHUB_OUTPUT
+read-output:
+  runs-on: ubuntu-latest
+  needs: set-output
+  steps:
+    - name: Display Output from Previous Job
+      run: echo "The output from set-output job is: ${{ needs.set-output.outputs.my-output }}"
+Introduction:
+
+Outputs in GitHub Actions allow data to be passed between jobs, enabling workflows to dynamically adapt based on the results of previous jobs.
+Key Features:
+
+Dynamic Workflows:
+
+Jobs can use outputs from other jobs to influence their behavior.
+Inter-Job Communication:
+
+Facilitates sharing of calculated values or results across different jobs.
+Simplified Logic:
+
+Reduces complexity by eliminating the need for external storage or additional dependencies.
+Conclusion:
+
+Outputs make workflows more interactive and flexible, supporting advanced CI/CD pipelines that require dynamic behavior.
+P
+Resources
+GitHub Actions Documentation:
+
+https://docs.github.com/en/actions/

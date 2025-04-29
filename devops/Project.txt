@@ -1,0 +1,73 @@
+Module 13 - Home Project
+
+1 / 9
+Goto...
+Create Public Git Repo
+If you still don’t have a GitHub account, you need to create one
+Create a public repository
+
+2 / 9
+Goto...
+Develop Simple REST Service
+Create root get endpoint "/" that return response with "Hello World"
+Create hostname get endpoint "/hostname" that return response with the machine hostname
+Note: You can use any language. You can also review the demos/labs repo for some ideas with python.
+
+
+3 / 9
+Goto...
+Create Dockerfile and .dockerignore
+Dockerfile
+
+Add the application code
+Install dependencies
+The CMD/Entrypoint must start the app
+The app must listen on port 80
+.dockerignore
+
+Review and add all files and directories that needs to be excluded
+
+4 / 9
+Goto...
+Create GitHub actions workflow
+Create a workflow
+Build image
+Push image to ghcr
+Note: You can review the demos/labs repo for some ideas
+
+
+5 / 9
+Goto...
+Create terraform code for EC2
+If you don’t have AWS account, you will need to create one
+You will need to use T2/T3 EC2 depending on the region.
+Check for the specific region which EC2 type is eligible for free tier
+The EC2 must be launched with public address
+Create security group that allow http traffic (port 80)
+Note: You can review the demo/labs repo for some ideas
+
+
+6 / 9
+Goto...
+Create ansible playbook to deploy
+Install docker
+Deploy the container with exposed port 80
+Note: You can review the demo/labs repo for some ideas
+
+
+7 / 9
+Goto...
+Push all code to repo
+You will need to push all things that did to the repo
+Don’t forget to create a .gitignore file and the proper exclusions
+
+8 / 9
+Goto...
+Send email
+to:borislav.varadinov@outlook.com
+Link to the public repo
+Your names
+Your faculty number
+
+9 / 9
+Goto...

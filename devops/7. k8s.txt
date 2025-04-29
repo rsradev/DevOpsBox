@@ -1,0 +1,3618 @@
+P
+Before we cover Kubernetes - What is CNCF?
+Cloud Native Computing Foundation
+A foundation under the Linux Foundation
+Promote the adoption of cloud-native computing
+Sustaining open-source projects and technologies
+Includes platinum, gold, silver, and end-user members
+Hosts events like KubeCon and CloudNativeCon
+Example Projects: Kubernetes, Helm, OpenTelemetry, Prometheus
+Project Lifecycle: Sandbox, Incubating, Graduated
+Landscape: https://landscape.cncf.io/
+Introduction:
+
+Before diving into Kubernetes, it’s important to understand the role of the Cloud Native Computing Foundation (CNCF). The CNCF is a key driver of innovation in the cloud-native ecosystem and ensures the growth and sustainability of open-source technologies.
+About CNCF:
+
+The CNCF operates under the Linux Foundation and focuses on promoting cloud-native computing principles such as scalability, flexibility, and resilience.
+It serves as a hub for cloud-native technologies, fostering collaboration among developers and organizations.
+Membership Tiers:
+
+The foundation is supported by various members categorized as platinum, gold, silver, and end-user members.
+This diverse membership ensures a steady flow of contributions and collaboration across industries.
+Events:
+
+CNCF organizes global events like KubeCon and CloudNativeCon, which bring together the cloud-native community to discuss innovations, best practices, and use cases.
+Projects and Lifecycle:
+
+CNCF hosts numerous open-source projects, including well-known ones like Kubernetes, Helm, OpenTelemetry, and Prometheus.
+These projects progress through lifecycle stages:
+Sandbox: Early-stage projects exploring concepts.
+Incubating: Projects gaining traction and adoption.
+Graduated: Stable and widely adopted technologies.
+Landscape:
+
+The CNCF maintains the Cloud Native Landscape, an interactive tool showcasing the vast ecosystem of cloud-native projects and solutions.
+This is a valuable resource for exploring related tools and technologies.
+Conclusion:
+
+Understanding CNCF’s role provides context for Kubernetes as part of a broader ecosystem that promotes the development and adoption of cloud-native technologies.
+
+3 / 104
+Goto...
+
+
+P
+What is kubernetes?
+Container orchestration platform
+Cluster management platform
+Automates containerized and distributed applications
+Abstracts away the underlying hardware
+Developed by Google
+Open-Source platform
+Encourages declarative and automation paradigms
+Often abbreviated as K8s
+Works across on-premises, cloud, and hybrid environments
+Introduction:
+
+Kubernetes, often abbreviated as K8s, is a cornerstone of modern cloud-native application management. It simplifies deploying, scaling, and managing containerized applications, making it essential in today’s DevOps workflows.
+The name Kubernetes originates from Greek, meaning helmsman or pilot. K8s as an abbreviation results from counting the eight letters between the "K" and the "s". Google open-sourced the Kubernetes project in 2014. Kubernetes combines over 15 years of Google’s experience running production workloads at scale with best-of-breed ideas and practices from the community.
+Container Orchestration Platform:
+
+At its core, Kubernetes is a container orchestration platform, meaning it helps manage the lifecycle of containers in production, ensuring reliability and scalability.
+Cluster Management:
+
+Kubernetes organizes and manages groups of machines, known as clusters, to ensure high availability and efficient resource usage. These clusters can span on-premises, cloud, or hybrid environments.
+Automation and Abstraction:
+
+One of Kubernetes’ strengths lies in its ability to abstract the underlying hardware, whether physical servers or cloud-based virtual machines. This abstraction allows developers to focus on applications rather than infrastructure.
+Kubernetes also embraces declarative configurations, where users define the desired state of the application, and Kubernetes ensures it’s achieved and maintained.
+Origins and Open Source:
+
+Kubernetes was originally developed by Google, drawing from their extensive experience managing containers at scale with their internal platform, Borg.
+Today, Kubernetes is an open-source project governed by the CNCF, ensuring its growth and adoption across industries.
+Flexibility Across Environments:
+
+Kubernetes works seamlessly across on-premises data centers, public clouds, and hybrid environments, providing flexibility and consistency in deploying applications.
+Conclusion:
+
+In summary, Kubernetes is a powerful tool that automates the deployment and scaling of containerized applications, supports hybrid environments, and encourages modern practices like declarative configurations and automation. It’s a critical enabler of cloud-native and DevOps workflows.
+
+4 / 104
+Goto...
+
+P
+Kubernetes Distributions
+Customized versions of the upstream Kubernetes (vanilla)
+Include additional tools, configurations, and integrations
+Often provide enterprise features and support
+CNCF includes dozens of distributions
+Popular Distributions
+Cloud Based: Amazon EKS, Azure AKS, Google Kubernetes Engine (GKE)
+Enterprise: OpenShift, VMware Tanzu
+Single-Node: Minikube, Kind
+Introduction:
+
+Kubernetes is a powerful and flexible platform, but managing a cluster from scratch can be complex. Kubernetes distributions are tailored versions of the upstream Kubernetes that simplify deployment, provide additional tools, and cater to specific use cases.
+What are Kubernetes Distributions?
+
+Distributions are built on the vanilla Kubernetes, which is the open-source upstream project maintained by the CNCF.
+They often include custom configurations, pre-integrated tools, and enhanced features to streamline cluster setup and management.
+Many distributions are designed for enterprise use, providing support, security features, and compatibility with organizational policies.
+Types of Distributions:
+
+Cloud-Based Distributions:
+
+Examples include Amazon EKS, Azure AKS, and Google Kubernetes Engine (GKE).
+These are managed services where the cloud provider handles most of the heavy lifting, such as control plane setup and scaling.
+Enterprise Distributions:
+
+Examples include Red Hat OpenShift and VMware Tanzu.
+These distributions are designed for enterprise environments, offering robust security, compliance, and support.
+Single-Node Distributions:
+
+Examples include Minikube and Kind (Kubernetes IN Docker).
+These are lightweight distributions ideal for local development and testing, allowing developers to simulate Kubernetes clusters on their machines.
+Why Choose a Distribution?
+
+Organizations choose distributions based on their specific needs, such as:
+Simplifying Kubernetes setup and maintenance.
+Gaining enterprise-level support.
+Ensuring compatibility with existing cloud or on-premises environments.
+Testing Kubernetes locally with single-node setups.
+CNCF Landscape:
+
+The CNCF maintains a list of dozens of Kubernetes distributions. This diversity ensures that there’s a distribution suitable for every use case, from development and testing to large-scale enterprise deployments.
+Conclusion:
+
+Kubernetes distributions make it easier to adopt Kubernetes by providing pre-packaged solutions tailored to specific needs, whether in the cloud, on-premises, or for local development. Understanding the options helps teams select the right distribution for their requirements.
+
+5 / 104
+Goto...
+
+P
+Kubernetes Core Features
+Service discovery
+Load balancing
+Storage orchestration
+Automated rollouts and rollbacks
+Self-healing ideology
+Declarative definitions
+Secret and configuration management
+Automatic scaling
+Introduction:
+
+Kubernetes is more than just a container orchestration platform; it’s a comprehensive system with powerful features that simplify managing containerized applications. Let’s explore the core features that make Kubernetes a popular choice for modern application deployments.
+Service Discovery and Load Balancing:
+
+Kubernetes provides service discovery, allowing applications to find and communicate with one another easily, even as pods are added or removed.
+Load balancing ensures that traffic is distributed evenly across pods, maintaining performance and reliability.
+Storage Orchestration:
+
+Kubernetes can automatically provision and manage storage resources, whether they’re from local disks, network-attached storage (NAS), or cloud-based storage solutions.
+Automated Rollouts and Rollbacks:
+
+With Kubernetes, you can automate the deployment of new versions of applications. It ensures smooth rollouts, gradually updating pods to avoid downtime.
+If an issue occurs during deployment, Kubernetes can automatically rollback to a previous stable version.
+Self-Healing:
+
+Kubernetes follows a self-healing ideology, continuously monitoring the health of pods. If a pod fails or becomes unresponsive, Kubernetes restarts or replaces it automatically.
+Declarative Definitions:
+
+Kubernetes relies on declarative configurations, where you define the desired state of your application (e.g., number of replicas, resource limits) in YAML or JSON files. Kubernetes works to maintain this desired state.
+Secret and Configuration Management:
+
+Kubernetes provides secure and centralized management for secrets (like API keys, passwords) and configurations. These can be updated without restarting applications.
+Automatic Scaling:
+
+Kubernetes can scale applications horizontally (adding/removing pods) or vertically (adjusting resource limits) based on metrics like CPU or memory usage. This ensures efficient resource utilization.
+Conclusion:
+
+These features collectively make Kubernetes a robust and scalable platform for managing containerized applications. By automating complex tasks and ensuring reliability, Kubernetes enables developers to focus on building applications rather than managing infrastructure.
+
+6 / 104
+Goto...
+
+P
+Types of supported applications
+Stateless
+Stateful
+Data-processing
+Note: If an application can run in a container, it should run great on Kubernetes.
+
+Introduction:
+
+Kubernetes supports a variety of application types, offering flexibility and scalability for both simple and complex workloads. Let’s break down the primary types of applications that Kubernetes is well-suited for.
+Stateless Applications:
+
+Stateless applications do not retain any information about user sessions or transactions between requests.
+These are typically simpler to scale because each instance of the application is independent.
+Examples include web servers, API gateways, and microservices where state is managed externally (e.g., in a database or cache).
+Stateful Applications:
+
+Stateful applications maintain some level of persistent state or data across requests.
+Kubernetes offers features like Persistent Volumes (PVs) and Persistent Volume Claims (PVCs) to handle state management for these applications.
+Examples include databases (e.g., MySQL, PostgreSQL), message queues (e.g., RabbitMQ, Kafka), and storage systems.
+Data-Processing Applications:
+
+Kubernetes can handle workloads like batch processing, stream processing, and machine learning pipelines.
+These applications often require high scalability and distributed architectures, which Kubernetes can manage efficiently.
+Examples include Hadoop, Spark, and TensorFlow workloads.
+Key Note:
+
+Kubernetes is designed to run any containerized application efficiently. If an application works well in a container, it should also run seamlessly on Kubernetes.
+Conclusion:
+
+Whether your application is stateless, stateful, or data-intensive, Kubernetes provides the necessary tools and abstractions to deploy and manage it effectively. This flexibility is one of the reasons Kubernetes is a go-to platform for modern application development.
+
+7 / 104
+Goto...
+
+P
+Kubernetes does not
+Deploy source code
+Build your application
+Provide application-level services:
+Middleware services (message busses)
+Databases
+Caches
+Cluster storage systems
+Dictate logging, monitoring, or alerting solutions
+Introduction:
+
+While Kubernetes provides a powerful platform for orchestrating and managing containerized applications, it’s essential to understand its limitations. Kubernetes focuses on infrastructure management and does not handle higher-level application development tasks.
+Kubernetes Does Not Deploy Source Code:
+
+Kubernetes operates at the container level and does not interact directly with source code.
+It assumes that your application has already been built and packaged into a container image. Building, testing, and packaging are typically handled by CI/CD pipelines or other development tools.
+Kubernetes Does Not Build Your Application:
+
+Kubernetes is not a build tool or CI/CD system.
+Tasks like compiling source code, running tests, and creating container images need to be completed before deploying to Kubernetes.
+Kubernetes Does Not Provide Application-Level Services:
+
+Kubernetes doesn’t natively include middleware services, such as message queues (e.g., RabbitMQ, Kafka), databases (e.g., MySQL, MongoDB), or caches (e.g., Redis, Memcached).
+Similarly, it doesn’t handle cluster-wide storage systems. Instead, it allows you to integrate and manage these services using Persistent Volumes (PVs) or external tools.
+Kubernetes Does Not Dictate Logging, Monitoring, or Alerting Solutions:
+
+Kubernetes provides the ability to collect logs and metrics but does not prescribe specific solutions for logging, monitoring, or alerting.
+Tools like Prometheus, Grafana, Elastic Stack, or Datadog are commonly used alongside Kubernetes to handle these aspects.
+This flexibility allows teams to choose tools that align with their requirements.
+Conclusion:
+
+Kubernetes is designed to orchestrate containers, not to replace application build tools, middleware, or monitoring systems. Understanding these boundaries helps teams integrate Kubernetes effectively with other tools and services in their ecosystem.
+
+8 / 104
+Goto...
+
+P
+Kubernetes Cluster
+The heart of Kubernetes
+Set of nodes that run containerized applications
+Aims to run containers
+Efficiently
+Automated
+Distributed
+Scalable
+Decouples the containers from the underlying hardware layer
+Introduction:
+
+At the core of Kubernetes is the Kubernetes Cluster, which serves as the foundation for orchestrating containerized applications. Understanding its structure and purpose is key to leveraging Kubernetes effectively.
+The Heart of Kubernetes:
+
+The cluster is the central entity in Kubernetes, composed of a control plane and a set of worker nodes.
+It provides a unified platform for deploying and managing containerized applications.
+Set of Nodes:
+
+A Kubernetes cluster consists of multiple nodes, each of which can be a physical or virtual machine.
+Nodes are where pods (the smallest deployable units in Kubernetes) are executed.
+The control plane manages these nodes, ensuring desired application states are maintained.
+Key Aims of a Kubernetes Cluster:
+
+Efficient:
+
+Kubernetes optimizes resource utilization across nodes, ensuring applications use just the right amount of CPU, memory, and storage.
+Automated:
+
+Tasks like container deployment, scaling, and self-healing are handled automatically, reducing manual intervention.
+Distributed:
+
+Applications run across multiple nodes, improving reliability and enabling workloads to be distributed for better performance.
+Scalable:
+
+Kubernetes supports scaling applications horizontally (adding more pods) or vertically (allocating more resources to existing pods).
+Decoupling Containers from Hardware:
+
+Kubernetes abstracts the underlying hardware layer, whether it’s on-premises servers, cloud infrastructure, or a hybrid environment.
+This decoupling allows developers to focus on building and deploying applications without worrying about the details of the infrastructure.
+Conclusion:
+
+The Kubernetes cluster is the backbone of the platform, enabling efficient, automated, distributed, and scalable container orchestration. By abstracting the hardware layer, Kubernetes empowers teams to deploy applications seamlessly across diverse environments.
+
+9 / 104
+Goto...
+
+P
+Installing Kubernetes Cluster
+Managed Kubernetes services
+AWS
+Azure
+Google Cloud
+Self-hosted Kubernetes
+Local environment
+Ideal for learning, testing, and development
+minikube
+kind
+Introduction:
+
+Setting up a Kubernetes cluster can vary depending on the environment and purpose. Kubernetes provides several installation options, ranging from fully managed services to self-hosted and local setups.
+Managed Kubernetes Services:
+
+Cloud providers like AWS, Azure, and Google Cloud offer managed Kubernetes services:
+AWS Elastic Kubernetes Service (EKS): Handles the control plane while you manage worker nodes.
+Azure Kubernetes Service (AKS): Simplifies cluster setup with integrated monitoring and scaling.
+Google Kubernetes Engine (GKE): Provides a robust Kubernetes environment with seamless integration into Google Cloud tools.
+These services are ideal for production environments as they reduce the operational overhead of managing the control plane.
+Self-Hosted Kubernetes:
+
+With a self-hosted approach, you deploy and manage the entire Kubernetes cluster on your own infrastructure, either on-premises or on virtual machines.
+Tools like kubeadm, kubespray, kops, or custom scripts can be used to set up a cluster.
+This approach provides full control but requires expertise in cluster management and maintenance.
+Local Environment:
+
+For learning, testing, or development purposes, setting up Kubernetes on a local machine is a practical and lightweight option:
+minikube: A single-node Kubernetes environment designed for local use.
+kind (Kubernetes IN Docker): Runs Kubernetes clusters in Docker containers, ideal for CI pipelines and lightweight testing.
+These tools simplify experimentation without the complexity of managing a full-scale cluster.
+Choosing the Right Option:
+
+The choice of installation method depends on your use case:
+Use managed services for production and large-scale applications.
+Opt for self-hosted Kubernetes for full control in specialized or on-premises environments.
+Leverage local environments for quick testing, learning, and development.
+Conclusion:
+
+Installing Kubernetes is flexible and adaptable to various needs, whether you’re deploying in the cloud, managing your infrastructure, or working locally for development and testing.
+
+10 / 104
+Goto...
+
+P
+KIND
+Run local Kubernetes clusters in Docker containers
+KIND == Kubernetes IN Docker
+Primarily designed for learning and testing
+Can be used also for local development
+Installation instructions
+https://gitlab.dell.com/xxxxx
+Introduction:
+
+KIND (Kubernetes IN Docker) is a lightweight tool for running Kubernetes clusters locally in Docker containers. It’s an excellent option for developers and testers who want to experiment with Kubernetes without setting up a full cluster.
+What is KIND?
+
+KIND runs Kubernetes clusters inside Docker containers, simulating a multi-node cluster on a single machine.
+It’s ideal for scenarios like:
+Learning Kubernetes concepts and commands.
+Testing Kubernetes configurations and workloads.
+Local development and Continuous Integration (CI) pipelines.
+Primary Use Cases:
+
+Learning and Testing:
+
+KIND provides a simple and isolated environment for experimenting with Kubernetes.
+It eliminates the need for cloud infrastructure, making it cost-effective and accessible.
+Local Development:
+
+Developers can use KIND to test Kubernetes deployments locally before pushing to production clusters.
+Its Docker-based architecture integrates seamlessly with development workflows.
+Installation Instructions:
+
+The installation process is straightforward and involves setting up Docker and KIND.
+Refer to the provided link for detailed instructions:
+https://gitlab.dell.com/xxxxx.
+Advantages of KIND:
+
+Quick setup and teardown of clusters.
+No need for additional virtualization tools.
+Simulates real Kubernetes clusters, enabling accurate testing.
+Conclusion:
+
+KIND is a powerful and efficient tool for local Kubernetes experimentation. Whether you’re learning, testing, or developing, KIND simplifies the process of creating and managing Kubernetes clusters in a local environment.
+
+11 / 104
+Goto...
+
+P
+Kubernetes Config file
+YAML kubeconf file
+Default location is ~/.kube/config
+KUBECONFIG environment variable holds a list of kubeconfig files
+Used to manage and access multiple Kubernetes clusters
+Stores information on clusters, users, and contexts
+Structure
+Clusters: Defines each Kubernetes cluster to connect to
+Users: Holds authentication details for accessing clusters
+Contexts: Combines a cluster, user, and namespace for easy access
+Introduction:
+
+Let’s discuss the kubeconfig file, a critical file for configuring access to Kubernetes clusters when using kubectl.
+
+Definition:
+
+The kubeconfig file is used by kubectl to manage and store access configurations for multiple Kubernetes clusters. It includes settings for clusters, users, and contexts, allowing for flexible management.
+
+Structure:
+
+The kubeconfig file has a few main sections:
+Clusters: Each cluster entry includes details about a specific Kubernetes cluster, such as the server address.
+Users: Stores authentication credentials needed to access clusters, which may include tokens, certificates, or keys.
+Contexts: Combines a cluster, user, and namespace, providing a quick way to switch between different environments without needing separate configuration files.
+
+Purpose:
+
+The kubeconfig file enables multi-cluster management from a single configuration file. It centralizes access and authentication settings and makes it easy to switch between clusters without changing the file structure each time.
+
+Location:
+
+By default, the kubeconfig file is located at ~/.kube/config. However, we can specify custom config files using the --kubeconfig flag if we need to switch between different configurations or use multiple files.
+
+Conclusion:
+
+In summary, the kubeconfig file is essential for managing multiple Kubernetes clusters, enabling flexible and secure access through a single configuration file.
+
+12 / 104
+Goto...
+
+P
+kubectl
+The official kubernetes CLI client
+Interacts with the Kubernetes API
+Syntax
+kubectl <action> <resource> <obj-name>
+Output:
+
+By default is human readable
+Extended information: -o wide
+-o json or -o yaml
+Introduction:
+
+kubectl is the official command-line interface (CLI) tool for Kubernetes. It allows you to interact with the Kubernetes API to manage and troubleshoot your clusters effectively.
+Purpose of kubectl:
+
+kubectl serves as a bridge between users and the Kubernetes cluster.
+It can be used for a wide range of actions, from deploying applications to viewing cluster resources and debugging issues.
+kubectl Syntax:
+
+The general syntax for kubectl commands is:
+kubectl <action> <resource> <obj-name>
+
+<action>: The operation to perform (e.g., get, create, delete, apply).
+<resource>: The type of resource (e.g., pod, service, deployment).
+<obj-name>: The specific name of the object (optional).
+Example:
+kubectl get pods lists all pods in the current namespace.
+
+Output Formats:
+
+Human-Readable (Default):
+
+Outputs information in a table format for easy understanding.
+Extended Information (-o wide):
+
+Provides additional details, such as node assignments or IP addresses.
+Structured Data (-o json or -o yaml):
+
+Outputs information in JSON or YAML formats, suitable for scripting or configuration purposes.
+Example:
+kubectl get pods -o yaml retrieves the pod details in YAML format.
+Key Notes:
+
+kubectl is highly versatile and can handle nearly every aspect of Kubernetes management.
+It supports advanced features like applying configurations, managing contexts, and executing commands within pods.
+Conclusion:
+
+Mastering kubectl is essential for effectively managing Kubernetes clusters. Its combination of simplicity and power makes it the go-to tool for developers and operators alike.
+
+13 / 104
+Goto...
+
+P
+Namespaces
+Isolating groups of resources
+Used to organize objects
+Single cluster – Multiple namespaces
+Applicable only for namespace objects (e.g. Deployments, Services, PODs, etc)
+Intended for use in multi-tenant environments
+Introduction:
+
+In Kubernetes, namespaces provide a way to logically isolate and organize resources within a cluster. This is particularly useful in large or multi-tenant environments.
+Purpose of Namespaces:
+
+Namespaces help isolate groups of resources, such as deployments, services, and pods, into separate virtual spaces within a single cluster.
+They allow for better organization and management of Kubernetes objects, making it easier to apply policies and configurations specific to each group.
+Single Cluster, Multiple Namespaces:
+
+A Kubernetes cluster can have multiple namespaces, enabling teams or applications to share the same cluster while maintaining separation.
+By default, Kubernetes includes the following namespaces:
+default: Used when no namespace is specified.
+kube-system: Contains Kubernetes system components.
+kube-public: Contains publicly accessible resources.
+Namespace Objects:
+
+Namespaces are applicable only to namespace-scoped objects, such as:
+Deployments, Services, Pods, ConfigMaps, Secrets, etc.
+They do not apply to cluster-scoped objects like nodes, PersistentVolumes, or ClusterRoles.
+Multi-Tenant Environments:
+
+Namespaces are ideal for multi-tenant environments where different teams, projects, or applications share a single cluster but require isolation.
+Conclusion:
+
+Namespaces are a powerful feature for organizing and isolating resources in Kubernetes, making them essential for efficient cluster management in shared or large-scale environments.
+
+14 / 104
+Goto...
+
+P
+kubectl and namespaces
+By default kubectl interacts with the 'default' namespace
+Specify other namespace
+–namespace (-n) flag
+Use all namespaces
+–all-namespaces flag
+Introduction:
+
+By default, kubectl operates within the default namespace, but Kubernetes provides flexibility to work across other namespaces or the entire cluster.
+Default Namespace:
+
+If no namespace is specified, kubectl commands will interact with resources in the default namespace.
+This makes it convenient for single-namespace setups or quick interactions.
+Specifying Other Namespaces:
+
+To interact with a specific namespace, use the --namespace (or -n) flag:
+Example: kubectl get pods -n my-namespace retrieves pods in the my-namespace namespace.
+Using All Namespaces:
+
+To view resources across all namespaces, use the --all-namespaces flag:
+Example: kubectl get pods --all-namespaces lists all pods in every namespace.
+Namespace Context in Configurations:
+
+To avoid repeatedly specifying the -n flag, you can set a default namespace for your current context using:
+kubectl config set-context --current --namespace=<namespace-name>.
+Conclusion:
+
+Understanding how to manage namespaces with kubectl is key to efficiently navigating and managing Kubernetes clusters, especially in multi-namespace environments.
+
+15 / 104
+Goto...
+
+P
+kubectl and contexts
+List All Contexts
+kubectl config get-contexts
+
+Switch Context
+kubectl config use-context context-name
+
+View Current Context
+kubectl config current-context
+
+Set Default Namespace
+kubectl config set-context --current --namespace=namespace-name
+
+Introduction:
+
+Let’s look at some practical examples of using kubectl contexts. These commands will help us efficiently switch between clusters, set default namespaces, and manage our contexts in Kubernetes.
+
+Switch Context:
+
+To switch to a specific context, we use the command kubectl config use-context <context-name>. This sets the active context, which determines the cluster, user, and namespace for future kubectl commands.
+For example, if we’re switching between development and production clusters, this command lets us do that in one step.
+
+Set Default Namespace:
+
+We can also set the default namespace for the current context with kubectl config set-context --current --namespace=<namespace>. This is useful when we’re working within a specific namespace, allowing us to avoid adding the -n flag each time we run a command.
+
+View Current Context:
+
+To view the current active context, we use kubectl config current-context. This command is helpful if we’re unsure which cluster or environment we’re currently connected to.
+
+List All Contexts:
+
+If we want to see all available contexts, kubectl config get-contexts will list every context stored in the kubeconfig file, making it easy to see all our configured clusters and users.
+
+Rename a Context:
+
+To rename an existing context, we can use kubectl config rename-context <old-name> <new-name>. This is useful for giving contexts more descriptive names, especially in environments with multiple clusters.
+
+Conclusion:
+
+In summary, these commands allow us to manage contexts more effectively, helping us switch clusters, set namespaces, and organize our Kubernetes environments with ease.
+
+16 / 104
+Goto...
+
+P
+Kubernetes Resources
+Building Blocks of the Cluster
+Fundamental components that define and maintain applications
+Example of resources:
+POD
+Service
+ReplicaSet
+Deployment
+Introduction:
+
+Kubernetes resources are the building blocks of a cluster. They represent the objects and components that define how applications are deployed, managed, and scaled.
+Building Blocks of the Cluster:
+
+Resources are at the core of Kubernetes, enabling the platform to orchestrate containerized applications.
+Each resource serves a specific purpose in defining, running, and maintaining applications within the cluster.
+Fundamental Components:
+
+Kubernetes resources provide declarative configurations that define the desired state of the system.
+The Kubernetes control plane continuously works to ensure the actual state matches the desired state.
+Examples of Key Resources:
+
+POD:
+
+The smallest deployable unit in Kubernetes, representing one or more containers that share storage, network, and a specification for how to run them.
+Service:
+
+Defines a logical set of pods and a policy to access them.
+Services abstract the pod IPs and provide stable network endpoints.
+ReplicaSet:
+
+Ensures a specified number of pod replicas are running at any given time.
+Automatically replaces failed pods to maintain the desired state.
+Deployment:
+
+Provides declarative updates to applications.
+Manages ReplicaSets and ensures seamless rollouts and rollbacks.
+Conclusion:
+
+Understanding Kubernetes resources is essential for effectively managing clusters. These components enable Kubernetes to deliver on its promise of automating the deployment and scaling of containerized applications.
+
+17 / 104
+Goto...
+
+P
+Kubernetes Manifest Files
+Define Kubernetes Resources
+YAML or JSON files
+Declare the desired state
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+spec:
+  containers:
+    - name: my-container
+      image: my-app:1.22.0
+
+Introduction:
+
+Kubernetes manifest files are essential for managing resources in a Kubernetes cluster. They allow users to declare the desired state of applications and infrastructure in a systematic and repeatable way.
+Defining Kubernetes Resources:
+
+Manifest files serve as the blueprints for Kubernetes resources, defining their configuration and specifications.
+They provide a consistent method for creating, updating, and managing cluster resources.
+Supported File Formats:
+
+Kubernetes supports both YAML and JSON formats for manifest files.
+YAML is the preferred format for most Kubernetes users due to its readability and simplicity.
+Declarative State:
+
+Manifest files align with Kubernetes’ declarative approach to resource management.
+Users specify the desired state of a resource (e.g., the number of replicas, image version, configuration), and Kubernetes ensures the actual state matches it.
+This method is reliable and minimizes manual intervention.
+Key Benefits:
+
+Reproducibility:
+
+Manifest files can be stored in version control, ensuring changes are tracked and environments can be reproduced.
+Collaboration:
+
+Teams can collaborate by sharing and reviewing manifest files.
+Automation:
+
+Manifest files can be integrated into CI/CD pipelines, enabling automated deployments and updates.
+Conclusion:
+
+Kubernetes manifest files are a core aspect of managing resources in Kubernetes. By adopting them, teams can achieve consistency, scalability, and automation in their workflows.
+
+18 / 104
+Goto...
+
+P
+kubectl Imperative vs Declarative
+Imperative
+Execute imperative commands to describe resources
+Good for troubleshooting and experimenting
+Not recommended for production deployments
+kubectl run nginx --image=nginx
+
+Declarative
+Define a manifest file that describes the resources
+Apply the the desired state
+kubectl apply -f nginx.yaml
+
+Introduction:
+
+Kubernetes provides two approaches for managing resources: imperative and declarative. Each has its strengths, and understanding when to use them is critical for effective cluster management.
+Imperative Approach:
+
+Description:
+The imperative approach involves running real-time commands to create or modify resources directly in the cluster.
+
+When to Use:
+
+Ideal for troubleshooting scenarios, such as testing resource configurations.
+Useful for experimentation, allowing quick setup and adjustments.
+Advantages:
+
+Simple and fast for one-off tasks.
+No manifest file required.
+Disadvantages:
+
+Difficult to reproduce consistently.
+Not suitable for production due to lack of tracking and version control.
+Declarative Approach:
+
+Description:
+The declarative approach uses manifest files (YAML or JSON) to define the desired state of resources. Kubernetes ensures the cluster matches this state.
+
+When to Use:
+
+Recommended for production environments and long-term management.
+Works well with CI/CD pipelines for automated deployments.
+Advantages:
+
+Reproducible and consistent.
+Can be version-controlled, enabling easy collaboration and auditing.
+Kubernetes automatically resolves differences between the current and desired states.
+Disadvantages:
+
+Requires creating and maintaining manifest files, which can be time-consuming for simple tasks.
+Conclusion:
+
+Use the imperative approach for quick, ad-hoc tasks or debugging, and adopt the declarative approach for scalable, reliable, and production-ready Kubernetes management.
+
+19 / 104
+Goto...
+
+P
+PODs
+Basic building block
+Smallest deployable units
+Group of one or more containers
+Deeply coupled
+Shared network
+Shared storage
+Multiple containers in one POD
+Combining multiple primary workloads in single pod is an anti-pattern
+Sidecar containers, proxies, bridges, adapters, etc.
+Introduction:
+
+In Kubernetes, a Pod is the smallest and most basic building block. It represents a single instance of a running process in a cluster. Understanding Pods is crucial as they form the foundation for deploying and managing applications.
+Basic Building Block:
+
+A Pod encapsulates one or more tightly coupled containers.
+Containers within a Pod share the same network namespace, allowing them to communicate using localhost without any additional configuration.
+Pods can also share storage volumes, enabling data exchange between containers.
+Smallest Deployable Units:
+
+Pods are the smallest deployable units in Kubernetes, meaning all workloads in Kubernetes are deployed as Pods.
+Even single-container applications are wrapped in a Pod for standardization.
+Multiple Containers in One Pod:
+
+While most Pods contain a single container, multiple containers can be grouped into a Pod if they are deeply coupled and need to share resources like network and storage.
+
+Examples include:
+
+Sidecar containers for logging or monitoring.
+Proxies or adapters that enhance or modify the primary container’s functionality.
+Anti-Pattern Warning:
+
+Avoid combining multiple primary workloads in a single Pod. Each primary workload should have its own Pod to ensure proper scaling and fault isolation.
+Conclusion:
+
+Pods are fundamental to Kubernetes architecture. They provide the structure for deploying containerized applications, facilitating resource sharing and orchestration. Proper usage of Pods, especially avoiding anti-patterns, ensures scalable and maintainable deployments.
+
+20 / 104
+Goto...
+
+P
+PODs (cont.)
+Each container runs in its own cgroup
+Share OS namespaces
+Share IP Address and Port (network namespace)
+Share hostname
+Share IPC
+Introduction:
+
+In Kubernetes, Pods are unique in how they manage resources and namespaces. This slide explores the inner workings of Pods and how containers within them share and isolate resources.
+Containers and cgroups:
+
+Each container in a Pod operates within its own cgroup (control group).
+This isolates resource usage (CPU, memory) at the container level.
+Even within the same Pod, resource limits and requests can be defined for each container independently.
+Shared OS Namespaces:
+
+Containers in a Pod share certain operating system namespaces to enable seamless collaboration:
+Network namespace: Containers share the same IP address and port space.
+Communication between containers in the same Pod happens over localhost.
+Externally, the Pod appears as a single network entity.
+Hostname: All containers in the Pod share the same hostname.
+IPC (Inter-Process Communication): Containers can use shared memory to exchange data.
+Key Benefits of Shared Namespaces:
+
+Simplified Communication:
+
+Containers can communicate efficiently without needing external networking.
+Shared Environment:
+
+Sharing namespaces makes it easier for containers to collaborate, such as a logging sidecar processing logs from the main application.
+Best Practices:
+
+Design Pods to leverage shared namespaces for related tasks, such as monitoring or adapting a primary workload.
+Avoid overloading Pods with unrelated containers, as this increases complexity and reduces scalability.
+Conclusion:
+
+Pods provide a unique mechanism to balance isolation and sharing between containers. By sharing OS namespaces, Pods allow containers to operate closely while maintaining resource control through cgroups.
+
+21 / 104
+Goto...
+
+PODs (cont.)
+Create POD (Imperative)
+kubectl run nginx --image=nginx
+
+Create POD (Declarative)
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+EOF
+
+Delete POD
+kubectl delete nginx
+
+
+22 / 104
+Goto...
+
+Troubleshooting PODs
+Read pod logs
+kubectl logs pod-name
+
+Execute command in running container
+kubectl exec -it pod-name -- /bin/bash
+
+Attach to running container
+kubectl attach -it pod-name
+
+Copy files
+kubectl cp pod-name:/path/to/local/file path/to/local/file
+
+Forward traffic from local 8080 to confiner 80
+kubectl port-forward pod-name 8080:80
+
+
+23 / 104
+Goto...
+
+P
+Containers Health Checks / Probes
+Mechanisms to monitor the status of an application
+Kubelt takes action if the application is unhealthy or unresponsive
+Types:
+Startup probe
+Liveness probe
+Readiness probe
+Probe type:
+HTTP
+TCP
+gRPC
+exec (run script and exit with code 0)
+Introduction:
+
+Health checks, or probes, are mechanisms in Kubernetes that ensure the application inside a container is functioning correctly. They enable Kubernetes to detect issues and take corrective actions automatically.
+Purpose of Probes:
+
+Probes help Kubernetes determine whether a container is healthy or unresponsive.
+If a probe fails, the kubelet (the Kubernetes node agent) can:
+Restart the container.
+Prevent it from receiving traffic until it’s healthy again.
+Types of Probes:
+
+Startup Probe:
+
+Ensures the application starts correctly.
+Useful for applications with long initialization times.
+A startup probe ensures that the container has enough time to start before other probes (like liveness or readiness) take over.
+If the startup probe fails, Kubernetes will kill and restart the container.
+Liveness Probe:
+
+Checks if the application is still running.
+If the liveness probe fails, Kubernetes restarts the container.
+Example use case: Detecting a deadlock in an application.
+Readiness Probe:
+
+Checks if the application is ready to accept traffic.
+If the readiness probe fails, Kubernetes removes the Pod from the Service’s endpoints, ensuring no traffic is sent to it.
+Example use case: Waiting for database connections or dependent services to become available.
+Probe Types:
+
+Probes can be implemented in three ways:
+HTTP Probe: Sends an HTTP request to a specified endpoint. A 2xx or 3xx response indicates success.
+TCP Probe: Checks if a specified TCP port is open.
+exec Probe: Executes a script or command inside the container. If the script exits with code 0, the probe succeeds.
+Key Benefits:
+
+Probes provide automatic self-healing capabilities, reducing downtime.
+They improve application reliability by ensuring only healthy instances receive traffic.
+Conclusion:
+
+Kubernetes probes are an essential tool for maintaining application health and reliability. By using startup, liveness, and readiness probes effectively, teams can create self-healing and robust deployments.
+
+24 / 104
+Goto...
+
+Containers Health Checks / Probes (cont.)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app-pod
+spec:
+  containers:
+    - name: my-app-container
+      image: my-app:latest
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8000
+      livenessProbe:
+        httpGet:
+          path: /health
+          port: 8000
+        initialDelaySeconds: 5
+        periodSeconds: 10
+      readinessProbe:
+        httpGet:
+          path: /health
+          port: 8000
+        initialDelaySeconds: 5
+        periodSeconds: 5
+
+
+25 / 104
+Goto...
+
+P
+Requests and Limits
+Control the resources of a container
+By default, containers run with unbounded compute resources
+Applied per container in POD
+Requests
+Minimum guaranteed amount of a resource
+Used when scheduling PODs to nodes
+Scheduler ensures all requests for all pods do not exceed the node capacity
+Limits
+Maximum amount of a resources to be used
+Container can never consume more than the limit
+Relays on cgroups in the Linux Kernel
+Introduction:
+
+Requests and limits are resource management mechanisms in Kubernetes. They ensure efficient utilization of compute resources (CPU and memory) while maintaining fairness and stability in the cluster.
+Why Requests and Limits Matter:
+
+By default, Kubernetes does not impose any restrictions on resource usage. Containers can potentially consume all available resources on a node, impacting other workloads.
+Requests and limits provide control over resource allocation and consumption, ensuring predictable and stable cluster operations.
+Requests:
+
+What It Does:
+
+Represents the minimum amount of a resource (CPU or memory) guaranteed to a container.
+Kubernetes uses requests during scheduling to decide which node a Pod will run on.
+Behavior:
+
+The Kubernetes scheduler ensures the sum of all requests on a node does not exceed its total capacity.
+Example: A container with a CPU request of 500m (0.5 CPU) will be guaranteed this amount even under load.
+Use Case:
+
+Ensures critical applications have the resources they need, even in high-demand situations.
+Limits:
+
+What It Does:
+
+Specifies the maximum amount of a resource a container can use.
+If the container exceeds its limit, the kernel throttles its CPU usage or terminates it for exceeding memory.
+Behavior:
+
+CPU Limit: The container is throttled but not killed.
+Memory Limit: If exceeded, the container is terminated with an OutOfMemory (OOM) error.
+How It Works:
+
+Limits rely on cgroups (control groups) in the Linux Kernel to enforce these restrictions.
+Use Case:
+
+Prevents containers from monopolizing node resources, ensuring fair distribution.
+Key Considerations:
+
+Requests and limits are set per container within a Pod, allowing granular control.
+Overcommitting resources (setting requests and limits higher than actual usage) can lead to inefficient utilization.
+Undercommitting (setting too low) might result in application crashes under load.
+Conclusion:
+
+Kubernetes requests and limits are essential for managing resources effectively.
+Requests ensure fair and stable resource allocation during scheduling, while limits cap resource usage, preventing runaway containers. Proper tuning of these parameters is key to achieving optimal cluster performance.
+
+26 / 104
+Goto...
+
+Requests and Limits (cont.)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app-pod
+spec:
+  containers:
+    - name: my-app-container
+      image: my-app:latest
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8000
+      resources:
+        # Define the minimum required recourses to schedule the pod
+        requests:
+          memory: "128Mi"
+          cpu: "250m"
+        # Define the maximum resources that the pod can consume
+        limits:
+          memory: "256Mi"
+          cpu: "500m"
+
+
+27 / 104
+Goto...
+
+P
+Labels and Annotations
+Labels
+
+Key/Value pairs
+Attached to objects (e.g. Pods)
+Used to specify identifying
+Used in selectors
+Used to organize and to select subsets of objects
+Annotations
+
+Key/Value pairs
+Attached to objects (e.g. Pods)
+Attach arbitrary non-identifying metadata to objects
+Provide information that is useful to other tools
+Cannot be used in selectors
+Introduction:
+
+Kubernetes uses labels and annotations to provide metadata for objects like Pods, Services, and Deployments. These metadata types serve distinct purposes and are critical for organizing, identifying, and enhancing the functionality of Kubernetes objects.
+Labels:
+
+Purpose:
+
+Labels are identifiers in the form of key/value pairs attached to Kubernetes objects.
+They enable grouping, selection, and filtering of resources within the cluster.
+Use Cases:
+
+Selectors: Labels are heavily used in selectors to target subsets of objects.
+Organization: Labels help categorize objects, such as by application, environment, or tier.
+Annotations:
+
+Purpose:
+
+Annotations are used to attach non-identifying metadata to Kubernetes objects.
+Unlike labels, annotations cannot be used in selectors or to filter objects.
+Use Cases:
+
+External Tools: Annotations are often used to provide configuration information for external systems, such as monitoring, logging, or CI/CD pipelines.
+Additional Metadata: Useful for attaching metadata like build versions, configuration options, or documentation links.
+Key Differences Between Labels and Annotations:
+
+Feature	Labels	Annotations
+Purpose	Identifying objects	Adding non-identifying metadata
+Usage in Selectors	Yes	No
+Example Metadata	App name, tier, environment	Build version, maintainer, documentation
+Conclusion:
+
+Labels and annotations play complementary roles in Kubernetes metadata management.
+Use labels for identifying and selecting objects.
+Use annotations for attaching additional, non-identifying information that enriches object metadata.
+
+28 / 104
+Goto...
+
+Labels and Annotations (cont.)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-pod
+  labels:
+    app: my-app
+    env: production
+  annotations:
+    last-updated: "2024-11-08"
+spec:
+  containers:
+  - name: my-container
+    image: nginx:latest
+
+
+29 / 104
+Goto...
+
+P
+Service
+Discovery
+Load balancing
+Provides stable name
+Types of Services:
+ClusterIP
+NodePort
+LoadBalancer
+ExternalName
+Introduction:
+
+Now, let’s cover the Kubernetes Services. Services in Kubernetes allow us to provide stable IP addresses for groups of pods, making it easier for pods to connect to each other.
+
+Definition:
+
+A service in Kubernetes is an abstraction that defines a stable IP address for accessing a group of pods. This helps ensure reliable communication, even as pods are created and destroyed.
+
+Service Types:
+Kubernetes supports multiple service types for different use cases:
+
+ClusterIP: Exposes the service on an internal IP within the cluster, making it accessible only to other cluster resources.
+NodePort: Exposes the service on a specific port of each node, allowing external access to the service.
+LoadBalancer: Uses an external load balancer to distribute traffic across the pods, ideal for cloud providers.
+ExternalName: Maps the Service to the to external for the cluster DNS name. The mapping configures the cluster’s DNS server to return a CNAME record with that external hostname value. No proxying of any kind is set up.
+Service Discovery:
+
+Kubernetes uses DNS for service discovery. Each service has a DNS entry, allowing pods to find it by name rather than IP address, which simplifies connectivity and supports dynamic changes.
+Conclusion:
+
+In summary, pod-to-service communication allows stable connections between pods and services, ensuring reliable interaction within and outside the cluster.
+
+30 / 104
+Goto...
+
+Service (cont.)
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+spec:
+  type: NodePort
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 8000          # Port on the Service
+      targetPort: 8000    # Port on the Pod
+      nodePort: 30000     # Specific NodePort
+
+
+31 / 104
+Goto...
+
+P
+Replication sets (ReplicaSet)
+Ensures a specified number of pod replicas are running
+Automatically manages pod creation and deletion
+Key Functions:
+Self-healing
+Scaling
+Introduction:
+
+A ReplicaSet in Kubernetes ensures the availability and scalability of Pods by maintaining a specified number of replicas at all times. It is a critical resource for achieving high availability and fault tolerance.
+Core Purpose of ReplicaSets:
+
+ReplicaSets ensure that a defined number of Pods are always running.
+They monitor the state of Pods and automatically create or delete them to match the desired count.
+Key Functions of ReplicaSets:
+
+Self-Healing:
+
+If a Pod fails or is deleted unexpectedly, the ReplicaSet creates a new Pod to replace it, ensuring continuity.
+This makes applications more resilient to failures.
+Scaling:
+
+ReplicaSets allow easy scaling of applications by increasing or decreasing the number of replicas.
+Scaling can be performed manually or automatically (when paired with a Horizontal Pod Autoscaler).
+How ReplicaSets Work:
+
+ReplicaSets use selectors to identify the Pods they manage.
+They continuously compare the actual number of running Pods to the desired number specified in the ReplicaSet’s configuration and take action to reconcile differences.
+Conclusion:
+
+ReplicaSets are essential for maintaining a consistent application state in Kubernetes. They handle self-healing and scaling automatically, providing reliability and flexibility for managing workloads.
+
+32 / 104
+Goto...
+
+Replication sets (cont.)
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-app-replicaset
+  labels:
+    app: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: my-app:latest
+        ports:
+          - containerPort: 8000
+
+
+33 / 104
+Goto...
+
+P
+Deployments
+Deployment and scaling of containerized applications
+Uses ReplicaSets but adds additional functionality
+Describe the desired state of the application
+Easy version updates for any software (Rolling Updates)
+Introduction:
+
+Deployments are one of the most commonly used Kubernetes resources. They provide a higher-level abstraction over ReplicaSets, simplifying the deployment, scaling, and management of containerized applications.
+Core Purpose of Deployments:
+
+Deployments describe the desired state of an application, and Kubernetes works to ensure the cluster matches this state.
+They manage ReplicaSets under the hood but add features like version management and rolling updates.
+Key Features of Deployments:
+
+Deployment and Scaling:
+
+Deployments simplify the process of launching and managing containerized applications.
+Scaling is straightforward, allowing you to easily adjust the number of replicas.
+Enhanced Management:
+
+Deployments extend ReplicaSets by adding functionality such as declarative updates and rollback support.
+If a deployment fails, it can be rolled back to a previous version automatically or on demand.
+Rolling Updates:
+
+Kubernetes Deployments support rolling updates, which allow new versions of applications to be deployed without downtime.
+Pods are replaced incrementally, ensuring that the application remains available during updates.
+How Deployments Work:
+
+Deployments create and manage ReplicaSets. The ReplicaSets then manage the actual Pods.
+Updates to the deployment’s configuration result in the creation of new ReplicaSets, ensuring smooth transitions between versions.
+Conclusion:
+
+Deployments are a powerful tool for managing the lifecycle of applications in Kubernetes. By combining ReplicaSet management with features like rolling updates and rollback capabilities, they provide a reliable and flexible way to deploy and scale applications.
+
+34 / 104
+Goto...
+
+Deployments
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.21.6
+        ports:
+        - containerPort: 80
+
+
+35 / 104
+Goto...
+
+P
+Configuration Units
+ConfigMaps
+Object used to store non-confidential data
+Do not store confidential data!
+Key-value pairs
+Can be consumed as environment variables or file
+Secrets
+Object used to store sensitive data
+Passwords, tokens, encryption keys, etc.
+Can be consumed as environment variables or file
+Introduction:
+
+Kubernetes provides two main configuration units for managing application data: ConfigMaps and Secrets. These objects decouple configuration data from application code, making deployments more flexible and secure.
+ConfigMaps:
+
+Purpose:
+
+ConfigMaps are used to store non-confidential configuration data in key-value pairs.
+This data can be injected into Pods, allowing applications to access configuration information dynamically.
+Key Features:
+
+Can store plain text or structured data (e.g., JSON, YAML).
+ConfigMaps make it easy to manage environment-specific configurations without modifying application code.
+Usage:
+
+ConfigMaps can be consumed by Pods as:
+Environment Variables
+Files mounted into containers
+Important Note:
+
+Do not use ConfigMaps for sensitive data like passwords or API keys.
+Secrets:
+
+Purpose:
+
+Secrets are designed to store sensitive data, such as passwords, tokens, and encryption keys.
+Key Features:
+
+Data is stored in a base64-encoded format, adding a basic layer of obfuscation.
+Secrets enhance security by preventing sensitive information from being hardcoded in application code or ConfigMaps.
+Usage:
+
+Secrets can be consumed by Pods as:
+Environment Variables
+Files mounted into containers
+Best Practices:
+
+Use Secrets with proper access controls (e.g., RBAC policies).
+Integrate Secrets with external tools like HashiCorp Vault or AWS Secrets Manager for enhanced security.
+Comparison of ConfigMaps and Secrets:
+
+Feature	ConfigMaps	Secrets
+Data Type	Non-confidential configuration	Sensitive data
+Format	Plaintext key-value pairs	Base64-encoded key-value pairs
+Use Cases	Environment settings, configs	Passwords, tokens, keys
+Conclusion:
+
+Kubernetes ConfigMaps and Secrets provide a robust way to manage application configuration and sensitive data. By separating configuration from application code, they enhance maintainability, security, and flexibility.
+
+36 / 104
+Goto...
+
+ConfigMaps
+ConfigMap resource definiton
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-app-config-env
+data:
+  DATABASE_NAME: "myappdb"
+
+Set config map in POD resource definition
+env:
+  - name: DATABASE_HOST
+    valueFrom:
+      configMapKeyRef:
+        name: my-app-config-env
+        key: DATABASE_HOST
+
+
+37 / 104
+Goto...
+
+Secrets
+Secret resource definiton
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-app-secrets
+type: Opaque
+data:
+  # Base64 encoded stings
+  password: bXlwYXNzd29yZA==
+
+Set secret in POD resource definition
+ env:
+  - name: PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: my-app-secrets
+        key: password
+
+38 / 104
+Goto...
+
+Kubernetes Architecture
+
+39 / 104
+Goto...
+
+P
+What is a Control Plane?
+Group of services
+Cluster Management
+Workloads Scheduling
+Maintaining Desired State
+API Exposure
+Resource Coordination
+High Availability
+Introduction:
+
+The Control Plane is the brain of a Kubernetes cluster. It orchestrates and manages all cluster activities, ensuring workloads run as desired and resources are allocated efficiently.
+Core Functions of the Control Plane:
+
+Group of Services:
+
+The Control Plane consists of multiple services, including the API server, etcd, controller manager, scheduler, and cloud-controller manager. Together, these services form the backbone of cluster operations.
+Cluster Management:
+
+It oversees the overall health and operation of the cluster, managing nodes and workloads.
+Workloads Scheduling:
+
+The Control Plane schedules Pods to appropriate nodes based on resource availability and policies.
+The scheduler ensures optimal resource utilization and workload distribution.
+Maintaining Desired State:
+
+Kubernetes uses a declarative model where users define the desired state (e.g., number of replicas).
+The Control Plane ensures the actual state matches the desired state by creating or deleting resources as needed.
+API Exposure:
+
+The kube-apiserver is the entry point for interacting with the cluster.
+It exposes the Kubernetes API, allowing administrators, developers, and tools to manage the cluster programmatically.
+Resource Coordination:
+
+The Control Plane coordinates resources like CPU, memory, and storage across the cluster to ensure workloads run efficiently.
+High Availability:
+
+For production-grade clusters, the Control Plane can be set up with high availability to prevent downtime.
+Multiple instances of critical components, like the API server and etcd, ensure resilience.
+Conclusion:
+
+The Kubernetes Control Plane is the heart of the cluster, responsible for orchestration, scheduling, and maintaining desired state. By coordinating resources and providing API access, it enables scalable, reliable, and efficient management of containerized workloads.
+
+42 / 104
+Goto...
+
+P
+Control Plane - kube-apiserver
+Еxposes central API
+Cluster Communication Hub
+Writes the desired state of the cluster to etcd
+Designed to scale horizontally
+Introduction:
+
+The kube-apiserver is the central component of the Kubernetes Control Plane, acting as the communication hub for all cluster interactions. It exposes the Kubernetes API, enabling administrators and tools to interact with the cluster programmatically.
+Core Functions of kube-apiserver:
+
+Exposes Central API:
+
+Provides a RESTful API for all Kubernetes operations, such as managing workloads, monitoring resources, and configuring cluster settings.
+All other Control Plane components communicate via the API server.
+Cluster Communication Hub:
+
+Facilitates communication between cluster components, including the scheduler, controller manager, and kubelets on worker nodes.
+Writes to etcd:
+
+Records the desired state of the cluster in etcd, the distributed key-value store.
+This ensures that all components have a consistent view of the cluster state.
+Horizontal Scalability:
+
+The API server is stateless and can scale horizontally by running multiple instances behind a load balancer to handle high volumes of requests.
+Conclusion:
+
+The kube-apiserver is the backbone of the Kubernetes Control Plane, ensuring seamless communication and consistent state management. Its scalability and robustness are critical for cluster reliability and performance.
+
+43 / 104
+Goto...
+
+P
+Control Plane - etcd
+Key-Value store
+Stores all cluster data
+High Availability and Fault Tolerance
+Requires backup
+Introduction:
+
+etcd is a distributed key-value store that serves as the single source of truth for Kubernetes. It stores all cluster data, including configuration, state, and metadata.
+Core Functions of etcd:
+
+Key-Value Store:
+
+etcd organizes data in a key-value format, allowing fast and reliable reads and writes.
+Stores All Cluster Data:
+
+Includes details about nodes, pods, services, configurations, and secrets.
+All Kubernetes state and metadata are maintained in etcd.
+High Availability and Fault Tolerance:
+
+etcd is designed to be distributed and can run across multiple nodes to ensure data availability, even in the event of node failures.
+Backup Requirement:
+
+Regular backups of etcd are essential for disaster recovery.
+If etcd is corrupted or lost, the entire cluster state is at risk.
+Best Practices for etcd:
+
+Use a highly available setup with multiple etcd instances.
+Monitor etcd performance and disk usage to avoid bottlenecks.
+Encrypt data at rest and in transit for enhanced security.
+Conclusion:
+
+etcd is a critical component of the Kubernetes Control Plane. Its reliability and fault tolerance are vital for maintaining cluster stability, and regular backups ensure data integrity in case of failure.
+
+44 / 104
+Goto...
+
+P
+Control Plane - kube-scheduler
+Assigns Pods to Nodes
+Selects feasible Nodes
+Considers Node Conditions
+Balances Workloads
+Honors Constraints and Policies
+Responds to Changes
+Introduction:
+
+The kube-scheduler is a core component of the Kubernetes Control Plane responsible for assigning Pods to appropriate Nodes. It ensures optimal placement based on resource availability, constraints, and policies.
+Core Functions of kube-scheduler:
+
+Assigns Pods to Nodes:
+
+Determines which Node each Pod should run on.
+Scheduling happens only for Pods without an assigned Node.
+Selects Feasible Nodes:
+
+The scheduler filters Nodes to find ones that meet the Pod’s resource and configuration requirements (e.g., CPU, memory, labels, or taints and tolerations).
+
+kube-scheduler selects a node for the pod in a 2-step operation:
+
+Filtering
+Scoring
+The filtering step finds the set of Nodes where it’s feasible to schedule the Pod. For example, the PodFitsResources filter checks whether a candidate Node has enough available resources to meet a Pod’s specific resource requests. After this step, the node list contains any suitable Nodes; often, there will be more than one. If the list is empty, that Pod isn’t (yet) schedulable.
+
+In the scoring step, the scheduler ranks the remaining nodes to choose the most suitable Pod placement. The scheduler assigns a score to each Node that survived filtering, basing this score on the active scoring rules.
+
+Finally, kube-scheduler assigns the Pod to the Node with the highest ranking. If there is more than one node with equal scores, kube-scheduler selects one of these at random.
+
+Considers Node Conditions:
+
+Evaluates the current state of Nodes, such as resource availability and operational status, to avoid overloading or using unhealthy Nodes.
+Balances Workloads:
+
+Distributes workloads evenly across Nodes to prevent hotspots and ensure efficient resource utilization.
+Implements policies to balance Pods across zones or availability groups in cloud environments.
+Honors Constraints and Policies:
+
+Ensures that Pods are scheduled in compliance with user-defined constraints like:
+Node affinity and anti-affinity.
+Pod affinity and anti-affinity.
+Taints and tolerations.
+Responds to Changes:
+
+Dynamically reschedules Pods in response to changes in Node conditions or cluster configurations, ensuring workload stability.
+Conclusion:
+
+The kube-scheduler is crucial for efficient resource management in a Kubernetes cluster. By assigning Pods to Nodes based on constraints, policies, and conditions, it ensures a balanced and optimized workload distribution across the cluster.
+
+45 / 104
+Goto...
+
+P
+Control Plane - kube-controller-manager
+Maintains Cluster Desired State
+Single process but orchestrates multiple controllers
+Replication Controller
+Node Controller
+Endpoints Controller
+Namespace Controller
+Introduction:
+
+The kube-controller-manager is a core Control Plane component responsible for maintaining the cluster’s desired state. It coordinates various controllers that automate routine tasks and ensure cluster reliability.
+All controllers are bundled within the kube-controller-manager, each responsible for a specific aspect of cluster management
+Core Functions of kube-controller-manager:
+
+Maintains Cluster Desired State:
+
+Ensures that the actual state of the cluster aligns with the desired state defined in the Kubernetes manifests.
+Continuously monitors the cluster and takes corrective actions when needed.
+Single Process, Multiple Controllers:
+
+The kube-controller-manager runs as a single process but manages multiple logical controllers within Kubernetes.
+Each controller is specialized for a specific task, working independently to handle various aspects of cluster management.
+Key Controllers:
+
+Replication Controller:
+
+Ensures the specified number of replicas for a Pod are always running.
+Creates or deletes Pods to match the desired state.
+Node Controller:
+
+Monitors the health of Nodes in the cluster.
+Marks Nodes as unreachable if they stop responding and initiates recovery actions if necessary.
+Endpoints Controller:
+
+Updates the Endpoints object whenever Services or Pods are created or deleted.
+Ensures Services have the correct list of associated Pods.
+Namespace Controller:
+
+Handles the lifecycle of namespaces, ensuring that resources within a namespace are cleaned up when the namespace is deleted.
+Conclusion:
+
+The kube-controller-manager is a critical part of Kubernetes’ self-healing capabilities. By orchestrating multiple controllers to manage replicas, nodes, endpoints, and namespaces, it ensures the cluster remains stable and operates as expected.
+
+46 / 104
+Goto...
+
+P
+Control Plane - cloud-controller-manager
+Optional Component
+Cloud-specific control logic
+Links cluster to cloud provider’s API
+Implements plugin mechanism to allows different cloud integrations
+Single process but orchestrates multiple controllers
+Node controller
+Route controller
+Service controller
+Introduction:
+
+The cloud-controller-manager is an optional Kubernetes Control Plane component designed for clusters running on cloud providers. It handles cloud-specific functionality, integrating the Kubernetes cluster with the underlying cloud infrastructure.
+Core Functions of cloud-controller-manager:
+
+Optional Component:
+
+The cloud-controller-manager is not required for on-premises Kubernetes clusters or those running without a cloud provider.
+Cloud-Specific Control Logic:
+
+Adds logic to support cloud provider features, such as load balancers, storage, and routing.
+Links Cluster to Cloud API:
+
+Communicates with the cloud provider’s API to manage resources like nodes, networking, and storage in the cloud environment.
+Implements Plugin Mechanism:
+
+Supports a plugin mechanism that allows Kubernetes to integrate with different cloud providers, such as AWS, Azure, and Google Cloud.
+This flexibility enables seamless integration across various cloud platforms.
+Key Controllers Managed by cloud-controller-manager:
+
+Node Controller:
+
+Manages the lifecycle of cloud-based Nodes.
+Detects and removes Nodes that are no longer available in the cloud infrastructure.
+Route Controller:
+
+Manages routing rules in the cloud provider’s network.
+Ensures Pods can communicate across Nodes by updating routes as needed.
+Service Controller:
+
+Creates and manages cloud load balancers for Kubernetes Services.
+Automatically updates load balancer configurations when Services or Pods change.
+Conclusion:
+
+The cloud-controller-manager is a powerful tool for integrating Kubernetes clusters with cloud provider features. By managing cloud-specific resources and enabling seamless communication with the cloud API, it simplifies the operation of Kubernetes in cloud environments.
+
+47 / 104
+Goto...
+
+Kubernetes Nodes Architecture
+
+48 / 104
+Goto...
+
+P
+Nodes
+Machines where containers runs
+Runs container runtime
+Runs K8s services required to mnanage pods
+Two types
+Control Plane Nodes
+Worker Nodes
+Introduction:
+
+Nodes are the machines, virtual or physical, that form the foundation of a Kubernetes cluster. They host the containerized workloads and the services needed to manage these workloads.
+Key Functions of Nodes:
+
+Runs Containers:
+
+Nodes are where containers execute. They provide the runtime environment for Pods.
+Runs K8s Services:
+
+Nodes run essential Kubernetes services, like kubelet and kube-proxy, to manage and monitor workloads.
+Types of Nodes:
+
+Control Plane Nodes: Host the components responsible for managing the cluster.
+Worker Nodes: Host the application workloads and Pods.
+Conclusion:
+
+Nodes are the backbone of Kubernetes clusters, enabling workload execution and management. Understanding their roles is essential for managing Kubernetes effectively.
+
+49 / 104
+Goto...
+
+P
+Control Plane Nodes
+Runs control plain components
+Protected from running application workloads
+Can be virtual or physical machine
+The number of nodes must be always odd
+Single Control Plane Node
+Suitable for learning and testing
+Three Control Plane Nodes
+Recommended for production clusters
+Five Control Plane Nodes
+Recommended for really large cluster
+Introduction:
+
+Control Plane Nodes are critical for managing the Kubernetes cluster. They host components like kube-apiserver, etcd, kube-scheduler, and kube-controller-manager.
+Key Characteristics:
+
+Dedicated Role:
+
+Control Plane Nodes run cluster management services and are typically isolated from application workloads for better performance and reliability.
+Odd Node Count:
+
+An odd number of Control Plane Nodes ensures quorum in the etcd cluster, providing high availability.
+Scaling Recommendations:
+
+Single Node:
+
+Best for learning, testing, and non-production use cases.
+Three Nodes:
+
+Ideal for most production clusters, balancing availability and cost.
+Five Nodes:
+
+Used in large-scale clusters requiring enhanced reliability and fault tolerance.
+Conclusion:
+
+Control Plane Nodes are vital for stable cluster operation. Proper configuration and scaling ensure high availability and efficient management of workloads.
+
+50 / 104
+Goto...
+
+P
+Worker Nodes
+Runs application containers
+Managed by control plain
+Can be virtual or physical machine
+Typically a cluster have several worker nodes
+Single Worker Node
+Suitable for learning and testing
+Two or Mode Worker Nodes
+Recommended for produciton clusters
+Depends on the application’s scale, redundancy needs, and resource requirements
+Introduction:
+
+Worker Nodes are where the application workloads run. They execute the Pods and are managed by the Control Plane.
+Key Characteristics:
+
+Runs Application Containers:
+
+Worker Nodes host the Pods that contain application workloads.
+Managed by Control Plane:
+
+The Control Plane schedules Pods on Worker Nodes and monitors their health and performance.
+Scalability:
+
+Kubernetes supports clusters with multiple Worker Nodes to meet the application’s scaling and redundancy requirements.
+Scaling Recommendations:
+
+Single Node:
+
+Suitable for learning and testing environments.
+Two or More Nodes:
+
+Recommended for production, ensuring redundancy and handling increased workloads.
+Conclusion:
+
+Worker Nodes are essential for running workloads efficiently. Proper sizing and scaling based on the application’s needs are critical for optimal performance.
+
+51 / 104
+Goto...
+
+P
+Kubelet
+Agent that runs on each node
+Manages Containers and Pods
+Syncs Desired State
+Checks Node Health
+Handles Pod Lifecycle
+Monitors Resource Usage
+Introduction:
+
+Kubelet is the primary agent running on every Node in a Kubernetes cluster. It ensures that the Pods are running and the Node adheres to the cluster’s desired state.
+Key Responsibilities:
+
+Manages Containers and Pods:
+
+Ensures the containers within Pods are running as specified.
+Syncs Desired State:
+
+Communicates with the Control Plane to ensure the Node matches the cluster’s desired configuration.
+Checks Node Health:
+
+Monitors the Node’s status and reports back to the Control Plane.
+Handles Pod Lifecycle:
+
+Oversees the creation, updating, and deletion of Pods on the Node.
+Monitors Resource Usage:
+
+Tracks resource utilization, like CPU and memory, ensuring efficient use of Node resources.
+Conclusion:
+
+The kubelet is critical for maintaining Node-level operations, ensuring the smooth execution of workloads in the cluster.
+
+52 / 104
+Goto...
+
+P
+kube-proxy
+Network proxy that runs on each node
+Implements part of the Kubernetes Service
+Maintains network rules
+Manages network traffic
+Service networking
+Handling routing
+Load balancing
+Optional component ?!
+Introduction:
+
+kube-proxy is a network component running on each Node. It facilitates communication between Pods and Services, ensuring seamless networking in Kubernetes.
+Key Functions:
+
+Network Proxy:
+
+Acts as a proxy to route network traffic to the appropriate Pods.
+Implements Kubernetes Services:
+
+Plays a key role in handling Service networking, ensuring that traffic reaches the correct Pods.
+Maintains Network Rules:
+
+Configures network rules on each Node to enable Service-to-Pod communication.
+Manages Network Traffic:
+
+Handles traffic routing and provides basic load balancing for Services.
+Optional Component?:
+
+In modern clusters, CNI (Container Network Interface) plugins often handle networking. However, kube-proxy remains widely used in many deployments for managing Service networking.
+Conclusion:
+
+kube-proxy is essential for enabling Kubernetes Service networking. While optional in some setups, it remains a core component in many clusters for managing traffic efficiently.
+
+53 / 104
+Goto...
+
+P
+kube-proxy (cont.)
+It used to be mandatory and it is still the most used option
+
+Three modes
+
+user-space (Legacy and rarely used)
+iptables (default mode)
+ipvs (better performance in large scale)
+Why not kube-proxy?
+
+Inefficient in really large clusters
+Latency and resource usage are increased as the number of services grows
+So what is the alternative?
+
+Modern CNIs developed their own eBPF programs/drivers
+Introduction:
+
+While kube-proxy remains the most widely used network proxy in Kubernetes, its limitations in large-scale clusters have led to alternatives that leverage modern technologies.
+Three Modes of kube-proxy:
+
+user-space Mode:
+
+A legacy implementation where kube-proxy proxies traffic in user space.
+Rarely used due to inefficiency and high latency.
+In this mode, Kube-Proxy relies on a Linux feature called IPtables. IPtables work as an internal packet processing and filtering component. It inspects incoming and outgoing traffic to the Linux machine and applies specific rules against packets that match specific criteria. Kube-Proxy in user-space mode makes use of this and inserts a NAT rule inside IPtables. This rule redirects traffic to a local port of the Kube-Proxy itself. Kube-Proxy listens for connections on this port and forwards them to the respective backend Pods.
+The downside of this mode is that traffic needs to be redirected twice. It gets from the kernel space back to the user space and then gets routed to the Pod. This is because Kube-Proxy is sitting in the path of the traffic.
+iptables Mode (Default):
+
+kube-proxy uses iptables rules to route traffic to Pods.
+It’s reliable and widely adopted but can become a bottleneck in very large clusters.
+Instead of inserting a rule to forward connections to Kube-Proxy itself, this mode inserts the Service-to-Pod rules directly into the IPtables. By doing this, Kube-Proxy frees itself from getting in the way of the traffic. This saves the extra latency associated with the user-space mode.
+This changes the Kube-Proxy role from being an actual proxy to being only the “installer” of rules.
+The downside of this mode is that IPtables uses a sequential approach when performing a table lookup. So it goes through each rule in the table until it finds a match and applies it.
+Another downside is that IPtables don’t support load-balancing algorithms. It uses a random equal-cost way of distribution.
+ipvs Mode:
+
+Leverages Linux’s IP Virtual Server (IPVS) for load balancing, offering better performance in large-scale clusters.
+Provides faster packet processing and scalability compared to iptables.
+IPVS is a Linux feature designed specifically for load balancing. This makes it a perfect choice for Kube-Proxy to use. In this mode, Kube-Proxy inserts rules into IPVS instead of IPtables.
+IPVS has an optimized lookup algorithm with a complexity of O(1). This means that regardless of how many rules are inserted, it provides almost consistent performance.
+IPVS also supports load-balancing algorithms such as round robin, least connections, and other hashing approaches.
+Why Not kube-proxy?
+
+In very large clusters with thousands of Services, kube-proxy’s performance can degrade:
+Inefficiency: Managing a large number of network rules becomes cumbersome.
+Increased Latency: Traffic routing introduces noticeable delays.
+High Resource Usage: CPU and memory usage increase significantly as the cluster grows.
+Modern Alternatives with eBPF:
+
+Modern Container Network Interfaces (CNIs) like Cilium and Calico use eBPF (Extended Berkeley Packet Filter) to bypass kube-proxy for networking.
+eBPF Advantages:
+Allows dynamic packet filtering and processing directly in the Linux kernel.
+Eliminates the need for iptables or ipvs.
+Offers significantly improved performance and reduced latency.
+Conclusion:
+
+kube-proxy remains a key component in most Kubernetes deployments, but modern CNIs leveraging eBPF are gaining traction for large-scale clusters, providing enhanced performance and scalability.
+
+54 / 104
+Goto...
+
+P
+Container Runtime
+Underlying software that runs containers
+Two primary implementations
+Containerd
+CRI-O
+Introduction:
+
+The container runtime is a critical component of the Kubernetes ecosystem, responsible for running and managing containers on each node. It acts as the execution engine for Pods.
+Core Functions of a Container Runtime:
+
+Runs Containers:
+
+Provides the low-level functionality needed to start, stop, and manage containers.
+Manages Container Lifecycle:
+
+Handles the creation, execution, and deletion of containers.
+Integration with Kubernetes:
+
+Container runtimes interface with Kubernetes via the Container Runtime Interface (CRI) to execute containers as specified by the kubelet.
+Primary Implementations:
+
+Containerd:
+
+A lightweight container runtime initially developed as part of Docker but now widely used as an independent runtime.
+Provides robust support for container lifecycle management and image handling.
+CRI-O:
+
+A Kubernetes-native container runtime designed to work specifically with the CRI.
+Focuses on simplicity and maintaining compatibility with Open Container Initiative (OCI) standards.
+Conclusion:
+
+The container runtime is essential for running containers in a Kubernetes cluster. Choosing the right implementation, like Containerd or CRI-O, depends on the cluster’s requirements and the environment’s goals.
+
+55 / 104
+Goto...
+
+P
+Container Runtime Interface (CRI)
+Plugin interface
+Enables the kubelet to use container runtimes
+Implements protocol for the communication
+gRPC based protocl
+No need to recompile kubelet (just configuration)
+Introduction:
+
+The Container Runtime Interface (CRI) is an abstraction layer that allows Kubernetes to communicate with different container runtimes seamlessly. It ensures flexibility and interoperability in Kubernetes clusters.
+Key Features of CRI:
+
+Plugin Interface:
+
+CRI acts as a plugin system, enabling the kubelet to work with any container runtime that implements the CRI protocol.
+Enables Runtime Flexibility:
+
+Provides the kubelet with the ability to interact with multiple container runtimes (e.g., Containerd, CRI-O) without requiring changes to Kubernetes code.
+Protocol for Communication:
+
+Defines a standardized gRPC-based protocol for communication between the kubelet and the container runtime.
+This protocol ensures consistency and reliability across different runtime implementations.
+No Need for Recompilation:
+
+Container runtimes that implement the CRI can be integrated with Kubernetes through configuration changes, eliminating the need to recompile the kubelet.
+Conclusion:
+
+The CRI simplifies Kubernetes’ architecture by decoupling the kubelet from specific container runtimes. This flexibility enables Kubernetes to evolve and adopt new runtime technologies without modifying core components.
+
+56 / 104
+Goto...
+
+Persistent Storage in Kubernetes
+
+57 / 104
+Goto...
+
+P
+Introduction to Persistent Storage
+Definition
+
+Ensures data survives beyond the lifecycle of a pod
+Decouples data storage from ephemeral workloads
+Why Persistent Storage?
+
+Containers are stateless by design
+Applications like databases require persistent data
+Introduction:
+
+Kubernetes applications often need to store data that persists beyond the lifecycle of individual Pods. Persistent Storage provides a solution for managing and storing this data reliably.
+Definition:
+
+Persistent Storage ensures that data is retained even when Pods are deleted, rescheduled, or moved to another Node.
+It decouples storage from the ephemeral nature of containerized workloads, allowing data to persist independently.
+Why Persistent Storage?
+
+Containers are Stateless:
+
+Containers are designed to be lightweight and stateless, meaning their data is not retained when they stop or restart.
+Stateless applications rely on external storage for persistence.
+Applications Require Persistent Data:
+
+Many applications, like databases and file storage systems, need persistent data to function properly.
+Persistent Storage ensures data durability, enabling these applications to operate seamlessly.
+Conclusion:
+
+Persistent Storage is essential for running stateful applications in Kubernetes. It ensures data resilience and decouples workloads from their storage requirements.
+
+58 / 104
+Goto...
+
+P
+Persistent Storage compoenents
+Persistent Volumes
+Persistent Volume Claims
+Storage Classes
+Introduction:
+
+Kubernetes provides a modular and flexible architecture for managing Persistent Storage. The key components include Persistent Volumes (PVs), Persistent Volume Claims (PVCs), and Storage Classes.
+Components Overview:
+
+Persistent Volumes (PVs):
+
+Represent the actual physical or logical storage resources in the cluster.
+Persistent Volume Claims (PVCs):
+
+Allow users or applications to request storage resources without needing to understand the underlying details.
+Storage Classes:
+
+Enable dynamic provisioning of PVs based on user-defined requirements, automating the storage allocation process.
+Conclusion:
+
+These components work together to provide a robust and scalable mechanism for managing Persistent Storage in Kubernetes, catering to diverse application needs.
+
+59 / 104
+Goto...
+
+P
+Persistent Volumes (PV)
+Definition
+
+Storage abstraction for Kubernetes clusters
+Represents physical storage
+Key Features
+
+Abstracts storage details (cloud storage, local disks, NFS)
+Managed by the cluster administrator
+Introduction:
+
+Persistent Volumes (PVs) are a cluster-level resource that provide a standardized interface for storage in Kubernetes. They decouple storage from workloads, enabling greater flexibility and management.
+Definition:
+
+A Persistent Volume (PV) is an abstraction of the physical or logical storage resource, such as a disk or cloud storage, available in the cluster.
+Key Features:
+
+Abstracts Storage Details:
+
+PVs can represent various storage backends, including cloud-based storage (AWS EBS, Azure Disk), local disks, or shared file systems (NFS).
+Applications do not need to know the details of the underlying storage.
+Managed by Cluster Administrator:
+
+Administrators create and manage PVs to allocate storage resources to the cluster.
+Conclusion:
+
+Persistent Volumes simplify storage management in Kubernetes by abstracting the storage backend, allowing users to focus on application requirements rather than infrastructure.
+
+60 / 104
+Goto...
+
+P
+Persistent Volume Claims (PVC)
+Definition
+
+A request for storage by a user or application
+Connects pods to Persistent Volumes
+Lifecycle
+
+PVC is created by the user
+Kubernetes binds the PVC to a suitable PV
+The pod uses the PVC to access the storage
+Introduction:
+
+Persistent Volume Claims (PVCs) are the mechanism through which users or applications request storage in Kubernetes. They bridge the gap between Pods and Persistent Volumes.
+Definition:
+
+A PVC is essentially a storage request specifying the size, access mode, and other requirements.
+Kubernetes uses the PVC to find and bind an appropriate PV.
+Lifecycle:
+
+User Creates PVC:
+
+The user specifies the storage requirements, such as capacity and access modes.
+Kubernetes Binds PVC to PV:
+
+The system automatically binds the PVC to a suitable PV that meets the request.
+Pod Uses PVC:
+
+The Pod accesses the storage through the PVC, abstracting the storage details.
+Conclusion:
+
+PVCs make it easy for users to request storage resources without needing to manage the underlying details. This abstraction simplifies the process and ensures efficient storage allocation.
+
+61 / 104
+Goto...
+
+P
+Storage Classes
+Definition
+
+Dynamic provisioner for Kubernetes storage
+Automates PV creation based on user-defined storage requirements
+Key Features
+
+Supports multiple types of storage (block, file, cloud).
+Example Storage Classes: AWS EBS, Azure Disk, Ceph, NFS.
+Introduction:
+
+Storage Classes enable dynamic provisioning of Persistent Volumes in Kubernetes. They simplify the storage allocation process and support various storage backends.
+Definition:
+
+A Storage Class defines a set of rules for dynamically provisioning Persistent Volumes.
+Users specify the desired Storage Class in their PVC, and Kubernetes automatically creates a PV based on the class’s configuration.
+Key Features:
+
+Supports Multiple Storage Types:
+
+Includes block storage, file storage, and cloud-native solutions like AWS EBS, Azure Disk, and Ceph.
+Dynamic Provisioning:
+
+Automates the PV creation process, eliminating the need for pre-provisioned storage.
+Customizable Policies:
+
+Administrators can define policies like performance tiers, redundancy, or access modes for each Storage Class.
+Conclusion:
+
+Storage Classes bring flexibility and automation to Persistent Storage management in Kubernetes, making them a key tool for scalable and dynamic storage provisioning.
+
+62 / 104
+Goto...
+
+Advanced POD Deployment Options in Kubernetes
+
+63 / 104
+Goto...
+
+P
+Init Containers
+What are Init Containers?
+
+Special containers
+Run before the main application container
+Designed to perform initialization tasks
+Run in the same pod namespace as the application containers
+Can have different images and configurations
+Failure of an init container will restart the entire pod
+Use Cases
+
+Fetch and construct configuration files or secrets
+Run database migrations
+Validate pod or cluster configurations
+Wait for other dependencies to be running
+Initialize persistent volumes
+Introduction
+In Kubernetes, init containers play a vital role in ensuring that the main application containers are launched in a fully prepared environment.
+They perform initialization tasks like setting up configurations, checking dependencies, or preparing resources, and only then allow the application containers to start.
+What are Init Containers?
+Init containers are special containers that run to completion before the main application containers in a pod.
+They are designed for initialization tasks that must be completed before the main application starts.
+These tasks are often pre-requisites to ensure the success of the main application.
+Key Features
+Sequential Execution:
+
+Init containers always run before the main containers and must complete successfully for the pod to proceed.
+If an init container fails, the pod is restarted and retried.
+Flexible Configuration:
+
+Defined in the spec.initContainers field in a pod’s configuration.
+Can use different container images and configurations than the main containers.
+Shared Namespace:
+
+Init containers share the same networking and storage as the main containers within the pod.
+Error Handling:
+
+Failure of an init container results in pod restart until the init container succeeds or the pod fails due to restart limits.
+Use Cases
+Dependency Setup:
+
+Downloading application-specific files, libraries, or binaries.
+Example: Fetching updated configuration files from a remote server.
+Waiting for External Services:
+
+Performing health checks to ensure dependencies like databases or APIs are accessible before the main container starts.
+Database Initialization:
+
+Running database migrations or initializing database schemas.
+Secret Management:
+
+Fetching and decrypting secrets from tools like HashiCorp Vault or AWS Secrets Manager.
+Persistent Volume Initialization:
+
+Populating shared volumes with necessary files before the main application starts.
+Network and Service Setup:
+
+Configuring DNS or network settings for distributed applications.
+Pre-flight Validations:
+
+Ensuring cluster or pod configurations meet specific criteria before the main container launches.
+Cache Pre-warming:
+
+Populating in-memory or distributed caches with required data for faster application startup.
+Example Pod Spec
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  initContainers:
+  - name: init-nginx
+    image: busybox
+    command: ['sh', '-c', 'echo "<h1>hello world</h1>" > /usr/share/nginx/html/index.html && sleep 5']
+  containers:
+  - name: nginx-container
+    image: nginx
+
+Conclusion
+Init containers are a powerful Kubernetes feature to handle initialization tasks like setting up environments, validating dependencies, or pre-populating data.
+By using init containers effectively, you can ensure that your main application starts in an optimal and ready state.
+
+64 / 104
+Goto...
+
+Init Containers (cont.)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  initContainers:
+  - name: init-nginx
+    image: busybox
+    command: ['sh', '-c', 'echo "<h1>hello world</h1>" > /usr/share/nginx/html/index.html && sleep 5']
+  containers:
+  - name: nginx-container
+    image: nginx
+
+
+65 / 104
+Goto...
+
+P
+Sidecar containers
+What are Sidecar Containers?
+
+Containers that run alongside the main application container
+No specific keyword or special declaration
+Just a container that runs in the same pod
+Extend the functionality of the main container
+Provides complementary services
+Use Cases
+
+Service Proxies
+Logging and Monitoring
+Configuration Management
+Data Synchronization
+Security Enhancements
+Service Mesh Integration
+Introduction:
+
+Sidecar Containers are auxiliary containers that run within the same Pod as the main application container. They enhance or extend the primary container’s functionality by providing complementary services.
+What are Sidecar Containers?
+
+Run Alongside the Main Container:
+
+A Sidecar container shares the same network namespace, storage volumes, and lifecycle as the main application container.
+No Special Keyword:
+
+Sidecars are defined like any other container in the Pod spec, with no special designation in Kubernetes.
+Extend Functionality:
+
+The Sidecar model allows developers to decouple auxiliary functionality, enabling better modularity and reusability.
+Provide Complementary Services:
+
+Sidecars support the main container with additional services or capabilities, such as logging or configuration.
+Use Cases:
+
+Service Proxies:
+
+Enhance networking capabilities by adding proxies for communication, such as in service meshes (e.g., Istio).
+Logging and Monitoring:
+
+Collect and forward logs or metrics from the main container to external systems for analysis.
+Configuration Management:
+
+Dynamically fetch and update configuration files without restarting the main application.
+Data Synchronization:
+
+Synchronize data between local storage and a remote source or cache.
+Security Enhancements:
+
+Handle encryption, authentication, or other security-related tasks to offload these responsibilities from the main container.
+Service Mesh Integration:
+
+Facilitate advanced networking features like traffic management and observability.
+Conclusion:
+
+Sidecar containers are a powerful pattern for augmenting the functionality of the main application. By running within the same Pod, they provide seamless integration and resource sharing, enabling modular and scalable application designs.
+
+66 / 104
+Goto...
+
+Sidecar containers (cont.)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sidecar-example
+spec:
+  containers:
+  - name: main-application
+    image: python:3.9-slim
+    command: ["python", "-m", "http.server", "--bind", "127.0.0.1", "8080"]
+    ports:
+    - containerPort: 8080
+  - name: nginx-proxy
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: nginx-config
+      mountPath: /etc/nginx/conf.d
+  volumes:
+  - name: nginx-config
+    configMap:
+      name: nginx-config
+
+
+67 / 104
+Goto...
+
+P
+DaemonSets
+Ensures one pod per each node (or selected nodes)
+Typically used for system-level services
+Automatically creates pods on new nodes
+Common Use Cases: Loggin, Monitoring, Network Configuration
+Example: Splung logs collector
+Introduction:
+
+A DaemonSet is a Kubernetes resource designed to ensure that a specific Pod is running on all (or selected) nodes in a cluster. It is commonly used for system-level workloads that require uniform deployment across nodes.
+Core Features of DaemonSets:
+
+Ensures One Pod Per Node:
+
+DaemonSets guarantee that one Pod is scheduled on every node in the cluster.
+Alternatively, they can be scoped to run on selected nodes using node selectors or tolerations.
+System-Level Services:
+
+DaemonSets are ideal for running background tasks or services that need to operate on all nodes, such as logging agents or monitoring daemons.
+Automatic Pod Creation on New Nodes:
+
+When new nodes are added to the cluster, DaemonSets automatically create Pods on those nodes without manual intervention.
+Common Use Cases:
+
+Logging:
+
+Agents like Splunk or Fluentd can collect logs from all nodes and forward them to a centralized logging system.
+Monitoring:
+
+Metrics collectors like Prometheus Node Exporter or Datadog agents can monitor the health and resource usage of nodes.
+Network Configuration:
+
+Tools like Cilium or Calico use DaemonSets to manage network policies and configurations across nodes.
+Example: Splunk Logs Collector
+
+A DaemonSet can be used to deploy the Splunk Universal Forwarder on each node, ensuring logs from all applications and system components are collected and sent to a Splunk server for analysis.
+Conclusion:
+
+DaemonSets are essential for deploying system-level services across all nodes in a Kubernetes cluster. By ensuring uniform Pod distribution, they simplify the management of critical infrastructure tasks.
+
+68 / 104
+Goto...
+
+DaemonSets (cont.)
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd
+spec:
+  selector:
+    matchLabels:
+      name: fluentd
+  template:
+    metadata:
+      labels:
+        name: fluentd
+    spec:
+      containers:
+      - name: fluentd
+        image: fluent/fluentd:v1.14.6
+        volumeMounts:
+        - name: varlog
+          mountPath: /var/log
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: varlog
+        hostPath:
+          path: /var/log
+
+
+69 / 104
+Goto...
+
+P
+StatefulSets
+Manages deployment and scaling of stateful applications
+Stable and persistent storage
+Stable hostname
+Startup/Shutdown ordering
+Common Use Case: Databases, Message Queues, Distributed Systems
+Introduction:
+
+StatefulSets are a specialized Kubernetes resource for managing stateful applications that require persistent storage, stable network identities, and ordered deployment.
+Core Features of StatefulSets:
+
+Manages Stateful Applications:
+
+Unlike Deployments, StatefulSets are designed for workloads that need stable identities and persistent data.
+Stable and Persistent Storage:
+
+Each Pod in a StatefulSet is associated with its own Persistent Volume, ensuring data is preserved even if the Pod is deleted or rescheduled.
+Stable Hostname:
+
+Each Pod has a stable, predictable hostname (e.g., <pod-name>-0, <pod-name>-1), which is critical for applications that rely on consistent network identities.
+Startup/Shutdown Ordering:
+
+Pods in a StatefulSet are created and terminated in a defined order.
+This ensures dependencies between Pods are maintained during scaling or updates.
+Common Use Cases:
+
+Databases:
+
+Applications like MySQL, PostgreSQL, or Cassandra that require persistent storage and stable network identities.
+Message Queues and Streaming Platforms:
+
+Systems like Kafka or RabbitMQ where ordered startup/shutdown and consistent identities are essential.
+Distributed Systems:
+
+Applications like Elasticsearch, Zookeeper, or Hadoop that rely on stable Pod identities for inter-node communication.
+Conclusion:
+
+StatefulSets provide a robust solution for managing stateful workloads in Kubernetes. By ensuring persistent storage, stable identities, and ordered operations, they enable reliable deployment and scaling of complex applications.
+
+70 / 104
+Goto...
+
+StatefulSets (cont.)
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: cassandra
+  namespace: database
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cassandra
+  serviceName: "cassandra"
+  podManagementPolicy: OrderedReady
+  template:
+    metadata:
+      labels:
+        app: cassandra
+    spec:
+      containers:
+      - name: cassandra
+        image: cassandra:4.0
+        ports:
+        - containerPort: 9042
+    ...
+
+
+71 / 104
+Goto...
+
+Advanced scalling in Kubernetes
+
+72 / 104
+Goto...
+
+P
+Kubernetes Metrics Server
+What is the Metrics Server?
+
+A lightweight cluster add-on that provides resource usage metrics
+Collects CPU and memory usage data
+Collects data for nodes and pods
+Enables Autoscaling
+Enables kubectl top command
+Does not store historical data
+Key Features
+
+Resource Monitoring
+Data Aggregation
+Lightweight
+Integration
+Introduction
+Let’s discuss the Kubernetes Metrics Server, a critical component for monitoring resource usage in your cluster. It provides real-time metrics on CPU and memory usage, enabling features like autoscaling and performance analysis.
+What is the Metrics Server?
+The Metrics Server is a lightweight Kubernetes add-on that collects real-time resource usage metrics for pods and nodes.
+It is designed to be efficient and has minimal impact on cluster performance.
+Key Features
+Resource Monitoring:
+
+The Metrics Server tracks the CPU usage in millicores (m) and memory usage in mebibytes (Mi).
+For example, a pod might report 250m CPU usage, meaning it is consuming 25% of a single core, and 512Mi for memory, indicating 512 mebibytes of RAM in use.
+Data Aggregation:
+
+It gathers metrics from kubelets running on each node using Kubernetes’ Summary API.
+This allows it to aggregate data for all pods and nodes in the cluster.
+Lightweight Design:
+
+The Metrics Server is optimized for low resource usage and does not store historical data. Instead, it focuses on providing current metrics.
+Integration:
+
+Enables critical Kubernetes features like:
+Horizontal Pod Autoscaler (HPA): Dynamically adjusts the number of pods based on CPU or memory usage.
+kubectl top command: Displays current resource usage for pods and nodes directly in the terminal.
+Use Cases
+Autoscaling:
+
+Provides metrics to the Horizontal Pod Autoscaler to make scaling decisions.
+For instance, if a pod’s CPU usage exceeds 70% of its requested limit, the HPA can scale up the deployment to meet demand.
+Performance Analysis:
+
+Using the kubectl top command, you can analyze real-time resource consumption.
+For example, you can identify pods consuming excessive CPU (m) or memory (Mi), helping with performance optimization.
+Installation
+The Metrics Server can be installed using Helm charts, preconfigured manifest files, or add-on managers like kubectl apply.
+Ensure proper permissions and role-based access control (RBAC) settings during installation.
+Limitations
+The Metrics Server does not provide historical metrics. For long-term monitoring, you’d use tools like Prometheus.
+Its scope is limited to basic CPU and memory metrics, without advanced data like disk I/O or network usage.
+Conclusion
+The Kubernetes Metrics Server is essential for resource monitoring, enabling autoscaling, and simplifying performance analysis. While lightweight and efficient, it’s not designed for comprehensive monitoring or historical data storage.
+
+73 / 104
+Goto...
+
+Review Node and Pod metrics
+Used Total Memory and CPU per nodes
+kubectl top nodes
+
+Used Total Memory and CPU per pods (default namespace)
+kubectl top pods
+
+Used Total Memory and CPU per pods (specific namespace)
+kubectl top pods -n namespace-name
+
+
+74 / 104
+Goto...
+
+P
+Kubernetes Auto-scaling
+Horizontal Pod Autoscaler
+Vertical Pod Autoscaler
+Cluster Autoscaler for cloud environments
+Introduction:
+
+Kubernetes provides multiple auto-scaling mechanisms to ensure efficient resource utilization and meet application demands dynamically. These include Horizontal Pod Autoscaler (HPA), Vertical Pod Autoscaler (VPA), and Cluster Autoscaler for cloud environments.
+Core Auto-scaling Mechanisms:
+
+Horizontal Pod Autoscaler (HPA):
+
+Adjusts the number of Pods in a deployment or replica set based on metrics like CPU utilization or custom metrics.
+Vertical Pod Autoscaler (VPA):
+
+Adjusts resource requests and limits (CPU, memory) for Pods to match their actual usage.
+Cluster Autoscaler:
+
+Scales the number of worker nodes in a cloud-based cluster to accommodate changes in workload demands.
+Conclusion:
+
+Kubernetes auto-scaling mechanisms ensure applications remain responsive while optimizing resource utilization, making them essential for dynamic workloads.
+
+75 / 104
+Goto...
+
+P
+Horizontal Pod Autoscaling (HPA)
+Horizontal scaling (Deploy more Pods)
+Automatically scaling the deployment
+Automatically shrinking the deployment
+Adjusts the desired scale (Average CPU utilization)
+Introduction:
+
+The Horizontal Pod Autoscaler (HPA) automatically adjusts the number of Pods in a deployment or replica set based on observed resource usage, ensuring scalability and responsiveness to varying workloads.
+Key Features of HPA:
+
+Horizontal Scaling:
+
+Adds or removes Pods to scale the application horizontally.
+Automatic Scaling and Shrinking:
+
+Dynamically increases the number of Pods during high demand and decreases them when demand reduces.
+Metrics-Based Adjustment:
+
+Uses metrics like average CPU utilization, memory utilization, or custom application metrics to decide the desired scale.
+How It Works:
+
+The HPA periodically queries the metrics server to evaluate the current resource usage and adjusts the number of replicas in the deployment accordingly.
+Conclusion:
+
+HPA ensures that applications can handle varying workloads efficiently while maintaining optimal resource usage.
+
+76 / 104
+Goto...
+
+P
+Vertical Pod Autoscaler (VPA)
+Vertical scaling (Add resources)
+Monitors Pod memory and CPU resources
+Automatically adjusts the CPU and memory resources
+Recommend only mode
+Introduction:
+
+The Vertical Pod Autoscaler (VPA) optimizes the resource allocation for Pods by adjusting their CPU and memory requests and limits based on actual usage.
+Key Features of VPA:
+
+Vertical Scaling:
+
+Instead of adding Pods, VPA increases or decreases the resource allocation for existing Pods.
+Resource Monitoring:
+
+Continuously monitors Pod resource usage (CPU and memory) and identifies under-allocated or over-allocated resources.
+Automatic Adjustment:
+
+Adjusts resource requests and limits to align with the actual needs of the application.
+Recommend Only Mode:
+
+Operates in a non-disruptive mode to suggest resource changes without applying them automatically.
+Conclusion:
+
+VPA is ideal for optimizing resource allocation and reducing inefficiencies in Kubernetes workloads, ensuring better performance and cost management.
+
+77 / 104
+Goto...
+
+P
+POD Disruption Budget (PDB)
+Disruption - event when a pod needs to be killed
+Minimum availability of pods during disruptive events
+Maintenance
+Updates
+Scaling
+Ensures that a specified number of pods are always available
+Introduction:
+
+A Pod Disruption Budget (PDB) ensures the availability of a minimum number of Pods during planned or unplanned disruptive events, providing application resilience.
+What is a Disruption?
+
+Disruptions occur when Pods are terminated due to:
+Maintenance: Node upgrades or system reboots.
+Updates: Rolling updates or configuration changes.
+Scaling: Scaling down a deployment or replica set.
+Key Features of PDB:
+
+Defines Minimum Availability:
+
+Specifies the minimum number or percentage of Pods that must remain available during a disruption.
+Controls Disruptive Events:
+
+Ensures disruptions do not affect application availability by limiting the number of Pods terminated simultaneously.
+Conclusion:
+
+PDBs enhance the reliability of Kubernetes applications by maintaining their availability during disruptive events, making them essential for stateful or critical workloads.
+
+78 / 104
+Goto...
+
+Service Accounts and Role Based Access Control
+
+79 / 104
+Goto...
+
+P
+Service Accounts
+Mechanism for authenticating and authorizing
+Authenticate pods to interact with the Kube API server
+Can be associated with Roles and RoleBindings/ClusterRoleBindings
+Grant specific permissions
+Fine-grained access to specific resources
+Introduction:
+
+Service Accounts are a Kubernetes mechanism for authenticating and authorizing Pods to interact with the Kubernetes API server. They enable secure and controlled access to cluster resources.
+Core Features of Service Accounts:
+
+Authentication and Authorization:
+
+Service Accounts authenticate Pods, allowing them to securely communicate with the Kubernetes API.
+They work alongside Roles and RoleBindings to enforce authorization policies.
+Pod Authentication:
+
+Each Pod can be associated with a Service Account.
+This allows the Pod to perform specific actions, like reading Secrets or modifying ConfigMaps, based on its assigned permissions.
+Roles and RoleBindings/ClusterRoleBindings:
+
+Service Accounts can be linked to:
+Roles (namespace-scoped permissions).
+ClusterRoles (cluster-wide permissions).
+These associations define what resources a Pod can access and what actions it can perform.
+Example Use Cases:
+
+Granular Access Control:
+
+Assign specific access permissions to Pods to ensure they can only perform the actions they need.
+Secure API Access:
+
+Use Service Accounts to securely grant Pods access to the Kubernetes API for tasks like retrieving Secrets or managing deployments.
+Multi-Tenant Environments:
+
+In multi-tenant clusters, Service Accounts help isolate workloads by limiting their access to specific resources.
+Best Practices:
+
+Assign minimal permissions to Service Accounts to adhere to the principle of least privilege.
+Regularly audit and update RoleBindings to ensure Pods have only the necessary access.
+Conclusion:
+
+Service Accounts are critical for securing Kubernetes workloads. By combining them with Roles and RoleBindings, they provide fine-grained access control, ensuring Pods operate within defined boundaries.
+
+80 / 104
+Goto...
+
+P
+Role Based Access Control (RBAC)
+Regulating access to resources based on user roles
+Provides fine-grained access control
+Allows users and applications to have only the permissions they need
+Key Components:
+Role: Defines permissions within a namespace (e.g., access to pods, services)
+ClusterRole: Defines permissions at the cluster level (e.g., nodes, persistent volumes)
+RoleBinding: Grants a Role to a user or group within a namespace
+ClusterRoleBinding: Grants a ClusterRole to a user or group at the cluster level
+Introduction:
+
+Now, lets talk about Role-Based Access Control (RBAC) in Kubernetes, which is a powerful way to manage access to cluster resources and ensure security across different environments.
+
+Definition:
+
+RBAC is a method for regulating access to Kubernetes resources by assigning specific permissions based on roles. It ensures that users and applications only have access to the resources they need and nothing more.
+RBAC is an important security feature, particularly for clusters with multiple users or teams, as it helps prevent unauthorized actions and protects sensitive resources.
+
+Key Components:
+
+RBAC is composed of four main components that work together to control access:
+Role: A Role is a set of permissions within a specific namespace. For example, a Role might grant access to view or edit pods and services within a given namespace.
+ClusterRole: A ClusterRole is similar to a Role but operates at the cluster level, allowing access to cluster-wide resources like nodes or persistent volumes.
+RoleBinding: This binds a Role to a specific user or group within a namespace, granting them the permissions defined by that Role.
+ClusterRoleBinding: This binds a ClusterRole to a user or group at the cluster level, allowing them to access cluster-wide resources based on the permissions in the ClusterRole.
+
+Benefits:
+
+RBAC enhances security by following the principle of least privilege, meaning users only get the permissions they need to do their jobs.
+It provides fine-grained access control, reducing the risk of unauthorized actions and helping administrators manage permissions more effectively.
+
+Conclusion:
+
+In summary, RBAC in Kubernetes provides a secure, flexible way to manage access across clusters, ensuring that resources are only accessible to those who need them, thus improving overall cluster security.
+
+81 / 104
+Goto...
+
+Kubernetes Advanced Networking
+
+82 / 104
+Goto...
+
+P
+Kubernetes Networking Overview
+The system that enables communication between
+Pods
+Services
+External networks
+Networking Components:
+Pod-to-Pod Communication
+Pod-to-Service Communication
+External-to-Internal Communication
+Introduction:
+
+Today, we’ll cover Kubernetes Networking, which is essential for allowing communication between different parts of the cluster, including pods, services, and external networks.
+
+Definition:
+
+Kubernetes networking is the system that enables communication within a Kubernetes cluster. It allows pods to talk to each other, connect to services, and communicate with the outside world.
+
+Goals:
+
+The main goals of Kubernetes networking are to ensure that each pod has a unique IP address and can easily communicate with other pods. Kubernetes also aims to simplify container networking by applying consistent policies across the cluster.
+
+Networking Components:
+
+The three main components of Kubernetes networking are:
+Pod-to-Pod Communication: Ensures that pods within a cluster can reach each other.
+Pod-to-Service Communication: Allows pods to access services within the cluster.
+External-to-Internal Communication: Manages access from outside the cluster to internal services.
+
+Conclusion:
+
+In summary, Kubernetes networking is a core system that enables efficient and organized communication within a cluster, connecting pods, services, and external networks.
+
+83 / 104
+Goto...
+
+P
+Container Network Interface (CNI)
+Plugin interface
+Manage networking between pods and nodes
+Open and Closed source plugins
+Popular CNI plugins include:
+Calico: Provides network policies and high-performance networking.
+Flannel: Simple overlay network, mainly for basic connectivity.
+Weave: Supports cross-cluster networking and encrypted connections.
+Cilium: Focuses on security and eBPF-based data handling.
+Multus: Allows attaching multiple network interfaces to pods.
+Introduction:
+
+The Container Network Interface (CNI) is a standard interface specification that Kubernetes uses to manage networking between Pods and Nodes. CNIs provide flexibility in choosing networking solutions based on the cluster’s requirements.
+Core Functions of CNI:
+
+Plugin Interface:
+
+The CNI standard defines how Kubernetes interacts with networking plugins to configure network connectivity for Pods.
+Manages Networking:
+
+CNIs handle Pod-to-Pod and Pod-to-Service communication within the cluster.
+They also enable external traffic to reach Pods when necessary.
+Support for Open and Closed Source Plugins:
+
+CNI plugins are available as open-source solutions, while some cloud providers also offer proprietary implementations.
+Popular CNI Plugins:
+
+Calico:
+
+Offers advanced network policies for fine-grained traffic control.
+Known for its performance and scalability, making it suitable for production environments.
+Flannel:
+
+A simple overlay network focused on providing basic connectivity.
+Often used in small clusters or for straightforward networking setups.
+Weave:
+
+Supports cross-cluster networking and provides encrypted connections for enhanced security.
+Cilium:
+
+Leverages eBPF for efficient data processing and advanced security features.
+Suitable for environments with high security and performance requirements.
+Multus:
+
+Enables Pods to attach to multiple network interfaces, supporting use cases like NFV (Network Functions Virtualization).
+Conclusion:
+
+The CNI ecosystem offers a wide range of networking solutions tailored to diverse Kubernetes use cases. Understanding the strengths of different plugins helps in choosing the right one for a specific cluster environment.
+
+84 / 104
+Goto...
+
+P
+Pod-to-Pod Communication
+Pods can communicate with each other directly, regardless of the node they’re running on
+Each pod has a unique IP address
+No need for Network Address Translation (NAT) between pods
+Introduction:
+
+Let’s look at Pod-to-Pod Communication, a foundational aspect of Kubernetes networking that ensures that all pods in a cluster can communicate with each other.
+
+Definition:
+
+Pod-to-pod communication means that all pods can reach each other directly, even if they’re on different nodes. This is essential for distributed applications that rely on multiple pods working together.
+
+Kubernetes Networking Model:
+
+In Kubernetes, each pod is assigned a unique IP address, and communication between pods does not require NAT. This flat network structure makes it easy for pods to connect directly without address translation.
+Kubernetes also requires that all nodes can communicate with all pods, meaning the network infrastructure must support cluster-wide communication.
+
+Conclusion:
+
+Pod-to-pod communication is essential for Kubernetes applications, allowing distributed components to interact seamlessly across nodes.
+
+85 / 104
+Goto...
+
+P
+Ingress
+Manages external access to services
+API object
+Typically HTTP and HTTPS traffic
+Route traffic based on request paths or hostnames
+Terminates SSL/TLS connections for HTTPS traffic
+Consolidates multiple applications behind a single external IP
+Ingress Resource:
+Defines routing rules and exposes services
+Ingress Controller:
+Load balancer within the cluster (Nginx, Traefik, Envoy, etc.)
+Reads Ingress resources and routes traffic
+Introduction:
+
+Ingress is a Kubernetes API object that provides a way to manage external access to Services within a cluster, typically for HTTP and HTTPS traffic. It allows for advanced traffic routing, SSL termination, and consolidated access management.
+Core Features of Ingress:
+
+Manages External Access:
+
+Ingress enables access to cluster Services from outside the cluster, typically for web applications.
+Routing Traffic:
+
+Routes requests based on paths or hostnames, allowing multiple applications to share a single external IP.
+SSL/TLS Termination:
+
+Handles the termination of SSL/TLS connections, reducing the need for individual Services to manage encryption.
+Ingress Components:
+
+Ingress Resource:
+
+Defines routing rules, such as mapping a URL path (/app1, /app2) or hostname (app.example.com) to specific Services.
+Example rule:
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: example-ingress
+spec:
+  rules:
+  - host: app.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: app-service
+            port:
+              number: 80
+Ingress Controller:
+
+A cluster component that implements the Ingress API.
+Reads Ingress Resources and configures a load balancer to direct traffic accordingly.
+Popular controllers include Nginx, Traefik, Envoy, and HAProxy.
+Use Cases of Ingress:
+
+Simplified Access Management:
+
+Consolidates multiple application endpoints behind a single external IP or domain.
+Advanced Routing:
+
+Supports routing by hostnames or paths for multi-application environments.
+Improved Security:
+
+Centralized SSL/TLS termination simplifies encryption management and improves security.
+Conclusion:
+
+Ingress simplifies external traffic management for Kubernetes Services, enabling advanced routing, secure connections, and centralized access management. Pairing it with an appropriate Ingress Controller ensures scalability and performance for modern applications.
+
+86 / 104
+Goto...
+
+P
+Network Policy
+What is a Network Policy?
+Traffic control flow between Pods or Pods and external entities
+Works like a virtual Firewall
+Key Features:
+Controls ingress (incoming) and egress (outgoing) traffic
+Enforced by network plugins (e.g., Calico, Cilium)
+Use Cases:
+Isolate workloads in multi-tenant environments
+Restrict traffic to and from sensitive applications
+Implement security policies at the network level
+Introduction:
+
+Network Policies in Kubernetes are a mechanism to define rules for controlling traffic flow at the Pod level. They enhance cluster security by limiting which Pods can communicate with each other or with external resources.
+What is a Network Policy?
+
+Traffic Control:
+
+Network Policies allow administrators to define rules for ingress (incoming) and egress (outgoing) traffic to Pods.
+Rules are based on IP addresses, ports, and labels, enabling granular control.
+Plugin Dependency:
+
+Network Policies require a supported CNI plugin, such as Calico, Cilium, or Weave, to enforce the rules.
+Key Features:
+
+Ingress and Egress Control:
+
+Define which traffic is allowed to enter or leave a Pod.
+Example: Only allow traffic from specific namespaces or Pods with certain labels.
+Security Enhancement:
+
+Protect sensitive workloads by isolating them from unnecessary network access.
+Declarative Configuration:
+
+Policies are defined using Kubernetes manifests, making them version-controlled and auditable.
+Use Cases:
+
+Isolate Workloads:
+
+In multi-tenant clusters, use Network Policies to ensure that different tenants cannot access each other’s resources.
+Restrict Sensitive Applications:
+
+Limit access to databases or backend services to only specific Pods or namespaces.
+Implement Security Standards:
+
+Enforce organizational or regulatory security policies at the network level.
+Example Network Policy:
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-db
+spec:
+  podSelector:
+    matchLabels:
+      role: db
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          role: backend
+
+This policy allows traffic to Pods with the label role: db only from Pods with the label role: backend.
+Conclusion:
+
+Network Policies are critical for securing Kubernetes environments. By controlling traffic flow between Pods and external systems, they help enforce best practices for network segmentation and application isolation.
+
+87 / 104
+Goto...
+
+P
+Service Mesh
+Infrastructure layer for handling service-to-service communication
+Manages network traffic, security, and observability between services
+Offloads networking logic from application code
+Key Components
+Data Plane: Proxies that handle traffic between services
+Control Plane: Manages policies, configurations, and traffic routing across proxies
+Examples
+Istio: Open-source service mesh for advanced traffic management, security, and observability
+Linkerd: Lightweight service mesh focused on simplicity and performance
+Introduction:
+
+Let’s discuss the concept of a Service Mesh, which is a dedicated infrastructure layer designed to manage the communication between microservices.
+
+Definition:
+
+A Service Mesh handles service-to-service communication in a microservices architecture. It abstracts network management from the application, allowing Kubernetes to control aspects like traffic routing, security, and observability at the infrastructure level rather than within each service.
+
+Purpose:
+
+Service meshes provide enhanced security, traffic management, and monitoring for microservices applications, which often have complex networking requirements.
+By using a service mesh, we can offload complex networking logic—such as retries, circuit breaking, and encryption—from the application code to the mesh layer, simplifying application development.
+
+Key Components:
+
+Service meshes typically have two main components:
+Data Plane: This consists of proxies (often Envoy proxies) that are deployed alongside each service to handle traffic between services, routing requests according to policies set in the control plane.
+Control Plane: The control plane manages configuration, policies, and routing rules for all the proxies, allowing centralized control over service communication.
+
+Examples:
+
+Some popular service mesh options include:
+Istio: A powerful and feature-rich service mesh that provides advanced traffic management, security policies, and observability tools.
+Linkerd: A lightweight, easy-to-deploy service mesh that focuses on simplicity and performance, ideal for teams looking for a straightforward solution.
+
+Conclusion:
+
+In summary, a service mesh is an essential infrastructure layer for managing the complex network needs of microservices, enhancing security, monitoring, and control across services.
+
+88 / 104
+Goto...
+
+Other Advanced Topics
+
+89 / 104
+Goto...
+
+P
+Namespace Quota (ResourceQuota)
+A way to limit resource consumption per namespace
+Useful for controlling resource usage
+Suitable for multi-tenant clusters
+Types of Quotas:
+Compute Resource Quotas
+Storage Quotas
+Object Count Quotas
+Introduction:
+
+Namespace Quotas (ResourceQuotas) in Kubernetes help manage and limit resource consumption within a specific namespace. They are essential for ensuring fair resource allocation, especially in multi-tenant clusters.
+Core Features of Namespace Quota:
+
+Limit Resource Consumption:
+
+ResourceQuotas enforce limits on the amount of compute, storage, and object resources that can be consumed in a namespace.
+Control Resource Usage:
+
+They prevent resource overconsumption by individual workloads, ensuring other workloads or tenants have sufficient resources.
+Multi-Tenant Clusters:
+
+Ideal for environments with multiple teams or projects sharing the same cluster. ResourceQuotas help enforce boundaries and prevent resource contention.
+Types of Quotas:
+
+Compute Resource Quotas:
+
+Limit CPU and memory requests and limits for workloads in a namespace.
+Example:
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: team-a
+spec:
+  hard:
+    requests.cpu: "10"
+    requests.memory: "32Gi"
+    limits.cpu: "20"
+    limits.memory: "64Gi"
+Storage Quotas:
+
+Restrict the amount of persistent storage that can be consumed in a namespace.
+Example:
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: storage-quota
+  namespace: team-b
+spec:
+  hard:
+    requests.storage: "500Gi"
+    persistentvolumeclaims: "10"
+requests.storage: Limits the total storage requested by PersistentVolumeClaims in the namespace.
+persistentvolumeclaims: Restricts the number of PVCs that can be created.
+Object Count Quotas:
+
+Limit the number of Kubernetes objects (e.g., Pods, Services, ConfigMaps) that can be created in a namespace.
+Example:
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: object-quota
+  namespace: team-b
+spec:
+  hard:
+    pods: "50"
+    configmaps: "20"
+Best Practices:
+
+Combine ResourceQuotas with LimitRanges to enforce default resource requests and limits for Pods.
+Monitor resource usage regularly to adjust quotas as needed.
+Conclusion:
+
+Namespace Quotas provide a robust mechanism for managing resource consumption in Kubernetes. By enforcing quotas, administrators can ensure fair usage, prevent resource contention, and maintain cluster stability in multi-tenant environments.
+
+90 / 104
+Goto...
+
+P
+Taints and Tolerations
+Mechanism to control pod placement on nodes
+Ensures specific workloads run only on designated nodes
+Taints
+Applied to nodes to repel certain pods
+Tolerations
+added to pods to allow them to be scheduled on tainted nodes
+Introduction:
+
+Let’s discuss Taints and Tolerations in Kubernetes, which provide a way to control which pods are allowed to run on which nodes, adding flexibility to scheduling decisions.
+
+Definition:
+
+In Kubernetes, taints and tolerations are mechanisms for controlling pod placement on nodes. Taints are applied to nodes to make them repel certain pods, while tolerations are added to pods to let them be scheduled on tainted nodes.
+This system allows us to ensure that specific nodes are only used for designated workloads, improving resource management and control.
+
+Purpose:
+
+Taints and tolerations are used for scheduling specific workloads on designated nodes. For example, we might taint a node to only allow critical workloads, ensuring that development or testing pods aren’t scheduled there.
+This approach is especially useful in clusters that run both production and non-production workloads, as it allows us to isolate resources for high-priority applications.
+
+Examples:
+
+Here are a couple of common examples of how taints and tolerations work:
+Taint a Node: To apply a taint to a node, we use the command kubectl taint nodes <node-name> key=value:NoSchedule. This command marks the node with a specific key-value pair and prevents pods without a matching toleration from being scheduled there.
+Add Toleration to a Pod: To allow a pod to be scheduled on a tainted node, we add a toleration in the pod’s YAML specification. For example:
+tolerations:
+  - key: key
+    operator: Equal
+    value: value
+    effect: NoSchedule
+This toleration allows the pod to tolerate the node’s taint and be scheduled on it.
+
+Conclusion:
+
+In summary, taints and tolerations give us greater control over pod scheduling, helping to manage resources more efficiently by designating certain nodes for specific workloads.
+
+91 / 104
+Goto...
+
+P
+Pod Affinity and Anti-Affinity
+Pod Affinity
+
+Ensures certain pods are scheduled on the same node or close to each other
+Useful for applications that benefit from low-latency communication
+Pod Anti-Affinity
+
+Ensures certain pods are scheduled on different nodes
+Useful for high availability by spreading replicas across nodes
+Introduction:
+
+Let’s look at Pod Affinity and Anti-Affinity, which are Kubernetes features that control how pods are placed in relation to each other. These rules help manage pod distribution for performance, reliability, and fault tolerance.
+
+Pod Affinity:
+
+With pod affinity, Kubernetes attempts to schedule certain pods close to each other, either on the same node or nearby. This is beneficial for applications that rely on low-latency communication, such as a web server and cache that need to communicate quickly.
+Using affinity, we can ensure these components are co-located, reducing communication delays and optimizing performance.
+
+Pod Anti-Affinity:
+
+Pod anti-affinity ensures that certain pods are scheduled on different nodes to prevent resource conflicts or a single point of failure.
+For example, we might apply anti-affinity rules to replicas of a database to ensure each replica is on a different node, enhancing high availability and fault tolerance.
+
+Example Use Cases:
+
+Affinity can be used to co-locate related components, like web servers and caches, to improve communication speed.
+Anti-affinity is helpful for distributing replicas, like database instances, across multiple nodes, which helps prevent service disruption if a node goes down.
+
+Conclusion:
+
+In summary, pod affinity and anti-affinity provide powerful tools to control pod placement, optimizing for performance, reliability, and availability based on application needs.
+
+92 / 104
+Goto...
+
+Helm
+
+93 / 104
+Goto...
+
+P
+Helm
+What is Helm?
+
+Package manager for Kubernetes applications
+Simplifies deployment, versioning, and management of complex applications
+Uses Go templating to generate dynamic Kubernetes manifests
+What is Chart?
+
+A collection of files that describe a Kubernetes application.
+Type of Charts
+
+Application Charts
+Library Charts
+Values files
+
+Externalize configuration settings in this files
+Introduction:
+
+Helm is a powerful tool that acts as a package manager for Kubernetes applications. It simplifies application deployment, management, and versioning by abstracting away the complexity of raw Kubernetes manifests.
+What is Helm?
+
+Package Manager:
+
+Helm packages Kubernetes applications into deployable units called Charts, making it easy to install, upgrade, and roll back applications.
+Simplified Management:
+
+Reduces the complexity of managing large applications by bundling resources together.
+Provides built-in tools for version control and upgrades.
+Dynamic Manifest Generation:
+
+Uses Go templating to dynamically generate Kubernetes manifests based on configurable inputs.
+What is a Chart?
+
+A Chart is a collection of files organized into a directory structure that defines a Kubernetes application.
+Includes templates, default configurations, metadata, and values files.
+Helm uses these files to deploy applications consistently and reliably.
+Types of Charts:
+
+Application Charts:
+
+Full applications that can be deployed directly (e.g., Nginx, MySQL, Prometheus).
+Library Charts:
+
+Reusable components that provide functionality to be shared across multiple charts (e.g., helper templates).
+Values Files:
+
+Purpose:
+
+Externalize configuration settings, allowing users to customize deployments without modifying the Chart itself.
+Key Features:
+
+Support hierarchical key-value settings.
+
+Provide default values in the values.yaml file, which users can override using their own values files or command-line arguments.
+
+Example:
+
+replicaCount: 3
+image:
+  repository: nginx
+  tag: 1.21
+resources:
+  limits:
+    memory: 256Mi
+    cpu: 500m
+Conclusion:
+
+Helm streamlines Kubernetes application deployment and management by introducing Charts and Values Files. It is an indispensable tool for DevOps teams managing complex workloads in Kubernetes.
+
+94 / 104
+Goto...
+
+Kubectl Alternatives
+
+95 / 104
+Goto...
+
+P
+Kubernetes Dashboard (UI)
+Web-based UI
+Enables cluster management
+View, manage, and troubleshoot applications
+Optional addon
+Supports K8s role-based access control (RBAC)
+Introduction:
+
+The Kubernetes Dashboard is a web-based UI that simplifies cluster management by providing an interactive interface for viewing and managing cluster resources.
+Core Features:
+
+Web-Based UI:
+
+Accessible through a browser, offering a visual way to interact with the Kubernetes cluster.
+Cluster Management:
+
+Enables users to monitor workloads, view resource usage, and manage deployments.
+Troubleshooting Applications:
+
+Provides tools to identify issues, review logs, and examine resource states for debugging.
+Optional Addon:
+
+Not installed by default in Kubernetes clusters but can be added using Helm or kubectl.
+RBAC Support:
+
+Integrates with Kubernetes Role-Based Access Control (RBAC) to ensure secure access to the cluster, limiting user actions based on permissions.
+Conclusion:
+
+The Kubernetes Dashboard is a powerful tool for administrators and developers who prefer a graphical interface to manage their clusters, especially during debugging or monitoring tasks.
+
+96 / 104
+Goto...
+P
+K9s - Kubernetes CLI Dashboard
+What is K9s?
+Terminal-based CLI dashboard
+Simplify real-time cluster interactions and troubleshooting
+Provides a visual and interactive interface
+Introduction:
+
+K9s is a terminal-based CLI dashboard designed to streamline Kubernetes cluster management from the command line. It offers an intuitive, interactive interface for managing workloads.
+Key Features:
+
+Terminal-Based Dashboard:
+
+Operates entirely within the terminal, providing a compact and efficient alternative to graphical dashboards.
+Real-Time Cluster Interactions:
+
+Allows users to view and manage Pods, Deployments, Services, and other resources dynamically.
+Facilitates live monitoring of resource events and states.
+Interactive Interface:
+
+Offers an interactive, menu-driven interface for navigating and executing Kubernetes commands without memorizing complex kubectl syntax.
+Benefits of K9s:
+
+Efficiency:
+
+Reduces the need for multiple commands by centralizing operations into a single terminal window.
+Troubleshooting:
+
+Ideal for quickly identifying and resolving issues with workloads.
+Portability:
+
+Easily installed on local machines, making it accessible for developers and administrators alike.
+Conclusion:
+
+K9s is an excellent tool for those who prefer command-line workflows but want a more user-friendly and interactive experience for managing Kubernetes clusters.
+
+97 / 104
+Goto...
+
+Extending Kubernetes
+
+98 / 104
+Goto...
+
+P
+Custom Resource Definitions (CRDs)
+Extend Kubernetes by allowing custom resource types
+Enables developers to define and manage new resources
+Integrating applications domain-specific objects into the Kubernetes API
+Key Components
+Custom Resource (CR): An instance of the defined resource type (e.g. Database)
+Controller: Monitors the custom resources and takes actions to maintain the desired state
+Introduction:
+
+Now, let’s talk about Custom Resource Definitions (CRDs), which allow Kubernetes to handle custom resources and extend its functionality beyond the built-in resource types.
+
+Definition:
+
+A Custom Resource Definition (CRD) is a way to extend Kubernetes by adding new resource types. While Kubernetes comes with standard resources like Pods and Services, CRDs allow us to define custom resource types specific to our applications or domain.
+
+Purpose:
+
+CRDs are essential for tailoring Kubernetes to meet specific application needs. They enable developers to manage domain-specific objects within the Kubernetes environment, integrating custom configurations directly into the cluster.
+For example, if we want to manage databases within Kubernetes, we could create a Database CRD and handle databases like any other Kubernetes resource.
+
+Key Components:
+
+CRDs consist of two main components:
+Custom Resource (CR): This is an instance of the custom resource type defined by the CRD. For example, a Database CR would represent a specific database instance.
+Controller: The controller monitors custom resources and ensures that the actual state matches the desired state, taking any necessary actions to achieve this. It adds the intelligence needed to manage custom resources effectively.
+
+Examples:
+
+Some examples of CRDs include:
+Database CRD: Allows databases to be created, configured, and managed as Kubernetes resources.
+Cache CRD: Supports in-cluster management of caching layers, making it easy to configure and maintain them directly within Kubernetes.
+
+Conclusion:
+
+In summary, CRDs extend Kubernetes by allowing it to handle custom resource types, enabling teams to manage complex, domain-specific applications within the Kubernetes ecosystem.
+
+99 / 104
+Goto...
+
+P
+Kubernetes Operators
+Custom controllers that extend Kubernetes
+Consistent way to manage applications with Kubernetes-native tools
+Automate complex applications:
+deployment
+scaling
+upgrades
+backups
+more…
+Components:
+Custom Resource Definitions (CRDs): Define new resource types specific to the application
+Controller Logic: Encodes the operational knowledge needed to manage the application
+Example: postgres-operator - Run highly-available PostgreSQL clusters
+Introduction:
+
+Let’s discuss Kubernetes Operators, a powerful way to automate the management of complex applications in Kubernetes. Operators allow us to handle advanced operations beyond basic deployments.
+
+Definition:
+
+A Kubernetes Operator is a custom controller that extends Kubernetes functionality by managing complex applications. Operators encapsulate domain-specific knowledge—such as deployment, scaling, and upgrades—allowing Kubernetes to handle more than just simple applications.
+
+Purpose:
+
+Operators are especially useful for stateful applications like databases, where complex lifecycle tasks need to be automated. By using operators, we can automate tasks such as deployment, scaling, upgrades, and backups, making it easier to manage applications at scale.
+The goal is to provide a consistent way to manage applications using Kubernetes-native tools and APIs, reducing the need for manual intervention.
+
+Components:
+
+Operators consist of two key components:
+Custom Resource Definitions (CRDs): Define new resource types that are specific to the application or service. For example, a database operator might define a ‘Database’ resource type.
+Controller Logic: Encodes the operational knowledge needed to manage the application. The controller constantly monitors the custom resources and takes actions based on the desired state.
+
+Examples:
+
+Some examples of Kubernetes Operators include:
+Database Operators: Automate the management of databases like MySQL, PostgreSQL, and MongoDB, handling tasks such as backups and failover.
+Monitoring Operators: Deploy and manage monitoring solutions, like Prometheus, automating scaling and configuration tasks.
+
+Conclusion:
+
+In summary, Kubernetes Operators allow us to extend Kubernetes’ capabilities to manage complex applications more easily, automating many operational tasks and reducing manual work.
+
+100 / 104
+Goto...
+
+Kubernetes and GitOps
+
+101 / 104
+Goto...
+
+P
+What is GitOps?
+Operational model for managing infrastructure and applications using Git
+Changes are tracked in Git and automatically applied to the Kubernetes cluster
+Git is a single source of truth
+Ensures version control and reproducibility
+Introduction:
+
+GitOps is a modern operational model that uses Git repositories as the single source of truth for managing both infrastructure and applications in Kubernetes. It leverages the principles of version control and automation to streamline deployments and cluster management.
+Key Features of GitOps:
+
+Git as the Source of Truth:
+
+All desired states of the cluster (e.g., manifests, Helm charts) are stored in Git repositories, providing a single point of reference.
+Automated Application of Changes:
+
+Changes committed to Git are automatically applied to the Kubernetes cluster by GitOps controllers, ensuring consistency.
+Version Control and Reproducibility:
+
+Git enables a full history of changes, allowing teams to track, audit, and revert updates as needed.
+Why GitOps Matters:
+
+GitOps bridges the gap between development and operations by using Git’s familiar workflows to manage Kubernetes environments. It enhances collaboration, traceability, and reliability in deployments.
+Conclusion:
+
+GitOps is a powerful model for managing Kubernetes clusters, bringing the benefits of version control, automation, and reproducibility to DevOps workflows.
+
+102 / 104
+Goto...
+
+P
+GitOps Key Principles
+Declarative
+Define desired states in Git (e.g., YAML files, Helm values)
+Versioned and Immutable
+All changes are committed to Git
+Full history of changes
+Peer review
+Automation
+Automated controllers pull changes from Git and apply them to the cluster
+Introduction:
+
+GitOps is built on three key principles: Declarative configuration, Versioning and Immutability, and Automation. These principles ensure GitOps workflows are efficient, predictable, and reliable.
+Key Principles:
+
+Declarative:
+
+Desired states of infrastructure and applications are defined in declarative configurations, such as Kubernetes YAML manifests or Helm values files.
+This ensures the system configuration is self-describing and easy to understand.
+Versioned and Immutable:
+
+All changes are committed to Git, providing a versioned, auditable record of updates.
+The immutable history allows teams to track changes, revert to previous states, and enforce peer-reviewed workflows.
+Automation:
+
+GitOps tools automatically pull changes from Git repositories and apply them to the Kubernetes cluster.
+This eliminates manual intervention, reducing human error and increasing deployment speed.
+Conclusion:
+
+By adhering to these principles, GitOps enables teams to manage Kubernetes environments in a scalable, reliable, and traceable manner.
+
+103 / 104
+Goto...
+
+P
+Popular Kubernetes GitOps Tools
+Flux
+Lightweight GitOps tool
+Integrates directly with Kubernetes
+Supports declarative configurations
+ArgoCD
+GitOps tool designed for Kubernete
+Includes robust UI and advanced sync status monitoring
+Offers advanced features like rollback, and multi-cluster support
+Introduction:
+
+The GitOps model relies on specialized tools to automate the synchronization between Git repositories and Kubernetes clusters. Two leading tools in this space are Flux and ArgoCD, each catering to different needs and complexity levels.
+Flux:
+
+Lightweight Tool:
+
+Flux is a Kubernetes-native tool designed for simplicity. It integrates seamlessly into Kubernetes environments and is ideal for straightforward GitOps workflows.
+Declarative Configurations:
+
+Supports defining cluster resources declaratively in Git repositories, ensuring a clear and version-controlled source of truth.
+Key Features:
+
+Simple setup and operation.
+Works well for small to medium-sized deployments or teams focusing on simplicity.
+ArgoCD:
+
+Feature-Rich GitOps Tool:
+
+ArgoCD offers a robust GitOps experience with a user-friendly web-based UI.
+Sync Status Monitoring:
+
+Provides advanced monitoring capabilities to track the synchronization status of Kubernetes clusters with Git.
+Highlights drift or deviations from the desired state.
+Advanced Features:
+
+Supports rollbacks to previous states in case of deployment issues.
+Enables multi-cluster management, making it suitable for complex enterprise environments.
+When to Use Which Tool?
+
+Flux: Choose when you need a lightweight, easy-to-use tool for simpler GitOps workflows.
+ArgoCD: Opt for advanced features and UI capabilities, especially in multi-cluster or large-scale environments.
+Conclusion:
+
+Both Flux and ArgoCD are powerful tools for implementing GitOps. Flux excels in simplicity, while ArgoCD provides advanced features for managing complex Kubernetes setups.
+
+104 / 104
+Goto...
